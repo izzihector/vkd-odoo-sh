@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_contacts" name="Contacts">
+            <section class="sinppet_contacts">
+                <div class="kontaktform-block">
+                    <div class="container kontaktform">
+                        <div class="row">
+                            <div class="group-contact">
+                                <div class="container">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_contacts" inherit_id="website.snippets" name="Contacts">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_contacts"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_001.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

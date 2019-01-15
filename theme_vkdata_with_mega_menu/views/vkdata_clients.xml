@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_clients" name="Clients">
+            <section class="sinppet_partners">
+                <div class="clients-block">
+                    <div class="container carousel-clients">
+                        <div class="row">
+                            <div class="clients-header text-center">
+                                <h1>Our Clients</h1>
+                            </div>
+                            <div class="group-clients">
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 group-clients-block">
+                                    <section class="snippet_clients">
+                                        <div class="group-clients">
+                                            <div class="client-image text-center">
+                                                
+                                            </div>
+                                            <div class="client-url text-center">
+                                                <a href="#">tonder.dk</a>
+                                            </div>
+                                            <div class="client-description text-center">
+                                                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 group-clients-block">
+                                    <section class="snippet_clients">
+                                        <div class="group-clients">
+                                            <div class="client-image text-center">
+                                                
+                                            </div>
+                                            <div class="client-url text-center">
+                                                <a href="#">tonder.dk</a>
+                                            </div>
+                                            <div class="client-description text-center">
+                                                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 group-clients-block">
+                                    <section class="snippet_clients">
+                                        <div class="group-clients">
+                                            <div class="client-image text-center">
+                                                
+                                            </div>
+                                            <div class="client-url text-center">
+                                                <a href="#">tonder.dk</a>
+                                            </div>
+                                            <div class="client-description text-center">
+                                                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 group-clients-block">
+                                    <section class="snippet_clients">
+                                        <div class="group-clients">
+                                            <div class="client-image text-center">
+                                                
+                                            </div>
+                                            <div class="client-url text-center">
+                                                <a href="#">tonder.dk</a>
+                                            </div>
+                                            <div class="client-description text-center">
+                                                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_clients" inherit_id="website.snippets" name="Clients">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_clients"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_001.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

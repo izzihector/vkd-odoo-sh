@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fik_settings_group_invoice,fik_settings group invoice,model_fik_settings,account.group_account_invoice,1,1,1,1
+access_fik_settings_accountant,fik_settings accountant,model_fik_settings,account.group_account_user,1,0,0,0
+access_fik_settings_salesman,fik_settings salesman,model_fik_settings,sales_team.group_sale_salesman,1,1,1,0
+access_fik_settings_manager,fik_settings manager,model_fik_settings,sales_team.group_sale_manager,1,1,1,1

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="fevolution360_tracker_pixel">
+			<field name="name">Evolution360 Tracker Pixel</field>
+			<field name="model">website</field>
+			<field name="inherit_id" ref='website.view_website_form' />
+			<field name="arch" type='xml'>
+	
+				<field name="google_analytics_key" position='before'>
+					<field name="evolution360_tracker_pixel" />
+				</field>
+
+			</field>
+		</record> 
+
+	</data>
+</odoo>
+

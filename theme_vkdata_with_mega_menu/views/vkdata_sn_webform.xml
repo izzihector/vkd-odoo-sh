@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_webform" name="Webform">
+            <section class="snippet_webform">
+                <div class="main_intro">
+                    <div class="container">
+                        <div class="col-md-6">
+                            <h2>Lad din virksomhed vokse med Odoo</h2>
+                            <p>Vi hjælper virksomheder der har brug for effektivisering og overblik.Vi starter med at afdække de egentlige behov gennem vores ekspertteam, som alle har et oprigtigt ønske om at hjælpe. Derefter leverer vi en tilpasset og fleksibel løsning, som er til at vokse med og som giver værdi for pengene - ikke kun på kort, men også på lang sigt.</p>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="wrapper-top text-center">
+                                <h2>Book et uforpligtigende møde om Odoo</h2>
+                            </div>
+                            <div class="wrapper-bottom">
+                                <div class="oe_structure"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_webfrom" inherit_id="website.snippets" name="Webform">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_webform"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_010.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

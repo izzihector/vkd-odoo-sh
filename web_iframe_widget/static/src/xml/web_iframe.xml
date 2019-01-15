@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <div t-name="WebIframe" class="oe_view_manager oe_mail_wall oe_view_manager_current">
+        <iframe t-if="!widget.get('value')"
+                allowfullscreen="allowfullscreen" frameborder="0" src="http://www.odoo.com">
+        </iframe>
+        <t t-if="widget.get('value')">
+            <div>
+                <input type="text"
+                    t-att-id="widget.id_for_label"
+                    t-att-tabindex="widget.__node.attrs.tabindex"
+                    t-att-autofocus="widget.__node.attrs.autofocus"
+                    t-att-placeholder="widget.__node.attrs.placeholder"
+                t-att-maxlength="widget.field.size"
+                />
+            </div>
+        </t>
+    </div>
+</template>

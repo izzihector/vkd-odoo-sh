@@ -1,0 +1,78 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_dk_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-14 11:05+0000\n"
+"PO-Revision-Date: 2017-07-14 13:07+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: en\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. module: l10n_dk_sale
+#: model:ir.model.fields,field_description:l10n_dk_sale.field_sale_order_status_from_invoice
+msgid "Accounting Status"
+msgstr "Regnskabs Status"
+
+#. module: l10n_dk_sale
+#: selection:sale.order,status_from_invoice:0
+msgid "Cancelled"
+msgstr "Anulleret"
+
+#. module: l10n_dk_sale
+#: selection:sale.order,status_from_invoice:0
+msgid "Draft"
+msgstr "Kladde"
+
+#. module: l10n_dk_sale
+#: model:ir.ui.view,arch_db:l10n_dk_sale.slc_sale_order_form_view
+msgid "Internal Remarks"
+msgstr "Internt notat"
+
+#. module: l10n_dk_sale
+#: model:ir.model.fields,field_description:l10n_dk_sale.field_sale_order_internal_remarks
+msgid "Internal remarks"
+msgstr "Internt notat"
+
+#. module: l10n_dk_sale
+#: model:ir.ui.view,arch_db:l10n_dk_sale.slc_sale_order_form_view
+msgid "Invoice Remarks"
+msgstr "Bemærkninger på faktura"
+
+#. module: l10n_dk_sale
+#: selection:sale.order,status_from_invoice:0
+msgid "Open"
+msgstr "Åben"
+
+#. module: l10n_dk_sale
+#: model:ir.ui.view,arch_db:l10n_dk_sale.slc_sale_order_form_view
+msgid "Order Notes"
+msgstr "Ordrenotat"
+
+#. module: l10n_dk_sale
+#: selection:sale.order,status_from_invoice:0
+msgid "Paid"
+msgstr "Betalt"
+
+#. module: l10n_dk_sale
+#: selection:sale.order,status_from_invoice:0
+msgid "Pro-forma"
+msgstr "Pro-forma"
+
+#. module: l10n_dk_sale
+#: model:ir.model.fields,field_description:l10n_dk_sale.field_sale_order_remarks
+msgid "Remarks for customer"
+msgstr "Remarks for customer"
+
+#. module: l10n_dk_sale
+#: model:ir.model,name:l10n_dk_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Salgsordre"

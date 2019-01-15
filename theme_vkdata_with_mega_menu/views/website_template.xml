@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="vkdata_layout" inherit_id="website.layout" name="VK Data" priority="1">
+            <xpath expr="//head//link" position="after">
+                <link rel="shortcut icon" href="/theme_vkdata_with_mega_menu/static/description/favicon.ico" type="image/x-icon"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

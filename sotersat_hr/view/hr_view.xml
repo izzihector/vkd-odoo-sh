@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+    	<record model="ir.ui.view" id="view_employee_form_hr_cus">
+            <field name="name">hr.employee.form.hrcus</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+            		<!-- <xpath expr="//notebook/page[@name='public']" position="attributes">
+                    	<attribute name="invisible">1</attribute>
+                	</xpath> -->
+            		 <xpath expr="//notebook/page[@name='public']/group/group/field[@name='work_phone']" position="after">
+            			<field name="emp_id"/>
+            			<field name="rfid"/>
+            		</xpath> 
+ 	         </field>
+         </record>
+    </data>
+</odoo>

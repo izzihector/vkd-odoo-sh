@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">       
+        <record id="smartmode" model="res.partner">
+            <field name="name">Nisus Solutions PVT LTD</field>
+            <field name="is_company">1</field>
+            <field name="street">The 2000 Plaza, New Hospital Road</field>
+            <field name="zip">10250</field>
+            <field name="city">Sri Jayawardenepura</field>
+            <field name="country_id" ref="base.lk"/>
+            <field name="phone">+94 112 799300</field>
+            <field name="fax">+94 112 799300</field>
+            <field name="website">http://www.nisus.lk</field>
+            <field name="email">info@nisus.lk</field>
+        </record>
+
+        <record id="res_partner_address_1" model="res.partner">
+            <field name="name">Example</field>
+            <field name="parent_id" ref="smartmode"/>
+            <field name="email">info@nisus.example.lk</field>
+            <field name="active">1</field>
+            <field name="type">contact</field>
+            <field name="street">Street</field>
+            <field name="zip">0000</field>
+            <field name="city">Sri Lanka</field>
+            <field name="country_id" ref="base.lk"/>
+        </record>
+    </data>
+</odoo>

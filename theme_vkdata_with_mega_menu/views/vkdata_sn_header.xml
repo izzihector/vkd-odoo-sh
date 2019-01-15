@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_header" name="Page Header [H1 and H2]">
+            <section class="snippet_header">
+                <div class="block_d">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="header">
+                                    <h1>Add main header here.</h1>
+                                    <h2>Add sub header here.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_header" inherit_id="website.snippets" name="Page Header [H1 and H2]">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_header"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_017.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

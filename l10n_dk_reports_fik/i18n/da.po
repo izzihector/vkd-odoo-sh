@@ -1,0 +1,143 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_dk_reports_fik
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-05 12:20+0000\n"
+"PO-Revision-Date: 2017-10-05 14:23+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: da\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.ui.view,arch_db:l10n_dk_reports_fik.report_invoice_fik_dk
+msgid "<strong>Online payment ID</strong><br/>"
+msgstr "<strong>Online betalings ID</strong><br/>"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model,name:l10n_dk_reports_fik.model_res_company
+msgid "Companies"
+msgstr "Virksomheder"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_fik_settings_create_uid
+msgid "Created by"
+msgstr "Oprettet af"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_fik_settings_create_date
+msgid "Created on"
+msgstr "Oprettet den"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_fik_settings_customer_code_length
+msgid "Customer Code Length"
+msgstr "Customer Code Length"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.ui.view,arch_db:l10n_dk_reports_fik.l10n_dk_view_account_config_settings
+msgid "Display FIK number on the invoice"
+msgstr "Vis FIK på faktura"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_fik_settings_display_name
+msgid "Display Name"
+msgstr "Vist navn"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_res_company_fik_id
+msgid "FI Contract number"
+msgstr "FI Nummer"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_res_config_settings_fik_id
+msgid "FI Contract number *"
+msgstr "FI Nummer *"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_res_config_settings_fik_settings
+msgid "FIK line configuration *"
+msgstr "FIK Indstillinger *"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_res_company_fik_enabled
+msgid "Fik Enabled"
+msgstr "Fik slået til"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_account_invoice_fik_line
+msgid "Fik Line"
+msgstr "Fik Linje"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_res_company_fik_settings
+msgid "Fik Settings"
+msgstr "Fik Indstillinger"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_fik_settings_id
+msgid "ID"
+msgstr "Id"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model,name:l10n_dk_reports_fik.model_account_invoice
+msgid "Invoice"
+msgstr "Faktura"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_fik_settings_invoice_number_length
+msgid "Invoice Number Length"
+msgstr "Invoice Number Length"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_res_company_invoice_prefix
+msgid "Invoice prefix"
+msgstr "Faktura præfiks"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_res_config_settings_invoice_prefix
+msgid "Invoice prefix *"
+msgstr "Faktura præfiks *"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_fik_settings___last_update
+msgid "Last Modified on"
+msgstr "Sidst ændret den"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_fik_settings_write_uid
+msgid "Last Updated by"
+msgstr "Sidst opdateret af"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_fik_settings_write_date
+msgid "Last Updated on"
+msgstr "Sidst opdateret den"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_fik_settings_name
+msgid "Name"
+msgstr "Navn"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model.fields,field_description:l10n_dk_reports_fik.field_res_config_settings_fik_enabled
+msgid "Show FIK on invoice *"
+msgstr "Vis FIK på faktura *"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model,name:l10n_dk_reports_fik.model_fik_settings
+msgid "fik.settings"
+msgstr "fik.settings"
+
+#. module: l10n_dk_reports_fik
+#: model:ir.model,name:l10n_dk_reports_fik.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"

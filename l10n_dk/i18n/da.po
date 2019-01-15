@@ -1,0 +1,212 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_dk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-05 07:30+0000\n"
+"PO-Revision-Date: 2017-10-05 09:32+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: da\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. module: l10n_dk
+#: model:ir.ui.view,arch_db:l10n_dk.forms_view_partner_form
+msgid "City"
+msgstr "By"
+
+#. module: l10n_dk
+#: model:ir.ui.menu,name:l10n_dk.account_reports_dk_statements_menu
+msgid "Danish Statements"
+msgstr "Danish Statements"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_quarter_purchase
+#: model:account.tax,description:l10n_dk.1_tax_quarter_sale
+#: model:account.tax,name:l10n_dk.1_tax_quarter_purchase
+#: model:account.tax,name:l10n_dk.1_tax_quarter_sale
+msgid "Delvis moms (1/4)"
+msgstr "Delvis moms (1/4)"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_eu_purchase_service
+msgid "EU Erhvervelselsmoms Ydelser"
+msgstr "EU Erhvervelselsmoms Ydelser"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_eu_purchase
+#: model:account.tax,description:l10n_dk.1_tax_eu_purchase_in
+#: model:account.tax,name:l10n_dk.1_tax_eu_purchase
+#: model:account.tax,name:l10n_dk.1_tax_eu_purchase_in
+msgid "EU Erhvervelsesmoms"
+msgstr "EU Erhvervelsesmoms"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_eu_purchase_service_in
+#: model:account.tax,name:l10n_dk.1_tax_eu_purchase_service
+#: model:account.tax,name:l10n_dk.1_tax_eu_purchase_service_in
+msgid "EU Erhvervelsesmoms Ydelser"
+msgstr "EU Erhvervelsesmoms Ydelser"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_eu_sale
+#: model:account.tax,name:l10n_dk.1_tax_eu_sale
+msgid "EU Salgsmoms"
+msgstr "EU Salgsmoms"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_eu_sale_service
+#: model:account.tax,name:l10n_dk.1_tax_eu_sale_service
+msgid "EU Salgsmoms Ydelser"
+msgstr "EU Salgsmoms Ydelser"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_export
+#: model:account.tax,name:l10n_dk.1_tax_export
+msgid "Eksport udenfor EU"
+msgstr "Eksport udenfor EU"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_import
+#: model:account.tax,name:l10n_dk.1_tax_import
+msgid "Import udenfor EU"
+msgstr "Import udenfor EU"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_no_purchase
+#: model:account.tax,name:l10n_dk.1_tax_no_purchase
+msgid "Ingen købsmoms"
+msgstr "Ingen købsmoms"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_no_sale
+#: model:account.tax,name:l10n_dk.1_tax_no_sale
+msgid "Ingen salgsmoms"
+msgstr "Ingen salgsmoms"
+
+#. module: l10n_dk
+#: model:ir.ui.view,arch_db:l10n_dk.slc_invoice_form_view
+msgid "Internal Remarks"
+msgstr "Internt notat"
+
+#. module: l10n_dk
+#: model:ir.model.fields,field_description:l10n_dk.field_account_invoice_internal_remarks
+msgid "Internal remarks"
+msgstr "Internt notat"
+
+#. module: l10n_dk
+#: model:ir.model,name:l10n_dk.model_account_invoice
+msgid "Invoice"
+msgstr "Faktura"
+
+#. module: l10n_dk
+#: model:ir.ui.view,arch_db:l10n_dk.slc_invoice_form_view
+msgid "Invoice Remarks"
+msgstr "Bemærkninger på faktura"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_rc_purchase
+#: model:account.tax,description:l10n_dk.1_tax_rc_purchase_in
+#: model:account.tax,name:l10n_dk.1_tax_rc_purchase
+#: model:account.tax,name:l10n_dk.1_tax_rc_purchase_in
+msgid "Køb med omvendt betalingspligt"
+msgstr "Køb med omvendt betalingspligt"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_purchase
+#: model:account.tax,name:l10n_dk.1_tax_purchase
+msgid "Købsmoms"
+msgstr "Købsmoms"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_purchase_services
+msgid "Købsmoms Ydelser"
+msgstr "Købsmoms Ydelser"
+
+#. module: l10n_dk
+#: model:account.tax,name:l10n_dk.1_tax_purchase_services
+msgid "Købsmoms Ydesler"
+msgstr "Købsmoms Ydesler"
+
+#. module: l10n_dk
+#: model:ir.actions.client,name:l10n_dk.action_client_l10n_dk_menu
+msgid "Open Account Dashboard Menu"
+msgstr "Open Account Dashboard Menu"
+
+#. module: l10n_dk
+#: model:ir.ui.view,arch_db:l10n_dk.slc_invoice_form_view
+msgid "Order Notes"
+msgstr "Ordrenotat"
+
+#. module: l10n_dk
+#: model:account.tax.group,name:l10n_dk.tax_group_reverse
+msgid "REVERSE CHARGE"
+msgstr "Omvendt Betalingspligt"
+
+#. module: l10n_dk
+#: model:ir.model.fields,field_description:l10n_dk.field_account_invoice_remarks
+msgid "Remarks"
+msgstr "Bemærkninger"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_eu_purchase_rc
+#: model:account.tax,name:l10n_dk.1_tax_eu_purchase_rc
+msgid "Reverse Charge EU Erhvervelsesmoms"
+msgstr "Reverse Charge EU Erhvervelsesmoms"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_eu_purchase_service_rc
+#: model:account.tax,name:l10n_dk.1_tax_eu_purchase_service_rc
+msgid "Reverse Charge EU Erhvervelsesmoms Ydelser"
+msgstr "Reverse Charge EU Erhvervelsesmoms Ydelser"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_rc_purchase_rc
+#: model:account.tax,name:l10n_dk.1_tax_rc_purchase_rc
+msgid "Reverse Charge Køb med omvendt betalingspligt"
+msgstr "Reverse Charge Køb med omvendt betalingspligt"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_rc_sale
+#: model:account.tax,name:l10n_dk.1_tax_rc_sale
+msgid "Salg med omvendt betalingspligt"
+msgstr "Salg med omvendt betalingspligt"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_sale
+#: model:account.tax,name:l10n_dk.1_tax_sale
+msgid "Salgsmoms"
+msgstr "Salgsmoms"
+
+#. module: l10n_dk
+#: model:account.tax,description:l10n_dk.1_tax_sale_services
+#: model:account.tax,name:l10n_dk.1_tax_sale_services
+msgid "Salgsmoms Ydelser"
+msgstr "Salgsmoms Ydelser"
+
+#. module: l10n_dk
+#: model:account.tax.group,name:l10n_dk.tax_group_0
+msgid "TAX 0%"
+msgstr "Moms 0%"
+
+#. module: l10n_dk
+#: model:account.tax.group,name:l10n_dk.tax_group_25
+msgid "TAX 25%"
+msgstr "Moms 25%"
+
+#. module: l10n_dk
+#: model:account.tax.group,name:l10n_dk.tax_group_5
+msgid "TAX 5%"
+msgstr "Delvis Moms 1/4"
+
+#. module: l10n_dk
+#: model:ir.ui.view,arch_db:l10n_dk.forms_view_partner_form
+msgid "ZIP"
+msgstr "post nr."

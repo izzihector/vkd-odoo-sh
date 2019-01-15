@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="vkdata" name="vkdata Styles" inherit_id="website.assets_frontend">
+            <xpath expr="link[last()]" position="after">
+                <link href="/theme_vkdata_with_mega_menu/static/less/styles.less" rel="stylesheet" type="text/less"/>
+                <link href="/theme_vkdata_with_mega_menu/static/less/snippet_basic.less" rel="stylesheet" type="text/less"/>
+                <link href="/theme_vkdata_with_mega_menu/static/less/media.less" rel="stylesheet" type="text/less"/>
+                <link href="/theme_vkdata_with_mega_menu/static/less/snippet_home.less" rel="stylesheet" type="text/less"/>
+                <link href="/theme_vkdata_with_mega_menu/static/less/snippet_footer.less" rel="stylesheet" type="text/less"/>
+                <link href="/theme_vkdata_with_mega_menu/static/less/snippet_sn_inner.less" rel="stylesheet" type="text/less"/>
+				<link href="/theme_vkdata_with_mega_menu/static/less/navbar_template.less" rel="stylesheet" type="text/less"/>
+				<link href="/theme_vkdata_with_mega_menu/static/less/snippet_module.less" rel="stylesheet" type="text/less"/>
+				<script src="/theme_vkdata_with_mega_menu/static/js/navbarfix.js" type="text/javascript" />
+            </xpath>
+        </template>
+    </data>
+</odoo>

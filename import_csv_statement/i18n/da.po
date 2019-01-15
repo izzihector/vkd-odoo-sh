@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* import_csv_statement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-20 10:34+0000\n"
+"PO-Revision-Date: 2017-10-20 10:34+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: import_csv_statement
+#: model:ir.model.fields,field_description:import_csv_statement.field_res_bank_amount_header
+msgid "Amount header"
+msgstr "Kolonne til beløb"
+
+#. module: import_csv_statement
+#: model:ir.model,name:import_csv_statement.model_res_bank
+#: model:ir.model.fields,field_description:import_csv_statement.field_import_csv_statement_journal_id
+msgid "Bank"
+msgstr "Bank"
+
+#. module: import_csv_statement
+#: model:ir.ui.view,arch_db:import_csv_statement.view_res_bank_form_inherit_account_custom
+msgid "CSV Configuration"
+msgstr "CSV Konfiguration"
+
+#. module: import_csv_statement
+#: model:ir.model.fields,field_description:import_csv_statement.field_res_bank_date_format
+msgid "Date format"
+msgstr "Datoformat"
+
+#. module: import_csv_statement
+#: model:ir.model.fields,field_description:import_csv_statement.field_res_bank_date_header
+msgid "Date header"
+msgstr "Kolonne til bogføringsdato"
+
+#. module: import_csv_statement
+#: model:ir.model.fields,help:import_csv_statement.field_res_bank_amount_header
+msgid "Give the column name of the field containing the posting amount in the base currency"
+msgstr "Indtast overskriften på den kolonne der indeholder beløbet"
+
+#. module: import_csv_statement
+#: model:ir.model.fields,help:import_csv_statement.field_res_bank_date_header
+msgid "Give the column name of the field containing the posting date"
+msgstr "Indtast overskriften på den kolonne der indeholder bogføringsdatoen"
+
+#. module: import_csv_statement
+#: model:ir.model.fields,help:import_csv_statement.field_res_bank_refernce_header
+msgid "Give the column name of the field containing the posting text/label"
+msgstr "Indtast overskriften på den kolonne der indeholder posteringsteksten"
+
+#. module: import_csv_statement
+#: model:ir.model.fields,help:import_csv_statement.field_res_bank_date_format
+msgid "Here you can input the date format used for the posting date. For Danske Bank type 1, for Nordea type 2, for BankData (Kreditbanken, Jyske Bank etc.) type 3. For anyone else, please specify the full date format"
+msgstr "Her skal du angive datoformatet for bogføringsdatoen. For Danske Bank tast 1, for Nordea tast 2, for BankData (Kreditbanken, Jyske Bank etc.) tast 3. For alle andre indtast det fulde dato format"
+
+#. module: import_csv_statement
+#: model:ir.ui.view,arch_db:import_csv_statement.journal_dashboard_view_inherit_account_custom
+msgid "Import CSV"
+msgstr "Import CSV"
+
+#. module: import_csv_statement
+#: model:ir.actions.act_window,name:import_csv_statement.action_import_csv_statement
+#: model:ir.ui.view,arch_db:import_csv_statement.view_import_csv_statement
+msgid "Import csv statement"
+msgstr "Importér CSV Kontoudtog"
+
+#. module: import_csv_statement
+#: code:addons/import_csv_statement/wizard/import_csv_statement.py:96
+#, python-format
+msgid "Only csv file format is supported to import file"
+msgstr "Det er kun CSV filer der er understøttet til import"
+
+#. module: import_csv_statement
+#: code:addons/import_csv_statement/wizard/import_csv_statement.py:54
+#, python-format
+msgid "Please Configure CSV Headers In Bank View."
+msgstr "Udfyld venligst CSV konfigurationen i opsætningen til banken."
+
+#. module: import_csv_statement
+#: model:ir.model.fields,field_description:import_csv_statement.field_import_csv_statement_data_file
+msgid "Price File"
+msgstr "Pris fil"
+
+#. module: import_csv_statement
+#: model:ir.model.fields,field_description:import_csv_statement.field_res_bank_refernce_header
+msgid "Refernce header"
+msgstr "Kolonne til posteringstekst"
+
+#. module: import_csv_statement
+#: model:ir.ui.view,arch_db:import_csv_statement.view_import_csv_statement
+msgid "Select a csv file to import"
+msgstr "Vælg den CSV-fil du ønsker at importere"
+
+#. module: import_csv_statement
+#: model:ir.model.fields,field_description:import_csv_statement.field_res_bank_skip_last_line
+msgid "Skip last line of the file"
+msgstr "Overspring sidste linje i filen"
+
+#. module: import_csv_statement
+#: code:addons/import_csv_statement/wizard/import_csv_statement.py:90
+#, python-format
+msgid "Something wrong in csv file please check your csv file."
+msgstr "Der er noget galt med CSV-filen. Kontroller venligst at filen er korrekt."
+
+#. module: import_csv_statement
+#: model:ir.model.fields,field_description:import_csv_statement.field_import_csv_statement_statement_id
+msgid "Statement"
+msgstr "Kontoudtog"
+
+#. module: import_csv_statement
+#: model:ir.ui.view,arch_db:import_csv_statement.view_import_csv_statement
+msgid "_Import"
+msgstr "_Importere"
+
+#. module: import_csv_statement
+#: model:ir.model,name:import_csv_statement.model_import_csv_statement
+msgid "import.csv.statement"
+msgstr "import.csv.statement"
+

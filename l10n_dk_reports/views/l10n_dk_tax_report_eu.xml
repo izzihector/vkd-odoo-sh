@@ -1,0 +1,112 @@
+<odoo>
+<data>
+
+    <!-- The ir.actions.report record that binds it all together -->
+    <report
+    id="print_l10n_dk_tax_report_eu"
+    string="Tax Reports"
+    model="account.tax.report.dk.eu"
+    report_type="qweb-pdf"
+    file="l10n_dk_reports.l10n_dk_tax_report_eu"
+    name="l10n_dk_reports.l10n_dk_tax_report_eu"
+    />
+
+    <!-- Form view of the wizard.
+         Needs to inherit from account.account_common_report_view in
+         order to work correctly. As far as i have figured out, the 'print' button
+         of this view, triggers the _print_report method of the defined model -->
+    <record id="l10n_dk_tax_report_eu_wizard" model="ir.ui.view">
+        <field name="name">Tax Report</field>
+        <field name="model">account.tax.report.dk.eu</field>
+        <field name="inherit_id" ref="account.account_common_report_view"/>
+        <field name="arch" type="xml">
+            <data>
+                <field name="journal_ids" position="replace"/>
+                <field name="target_move" position="replace"/>
+                <xpath expr="//field[@name='date_from']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <!-- Action for opening the wizard -->
+    <record id="action_l10n_dk_tax_report_eu" model="ir.actions.act_window">
+        <field name="name">Tax Report</field>
+        <field name="res_model">account.tax.report.dk.eu</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_dk_tax_report_eu_wizard"/>
+        <field name="context">{}</field>
+        <field name="target">new</field>
+    </record>
+    
+    <!-- Menu item for triggering the action that opens the wizard -->
+    <menuitem id="l10n_dk_tax_report_EU_print_menu" name="Print EU Tax Report" parent="l10n_dk.account_reports_dk_statements_menu" action="action_l10n_dk_tax_report_eu"/>
+
+    <!-- The actual printed report -->
+    <template id="l10n_dk_tax_report_eu">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <h2>EU-Salg Uden Moms</h2>
+                    <div class="row" style="padding-bottom: 15px;">
+                        <div class="col-xs-6 col-xs-offset-6">
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <th width="60%">CVR-nummer</th>
+                                        <td width="10%"></td>
+                                        <td width="30%"><t t-if="company.vat" t-esc="company.vat"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Periode</th>
+                                        <td>Fra:</td>
+                                        <td><span t-esc="datetime.datetime.strptime(data['date_from'], '%Y-%m-%d').strftime('%d-%m-%Y')"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td>Til:</td>
+                                        <td><span t-esc="datetime.datetime.strptime(data['date_to'], '%Y-%m-%d').strftime('%d-%m-%Y')"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row zero_min_height">
+                        <div class="col-xs-12">
+                            <div style="border-bottom: 1px solid black;"></div>
+                        </div>
+                    </div>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Country</th>
+                                <th>VAT nbr.</th>
+                                <th style="text-align: right;">EU Sale</th>
+                                <th style="text-align: right;">EU Sale Service</th>
+                                <th style="text-align: right;">Triangle Trade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="lines" t-as="i">
+                                <td><t t-esc="lines[i]['name']"/></td>
+                                <td><t t-esc="lines[i]['country']"/></td>
+                                <td><t t-esc="lines[i]['vat']"/></td>
+                                <td style="text-align: right;"><t t-esc="lines[i]['eu_sale']"/></td>
+                                <td style="text-align: right;"><t t-esc="lines[i]['eu_sale_service']"/></td>
+                                <td style="text-align: right;"><t t-esc="lines[i]['triangle_trade']"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</data>
+</odoo>

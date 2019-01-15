@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="footer_override" model="ir.ui.view">
+            <field name="name">footer.override</field>
+            <field name="model">website</field>
+            <field name="inherit_id" ref="website.view_website_form"/>
+            <field name="arch" type="xml">
+                <field name="default_lang_id" position="after">
+                    <field name="website_footer"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

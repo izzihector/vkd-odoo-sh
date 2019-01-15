@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+	<template id="disable_db_layout_footer" inherit_id="web.login_layout">
+		<xpath expr="//div[@class='text-center']/t/a[@href='/web/database/manager']" position="replace">
+		</xpath>
+	</template>
+ </data>
+</odoo>

@@ -1,0 +1,145 @@
+<odoo>
+    <data>
+        <record id="odoo_instance_view_form" model="ir.ui.view">
+            <field name="name">instance.form.view</field>
+            <field name="model">odoo.instance</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Instance">
+                    <header>
+                        <!-- <button name="remote_deploy" type="object" string="Deploy" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <button name="shut_down_instance" type="object" string="Shutdown" attrs="{'invisible': [('state', '!=', 'active')]}"/>
+                        <button name="update_instance" type="object" string="Update" attrs="{'invisible': [('state', '!=', 'active')]}"/>
+                        <button name="start_instance" type="object" string="Start" attrs="{'invisible': [('state', '!=', 'suspend')]}"/>
+                        <button name="terminate_instance" type="object" string="Terminate" attrs="{'invisible': ['|', ('state', '=', 'draft'),('state', '=', 'queue')]}"/> -->
+                        <field name="state" widget="statusbar" clickable="True"/>
+                    </header>
+                    <sheet>
+                        <h2><field name="display_name" widget="url"/></h2>
+                        <group>
+                            <group string="Basic Information">
+                                <field name="domain_name"/>
+                                <field name="primary_domain_name"/>
+                                <field name="description"/>
+                                <field name="purpose"/>
+                                <field name="customer_id"/>
+                                <field name="subscription_id" domain="[('partner_id.parent_id', '=', customer_id)]"/>
+                                <field name="request_user_id"/>
+                            </group>
+                            <group string="Odoo Information">
+                                <field name="odoo_admin_username"/>
+                                <field name="odoo_admin_password"/>
+                                <field name="language_id"/>
+                                <field name="version" widget="radio"/>
+                                <field name="date_update"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Technical Information" groups="base.group_no_one">
+                                <field name="server_id"/>
+                                <field name="linux_username"/>
+                                <field name="linux_password"/>
+                                <field name="port_number"/>
+                                <field name="longpolling_port_number"/>
+                                <field name="ssl_certificate"/>
+                                <field name="database_admin_password" attrs="{'required': [('linux_password', '!=', False)]}"/>
+                                <!-- <field name="state"/> -->
+                            </group>
+                            <group></group>
+                        </group>
+                        <notebook>
+                            <page string="Options">
+                                <group>
+                                    <group>
+                                        <field name="community"/>
+                                        <field name="demo_data"/>
+                                        <!-- <field name="odoo_package"/> -->
+                                        <!-- <field name="enable_website"/> -->
+                                    </group>
+                                    <!-- <group attrs="{'invisible':[('enable_website', '=', False)]}">
+                                        <field name="enable_webshop"/>
+                                        <field name="website_theme"/>
+                                    </group> -->
+                                </group>
+                            </page>
+                            <page string="Domains">
+                                <group>
+                                    <field name="domain_ids" nolabel="1">
+                                        <tree string="Domains" editable="bottom">
+                                            <field name="name" widget="url"/>
+                                            <field name="description"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="odoo_instance_view_tree" model="ir.ui.view">
+            <field name="name">instance.tree.view</field>
+            <field name="model">odoo.instance</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Instances">
+                    <field name="display_name" widget="url"/>
+                    <field name="odoo_admin_username"/>
+                    <field name="odoo_admin_password"/>
+                    <field name="linux_username"/>
+                    <field name="linux_password"/>
+                    <field name="port_number"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_open_instance_tree" model="ir.actions.act_window">
+            <field name="name">Instances</field>
+            <field name="res_model">odoo.instance</field>
+            <field name="view_type">form</field>
+            <field name="context">{'search_default_group_purpose': 1}</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="odoo_instance_search_filter" model="ir.ui.view">
+            <field name="name">odoo.instance.search.filter</field>
+            <field name="model">odoo.instance</field>
+            <field name="arch" type="xml">
+                <search string="Search Instance">
+                    <field name="domain_name"/>
+                    <field name="customer_id"/>
+                    <filter string="Action Needed" name="to_delete" icon="terp-personal" domain="['|',('state', '=', 'delete'),('state', '=', 'to_suspend')]"/>
+                    <filter string="Draft" name="draft" icon="terp-personal" domain="[('state', '=', 'draft')]"/>
+                    <filter string="Customer" name="group_customer" icon="terp-project" context="{'group_by': 'customer_id'}"/>
+                    <filter string="Purpose" name="group_purpose" icon="terp-project" context="{'group_by': 'purpose'}"/>
+                </search>
+            </field>
+        </record>
+        <record id="action_set_to_delete" model="ir.actions.server">
+            <field name="name">Mark To Delete</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="automatic_odoo_deployment.model_odoo_instance"/>
+            <field name="state">code</field>
+            <field name="code">
+                if records:
+                    action = records.action_set_to_delete()
+            </field>
+            <field name="binding_model_id" ref="automatic_odoo_deployment.model_odoo_instance"/>
+        </record>
+        <record id="action_set_to_suspend" model="ir.actions.server">
+            <field name="name">Mark To Suspend</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="automatic_odoo_deployment.model_odoo_instance"/>
+            <field name="state">code</field>
+            <field name="code">
+                if records:
+                    action = records.action_set_to_suspend()
+            </field>
+            <field name="binding_model_id" ref="automatic_odoo_deployment.model_odoo_instance"/>
+        </record>
+        <menuitem name="Instances" id="automatic_odoo_deployment.instance_menu" parent="automatic_odoo_deployment.menu_root" action="action_open_instance_tree" sequence="1"/>
+    </data>
+</odoo>

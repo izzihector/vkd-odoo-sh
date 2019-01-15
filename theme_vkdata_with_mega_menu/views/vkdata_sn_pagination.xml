@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_pagination" name="Pagination">
+            <section class="snippet_pagination">
+                <div class="block_pagination">
+                    <div class="container">
+                        <div class="col-md-6 col-md-offset-3">
+                            <ul class="wrapper-pagination">
+                                <a href="#"><li class="block pagi-num-01">1</li></a>
+                                <a href="#"><li class="block pagi-num-02">2</li></a>
+                                <a href="#"><li class="block pagi-num-03">3</li></a>
+                                <a href="#"><li class="block pagi-num-04">4</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_block_pagination" inherit_id="website.snippets" name="Pagination">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_pagination"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_016.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

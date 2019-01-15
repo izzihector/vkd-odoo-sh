@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_block_d" name="Inner Block - Container">
+            <section class="snippet_innerBlock_d">
+                <div class="block_d">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 wrapper-left">
+                                
+                            </div>
+                            <div class="col-md-6 wrapper-right">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_block_d" inherit_id="website.snippets" name="Inner Block - Container">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_block_d"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_013.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

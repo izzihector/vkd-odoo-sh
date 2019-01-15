@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+		<template id="evolution360_tracker_pixel" inherit_id="website.layout" name="Evolution360 Tracker Pixel">
+
+			<xpath expr="//meta[@name='description']" position="before">
+				<t t-if="website.evolution360_tracker_pixel">	
+					<script t-attf-src="https://app.evolution360.com/JavascriptClick/Tracker?cid={{website.evolution360_tracker_pixel}}"></script>
+				</t>
+			</xpath>
+
+		</template>
+
+  </data>
+</odoo>

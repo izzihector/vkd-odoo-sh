@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="journal_dashboard_view_inherit_account_custom" model="ir.ui.view">
+            <field name="name">account.journal.dashboard.kanban.csv.inherit</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr='//div[@name="bank_journal_cta"]' position='inside'>
+                    <br t-if="dashboard.number_to_reconcile == 0"/><button t-if="dashboard.number_to_reconcile == 0" type="object" name="import_csv_statement" class="btn btn-primary btn-sm">Import CSV</button>
+                    <a t-if="dashboard.number_to_reconcile > 0" type="object" name="import_csv_statement" class="oe_inline">Import CSV</a>
+                </xpath>
+                <xpath expr='//div[@name="bank_journal_default_cta"]' position='inside'>
+                    <button t-if="dashboard.bank_statements_source == 'file_import' &amp;&amp; dashboard.number_to_reconcile == 0" type="object" name="import_csv_statement" class="btn btn-primary btn-sm">Import CSV</button>
+                    <a t-if="dashboard.bank_statements_source == 'file_import' &amp;&amp; dashboard.number_to_reconcile > 0" type="object" name="import_csv_statement" class="oe_inline">Import CSV</a>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_res_bank_form_inherit_account_custom" model="ir.ui.view">
+            <field name="name">res.bank.form.csv.inherit</field>
+            <field name="model">res.bank</field>
+            <field name="inherit_id" ref="base.view_res_bank_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//group[last()]' position='inside'>
+                    <group string="CSV Configuration" name="csv_headers">
+                        <field name='date_header'/>
+                        <field name='amount_header'/>
+                        <field name='foreign_amount_header'/>
+                        <field name='foreign_currency_header'/>
+                        <field name='refernce_header'/>
+                        <field name='date_format'/>
+                        <field name='skip_last_line'/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

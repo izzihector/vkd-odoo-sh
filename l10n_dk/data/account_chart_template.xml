@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<menuitem id="account_reports_dk_statements_menu" name="Danish Statements" parent="account.menu_finance_reports" sequence="3" groups="account.group_account_user"/>
+	<data noupdate="1">
+		<record id="action_client_l10n_dk_menu" model="ir.actions.client">
+			<field name="name">Open Account Dashboard Menu</field>
+			<field name="tag">reload</field>
+			<field name="params" eval="{'menu_id': ref('account.menu_board_journal_1')}"/>
+		</record>
+		<record id="base.open_menu" model="ir.actions.todo">
+			<field name="action_id" ref="action_client_l10n_dk_menu" />
+			<field name="state">open</field>
+		</record>
+	</data>
+	<data noupdate="0">
+		<record id="transfer_account" model="account.account.template">
+			<field name="name">Transfer Account</field>
+			<field name="code">5830</field>
+			<field name="reconcile" eval="True"/>
+			<field name="user_type_id" ref="account.data_account_type_current_assets"/>
+		</record>
+
+		<!--Chart of Accounts template -->
+		<record id="l10n_dk" model="account.chart.template">
+			<field name="name">Danish Tax and Account Chart Template</field>
+			<field name="bank_account_code_prefix">582</field>
+			<field name="cash_account_code_prefix">581</field>
+			<field name="code_digits">4</field>
+			<!--<field name="default_sale_tax_id" ref="tax_sale"/>
+			<field name="default_purchase_tax_id" ref="tax_purchase"/> -->
+			<field name="currency_id" ref="base.DKK"/>
+			<field name="transfer_account_id" ref="transfer_account"/>
+		</record>
+
+		<record id="transfer_account" model="account.account.template">
+			<field name="chart_template_id" ref="l10n_dk"/>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_trim" name="Trin">
+            <section class="snippet_trim">
+                <div class="main_block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="wrapper-trin-block">
+                                    <div class="wrapper-top text-center">
+                                        <h4>Trin 1</h4>
+                                    </div>
+                                    <div class="wrapper-icon">
+                                        <div class="fa-icons text-center">
+                                            <a class="btn btn-primary">
+                                                <i class="fa fa-camera-retro fa-lg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-header text-center">
+                                        <h4>Add text here</h4>
+                                    </div>
+                                    <div class="wrapper-para text-center">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ullamcorper neque. Ut pulvinar id magna id tincidunt. Integer congue lacus at massa iaculis, in mollis tortor mollis. Morbi sem purus, mattis non sodales quis, hendrerit ut massa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="wrapper-trin-block">
+                                    <div class="wrapper-top text-center">
+                                        <h4>Trin 1</h4>
+                                    </div>
+                                    <div class="wrapper-icon text-center">
+                                        <div class="fa-icons">
+                                            <a class="btn btn-primary">
+                                                <i class="fa fa-camera-retro fa-lg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-header text-center">
+                                        <h4>Add text here</h4>
+                                    </div>
+                                    <div class="wrapper-para text-center">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ullamcorper neque. Ut pulvinar id magna id tincidunt. Integer congue lacus at massa iaculis, in mollis tortor mollis. Morbi sem purus, mattis non sodales quis, hendrerit ut massa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="wrapper-trin-block">
+                                    <div class="wrapper-top text-center">
+                                        <h4>Trin 1</h4>
+                                    </div>
+                                    <div class="wrapper-icon-black text-center">
+                                        <div class="fa-icons">
+                                            <a class="btn btn-primary">
+                                                <i class="fa fa-camera-retro fa-lg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-header text-center">
+                                        <h4>Add text here</h4>
+                                    </div>
+                                    <div class="wrapper-para text-center">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ullamcorper neque. Ut pulvinar id magna id tincidunt. Integer congue lacus at massa iaculis, in mollis tortor mollis. Morbi sem purus, mattis non sodales quis, hendrerit ut massa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="wrapper-trin-block">
+                                    <div class="wrapper-top text-center">
+                                        <h4>Trin 1</h4>
+                                    </div>
+                                    <div class="wrapper-icon-black text-center">
+                                        <div class="fa-icons">
+                                            <a class="btn btn-primary">
+                                                <i class="fa fa-camera-retro fa-lg"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-header text-center">
+                                        <h4>Add text here</h4>
+                                    </div>
+                                    <div class="wrapper-para text-center">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ullamcorper neque. Ut pulvinar id magna id tincidunt. Integer congue lacus at massa iaculis, in mollis tortor mollis. Morbi sem purus, mattis non sodales quis, hendrerit ut massa.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_trim" inherit_id="website.snippets" name="Trin">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_trim"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_003.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

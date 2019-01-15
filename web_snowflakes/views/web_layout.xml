@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="swnowflakes_layout" inherit_id="web.layout">
+        <xpath expr="//script" position="after">
+            <script src="/web/static/lib/jquery/jquery.js"></script>
+            <script>
+                $(document).ready( function(){
+                    $.fn.snow();
+                });
+            </script>
+        </xpath>
+    </template>
+
+</odoo>

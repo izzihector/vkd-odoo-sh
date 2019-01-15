@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="view_set_odometer_rading" model="ir.ui.view">
+            <field name="name">set_odometer_rading</field>
+            <field name="model">set.odometer.rading</field>
+            <field name="arch" type="xml">
+              <form string="view_set_odometer_rading">
+          		<!--  <p class="oe_grey">
+                        Here we can update odometer reading in sotersat....
+                  </p> -->
+              	  <group>
+              	  		<group>
+             	  				<field name="set_reading" widget="integer" />
+             	  				<field name="last_update_date"/>
+              	  		</group>
+              	  </group> 
+                  <footer>
+                  		<button name="set_last_reading" type="object" string="Set Reading" class="oe_highlight"/>
+                  	    or  
+                      <button string="Close" class="oe_link" special="cancel" />
+                  </footer>
+            </form>
+            </field>
+        </record>
+        
+        <record id="action_set_odometer_rading" model="ir.actions.act_window">
+            <field name="name">Set Odometer Reading</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">set.odometer.rading</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_set_odometer_rading"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

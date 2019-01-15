@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="forms_view_partner_form" model="ir.ui.view">
+			<field name="name">l10n_dk.forms_view_partner_form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='state_id']" position="attributes">
+					<attribute name="class">hidden</attribute>
+				</xpath>
+				<xpath expr="//field[@name='zip']" position="replace">
+
+				</xpath>
+				<xpath expr="//field[@name='city']" position="replace">
+
+				</xpath>
+				<xpath expr="//field[@name='street2']" position="after">
+					<field name="zip" placeholder="ZIP" class="o_address_zip" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+					<br/>
+	                <field name="city" placeholder="City" class="o_address_city" attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}"/>
+				</xpath>
+			</field>
+		</record>
+		<record id="forms_view_res_partner_filter" model="ir.ui.view">
+			<field name="name">l10n_dk.forms_view_res_partner_filter</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_res_partner_filter"/>
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='user_id']" position="after">
+					<field name="ref"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

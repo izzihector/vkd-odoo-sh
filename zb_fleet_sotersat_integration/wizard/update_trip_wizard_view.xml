@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="view_update_trip_wizard" model="ir.ui.view">
+            <field name="name">update_trip_wizard</field>
+            <field name="model">update.trip.wizard</field>
+            <field name="arch" type="xml">
+              <form string="update_trip_wizard">
+              	  <group>
+              	  	<field name="operation" required="1"/>
+              	  	<field name="vehicle_id" attrs="{'invisible': [('operation','!=','selected_vehicle')]}" />
+              	  </group>
+                  <footer>
+                  	<button type="object" name="update_trips" string="Update..." class="oe_highlight"/>
+                  	<button string="Close" class="oe_link" special="cancel" />
+                  </footer>
+            </form>
+            </field>
+        </record>
+        
+        <record id="action_update_trip_wizard" model="ir.actions.act_window">
+            <field name="name">Synchronize Trips</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">update.trip.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_update_trip_wizard"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

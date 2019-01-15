@@ -1,0 +1,115 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_contract_vkdata
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-17 11:29+0000\n"
+"PO-Revision-Date: 2017-03-17 12:30+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: da\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,help:sale_contract_vkdata.field_sale_subscription_offset_specific_subscription
+msgid "Enable this if you don't want to use the template offset settings, and set the offset for this specific subscription. If this field is disabled, the offset settings from the template will be used instead."
+msgstr "Aktiver dette hvis du ikke vil bruge forskydelses indstillingerne fra template, og i stedet vil indstille forskydelsen for dette specifikke abonnement. Hvis feltet ikke er slået til, bliver forskydelses indstillingerne fra template brugt i stedet."
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_internal_remarks
+msgid "Internal remarks"
+msgstr "Internt notat"
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_new_invoice_date
+msgid "New invoice date"
+msgstr "Ny faktura dato"
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_new_invoice_generation_date
+msgid "New invoice generation date"
+msgstr "Ny faktura genererings dato"
+
+#. module: sale_contract_vkdata
+#: model:ir.ui.view,arch_db:sale_contract_vkdata.vkdata_sale_subscription_view_form
+msgid "Next subscription period start"
+msgstr "Næste abonnements periode start"
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,help:sale_contract_vkdata.field_sale_subscription_offset_invoice_date
+#: model:ir.model.fields,help:sale_contract_vkdata.field_sale_subscription_template_offset_invoice_date
+msgid "Number of days before or after the subscription period start the invoice date should be set. Can be a positive or a negative number."
+msgstr "Antal dage før eller efter abonnement periodens start faktura datoen skal sættes. Kan være et positivt eller et negativt tal."
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,help:sale_contract_vkdata.field_sale_subscription_offset_invoice_generation
+#: model:ir.model.fields,help:sale_contract_vkdata.field_sale_subscription_template_offset_invoice_generation
+msgid "Number of days before or after the subscription period start the invoice should be generated. Can be a positive or a negative number."
+msgstr "Antal dage før eller efter abonnement periodens start fakturaen skal genereres. Kan være et positivt eller et negativt tal."
+
+#. module: sale_contract_vkdata
+#: model:ir.ui.view,arch_db:sale_contract_vkdata.vkdata_sale_subscription_template_view_form
+#: model:ir.ui.view,arch_db:sale_contract_vkdata.vkdata_sale_subscription_view_form
+msgid "Offset invoice"
+msgstr "Forskyd faktura"
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_offset_invoice_date
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_template_offset_invoice_date
+msgid "Offset invoice date"
+msgstr "Forskyd faktura dato"
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_offset_specific_subscription
+msgid "Offset invoice for this subscription"
+msgstr "Forskyd faktura for dette abonnement"
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_offset_invoice_generation
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_template_offset_invoice_generation
+msgid "Offset invoice generation"
+msgstr "Forskyd faktura generering"
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_template_offset_invoice
+msgid "Offset invoices"
+msgstr "Forskyd faktura"
+
+#. module: sale_contract_vkdata
+#: model:ir.model,name:sale_contract_vkdata.model_sale_subscription
+msgid "Sale Subscription"
+msgstr "Abonnement"
+
+#. module: sale_contract_vkdata
+#: model:ir.model,name:sale_contract_vkdata.model_sale_subscription_template
+msgid "Sale Subscription Template"
+msgstr "Abonnement Template"
+
+#. module: sale_contract_vkdata
+#: model:ir.ui.view,arch_db:sale_contract_vkdata.vkdata_sale_subscription_view_form
+msgid "The next subscription period will start on this date"
+msgstr "Den næste abonnements periode begynder denne dato"
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,help:sale_contract_vkdata.field_sale_subscription_template_offset_invoice
+msgid "This will enable settings that allow you to offset the invoice generation date and the date displayed on the invoice."
+msgstr "Tillader dig at forskyde datoen hvorpå fakturaen bliver generet og den viste dato på fakturaen."
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_template_use_subscription_period_end
+#: model:ir.model.fields,field_description:sale_contract_vkdata.field_sale_subscription_use_subscription_period_end
+msgid "Use subscription period end"
+msgstr "Brug periode slut dato"
+
+#. module: sale_contract_vkdata
+#: model:ir.model.fields,help:sale_contract_vkdata.field_sale_subscription_template_use_subscription_period_end
+#: model:ir.model.fields,help:sale_contract_vkdata.field_sale_subscription_use_subscription_period_end
+msgid "Use the subscription period end date, instead of the start date, to calculate the offset. This can be useful when the customer should be billed after the service has been provided."
+msgstr "Brug abonnement periodens slut dato, i stedet for start datoen, til at beregne faktura forskydelse. Det kan være nyttigt hvis et produkt eller en ydelse er bagudbetalt."

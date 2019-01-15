@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+	<!--<template id="website_multiple_logo_vkdata.assets_frontend" inherit_id="website.assets_frontend" name="Add Custom CSS">
+    	<xpath expr="." position="inside">	
+			<link rel="stylesheet" href="/website_multiple_logo_vkdata/static/src/css/style.css" />			
+	    </xpath>
+	</template>-->
+
+
+    <template id="extednded_header" inherit_id="website.layout" name="Extended Header">
+
+		<xpath expr="//div[@id='wrapwrap']/header/div" position="before">
+            <div class="wrapper-vkdata-top">
+                    <div class="container">
+                        <div class="col-md-7 hidden-xs hidden-sm"></div>
+                        <div class="col-xs-6 col-md-2">
+                            <div class="wrapper-icon hidden-xs">icon</div>
+                            <div class="wrapper-text">7373 8888</div>
+                        </div>
+                        <div class="col-xs-6 col-md-2">
+                            <div class="wrapper-icon hidden-xs">icon</div>
+                            <div class="wrapper-text">info@vkdata.dk</div>
+                        </div>
+                        <div class="col-md-1 hidden-xs">
+                            <div class="wrapper-social">
+                                <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                                <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+            </div>      
+        </xpath>
+
+    </template>
+
+  </data>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_intro" name="VK Data Intro">
+            <section class="snippet_introduction">
+                <div class="main_intro">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 wrapper-left">
+                                <h1>ODOO ØKONOMISYSTEM</h1>
+                                <div class="wrapper-texts">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    <br/>Nullam interdum enim id odio lobortis, 
+                                    <br/>vitae commodo magna vulputate.</p>
+                                </div>
+                                <div class="wrapper-link">
+                                    <a href="#">Bestil Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_intro" inherit_id="website.snippets" name="VK Data Intro">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_intro"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_001.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

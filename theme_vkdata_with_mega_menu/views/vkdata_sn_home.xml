@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_home" name="Home Block A">
+            <section class="sinppet_home">
+                <div class="container group_home">
+                    <div class="row">
+                        <div class="group-introduction">
+                            <div class="col-xs-12 col-sm-7 col-md-8 region-left text-left">
+                                <p>Vi har et dedikeret team af medarbejdere klar til at hjælpe dig og din virksomhed - både med køb og support. Du slipper for IT-bekymringerne, og vi optimerer og udvikler din forretning. Kompetent rådgivning er et centralt udgangspunkt for alle vores løsninger.</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-5 col-md-4 hidden-xs region-right">
+                                <div class="group_support">
+                                    <a href="#">
+                                        <div class="link-icon"><i class="fa fa-headphones fa-3x"></i></div>
+                                        <div class="link-group text-center">START online support</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_home" inherit_id="website.snippets" name="Main Introduction">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_home"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_001.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

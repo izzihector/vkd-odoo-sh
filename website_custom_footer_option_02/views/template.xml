@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<template id="footer_custom_option_02" inherit_id="website.layout">
+            <xpath expr="//div[@id='footer']" position="attributes">
+                <attribute name="style">display:none;</attribute>
+            </xpath>
+            <xpath expr="//div[@id='wrapwrap']/footer/div" position="before">
+                <div class="footer-wrapper">
+                    <div class="container">
+                        <div class="footer-wrapper-top">
+                            <div class="row">
+                                <div class="container">
+                                    <div class="col-md-2">
+                                        Add image here
+                                    </div>
+                                    <div class="col-md-5 col-md-offset-5">
+                                        <div class="footer-region">
+                                            Visit us on social networks:
+                                            <a href="#"><i class="fa fa-facebook-f fa-lg"></i></a>
+                                            <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-container">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="ni-footer">
+                                        <div class="ni-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis rhoncus rutrum. Donec at blandit felis, ut mollis tortor. Etiam in nibh vitae ante dictum tincidunt. </div>
+                                    </div>
+                                    <div class="ni-footer">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-pinterest-p fa-lg"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram fa-lg"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <h2>Contact Us</h2>
+                                    <div class="ni-footer">
+                                        <div class="ni-icon"><i class="fa fa-map-marker fa-lg"></i></div>
+                                        <div class="ni-text">Curabitur non nulla sit amet,<br/>Nisl Tempus Convallis,<br/>Sri Lanka</div>
+                                    </div>
+                                    <div class="ni-footer">
+                                        <div class="ni-icon"><i class="fa fa-phone fa-lg"></i></div>
+                                        <div class="ni-text ni-contact">+94 112 1234567</div>
+                                    </div>
+                                    <div class="ni-footer">
+                                        <div class="ni-icon"><i class="fa fa-envelope-o fa-lg"></i></div>
+                                        <div class="ni-text"><a href="mailto:info@example.com">info@example.com</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h2>Information</h2>
+                                            <ul>
+                                                <li><a href="#">Careers</a></li>
+                                                <li><a href="#">Invester Relation</a></li>
+                                                <li><a href="#">Press Releases</a></li>
+                                                <li><a href="#">Shop with Points</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h2>Customer Care</h2>
+                                            <ul>
+                                                <li><a href="#">Returns</a></li>
+                                                <li><a href="#">Shopping Info</a></li>
+                                                <li><a href="#">Gift Cards</a></li>
+                                                <li><a href="#">Size Guide</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h2>Subscribe for newsletter</h2>
+                                            <div class="input-group js_subscribe hidden" data-list-id="1" data-subscribe="off">
+                                                <input type="email" name="email" class="js_subscribe_email form-control" placeholder="your email..."/>
+                                                <span class="input-group-btn">
+                                                    <a href="#" class="btn btn-primary js_subscribe_btn o_default_snippet_text">Subscribe</a>
+                                                    <a href="#" class="btn btn-success js_subscribed_btn hidden o_default_snippet_text" disabled="disabled">Thanks</a>
+                                                </span>
+                                                <div class="alert alert-success hidden o_default_snippet_text">Thanks for your subscription!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>	
+        <template id="footer_copyright" inherit_id="website.layout_footer_copyright">
+            <xpath expr="//div[@class='container mt16 mb8']" position="attributes">
+                <attribute name="style">display:none;</attribute>
+            </xpath>
+<!--
+            <xpath expr="//div[@class='container mt16 mb8']" position="before">
+                <div class="footer-btm">
+                    <div class="container">
+                        <div class="footer-bottom">
+                            Ⓒ Custom footer - Option 02.
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+-->
+        </template>
+  </data>
+</odoo>

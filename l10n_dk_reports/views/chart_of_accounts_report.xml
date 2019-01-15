@@ -1,0 +1,47 @@
+<data>
+    <odoo>
+        <template id="report_chart_of_accounts">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <h2>Chart of Accounts</h2>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr class="text-center">
+                                    <th>Code</th>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Default Taxes</th>
+                                    <th>Tags</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="docs" t-as="coa">
+                                    <td><span t-field="coa.code"/></td>
+                                    <td><span t-field="coa.name"/></td>
+                                    <td><span t-field="coa.user_type_id"/></td>
+                                    <td>
+                                        <t t-foreach="coa.tax_ids" t-as="tax">
+                                            <span t-field="tax.name"/>
+                                            <t t-if="len(coa.tax_ids) > 1">
+                                                <br/>
+                                            </t>
+                                        </t>
+                                    </td>
+                                    <td>
+                                        <t t-foreach="coa.tag_ids" t-as="tag">
+                                            <span t-field="tag.name"/>
+                                            <t t-if="len(coa.tag_ids) > 1">
+                                                <br/>
+                                            </t>
+                                        </t>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </odoo>
+</data>

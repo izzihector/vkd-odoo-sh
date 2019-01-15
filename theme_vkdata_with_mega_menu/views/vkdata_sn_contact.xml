@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_contact" name="Contact - Home Page">
+            <section class="snippet_contact">
+                <div class="group-contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 group-contact">
+                                <div class="contact-container">
+                                    <div class="wrapper-left">
+                                        <i class="fa fa-map-marker fa-2x"></i>
+                                    </div>
+                                    <div class="wrapper-right">
+                                        <p><snippet class="region-name">visit us</snippet></p>
+                                        <p>add sub text here</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 group-contact">
+                                <div class="contact-container">
+                                    <div class="wrapper-left">
+                                        <i class="fa fa-envelope fa-2x"></i>
+                                    </div>
+                                    <div class="wrapper-right">
+                                        <p><snippet class="region-name">Email Us</snippet></p>
+                                        <p>add sub text here</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 group-contact">
+                                <div class="contact-container">
+                                    <div class="wrapper-left">
+                                        <i class="fa fa-phone fa-2x"></i>
+                                    </div>
+                                    <div class="wrapper-right">
+                                        <p><snippet class="region-name">Call Us</snippet></p>
+                                        <p>add sub text here</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_contact" inherit_id="website.snippets" name="Contact - Home Page">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_contact"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_006.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

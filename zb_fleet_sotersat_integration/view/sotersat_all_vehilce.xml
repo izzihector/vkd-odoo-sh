@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<record id="sotersat_all_vehilce_form_view" model="ir.ui.view">
+          <field name="name">sotersat_all_vehilce Form </field>
+          <field name="model">sotersat.all.vehilce</field>
+          <field name="arch" type="xml">
+          		<form>
+       				<field name="iframe_url" widget='iframe' colspan="4" width="1200" readonly="1" height="750" />
+       			</form>
+       		</field>
+  		</record>
+  		
+  		<record id="view_sotersat_all_vehilce_tree" model="ir.ui.view">
+            <field name="name">sotersat_all_vehilce</field>
+            <field name="model">sotersat.all.vehilce</field>
+            <field name="arch" type="xml">
+                <tree string="sotersat_all_vehilce">
+                	<field name="iframe_url"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record id="action_sotersat_all_vehilce" model="ir.actions.act_window">
+            <field name="name">Track Fleet</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sotersat.all.vehilce</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+    </data>
+</odoo>

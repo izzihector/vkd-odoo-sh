@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_footer" name="Snippet Footer">
+            <section class="footer-border">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-2">
+                            <h3 class="footer-header">Add header</h3>
+                            <ul class="footer-menu">
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-2">
+                            <h3 class="footer-header">Add header</h3>
+                            <ul class="footer-menu">
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-2">
+                            <h3 class="footer-header">Add header</h3>
+                            <ul class="footer-menu">
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-2">
+                            <h3 class="footer-header">Add header</h3>
+                            <ul class="footer-menu">
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-2">
+                            <h3 class="footer-header">Add header</h3>
+                            <ul class="footer-menu">
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                                <li class="footer-item"><i class="fa fa-angle-right"></i><a href="">Add menu item here</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-2">
+                            <h3 class="footer-header">Add header</h3>
+                            <p>Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+                            <div class="footer-vkdata">
+                                <img src="/theme_vkdata/static/images/vkdata_footer_logo.png"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="backtotop" data-oe-id="643" data-oe-xpath="/data/xpath[3]/div" data-oe-model="ir.ui.view" data-oe-field="arch">
+                    <div class="container backtotop-arrow">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="arrow">
+                                    <a href="#" class="back-to-top" style="display: block;">
+                                        <i class="fa fa-arrow-circle-up"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+        </template>
+		<template id="vkdata_footer" inherit_id="website.snippets" name="VK Data - Footer">
+			<xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+				<t t-snippet="theme_vkdata_with_mega_menu.snippet_footer"
+					t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/website_home_a.png"/>
+			</xpath>
+		</template>
+    </data>
+</odoo>

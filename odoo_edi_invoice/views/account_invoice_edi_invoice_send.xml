@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_invoice_form_edi_invoice_send" model="ir.ui.view">
+            <field name="name">view_invoice_form_edi_invoice_send</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//button[@name='action_invoice_sent']" position="after">
+                    <button name="action_invoice_send_edi" type="object" string="Send by EDI" attrs="{'invisible':['|','|',('sent','=',True), ('state', 'not in', ('open','paid')), ('is_edi', '=', False)]}" class="oe_highlight" groups="base.group_user"/>
+                    <button name="action_invoice_send_edi" type="object" string="Send by EDI" attrs="{'invisible':['|','|',('sent','=',False), ('state', 'not in', ('open','paid')), ('is_edi', '=', False)]}" groups="base.group_user"/>
+                </xpath>
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="gln"/>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="before">
+                    <field name="is_edi" invisible="1"/>
+                    <field name="odoo_edi_send_enable" invisible="1"/>
+                    <h4 class="alert alert-warning" attrs="{'invisible': ['|',('odoo_edi_send_enable', '=', False), ('sent', '=', True)]}">The invoice can be sent using EDI</h4>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

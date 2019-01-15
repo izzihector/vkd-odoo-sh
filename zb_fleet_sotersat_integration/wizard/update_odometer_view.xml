@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="view_update_odometer" model="ir.ui.view">
+            <field name="name">update_odometer</field>
+            <field name="model">update.odometer</field>
+            <field name="arch" type="xml">
+              <form string="rep_completed_wiz">
+          		 <p >
+                        This will update all available vehicle's odometer reading from Sotersat
+                  </p>
+              	   
+                  <footer>
+                  	  <button name="update" class="oe_highlight"
+                                         string="Update" type="object" />
+                                         or
+                      <button string="Close" class="oe_link" special="cancel" />
+                  </footer>
+            </form>
+            </field>
+        </record>
+        
+        <record id="action_update_odometer" model="ir.actions.act_window">
+            <field name="name">Synchronize Odometers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">update.odometer</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_update_odometer"/>
+            <field name="target">new</field>
+        </record>
+      <!--   <act_window
+        id="action_update_odometer_in_more"
+        name="Read/Synch"
+        res_model="update.odometer"
+        src_model="fleet.vehicle.odometer"
+        view_mode="form"
+        multi="True"
+        key2="client_action_multi"
+        target="new"
+        /> -->
+    </data>
+</odoo>

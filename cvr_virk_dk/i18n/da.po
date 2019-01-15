@@ -1,0 +1,205 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cvr_virk_dk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-09 09:49+0000\n"
+"PO-Revision-Date: 2017-10-09 11:50+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: da\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_ad_protected
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_partner_ad_protected
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_users_ad_protected
+msgid "Ad Protected"
+msgstr "Reklamebeskyttet"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_city
+msgid "City"
+msgstr "By"
+
+#. module: cvr_virk_dk
+#: model:ir.model,name:cvr_virk_dk.model_res_company
+msgid "Companies"
+msgstr "Virksomheder"
+
+#. module: cvr_virk_dk
+#: model:ir.ui.view,arch_db:cvr_virk_dk.cvr_partner_line_form
+msgid "Confirm Changes"
+msgstr "Bekræft Ændringer"
+
+#. module: cvr_virk_dk
+#: model:ir.ui.view,arch_db:cvr_virk_dk.cvr_partner_line_form
+msgid "Confirm Selection"
+msgstr "Bekræft Ændringer"
+
+#. module: cvr_virk_dk
+#: model:ir.ui.view,arch_db:cvr_virk_dk.cvr_partner_line_form
+msgid "Confirming the changes will overwrite all current fields on the selected partner!"
+msgstr "Hvis du bekræfter ændringerne vil det overskrive alle nuværende felter på den valgte partner!"
+
+#. module: cvr_virk_dk
+#: model:ir.model,name:cvr_virk_dk.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: cvr_virk_dk
+#: model:ir.ui.view,arch_db:cvr_virk_dk.vkdata_view_partner_form
+msgid "Create from CVR"
+msgstr "Opret fra CVR"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_create_uid
+msgid "Created by"
+msgstr "Oprettet af"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_create_date
+msgid "Created on"
+msgstr "Oprettet den"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_display_name
+msgid "Display Name"
+msgstr "Vist navn"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_email
+msgid "Email"
+msgstr "E-mail"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,help:cvr_virk_dk.field_res_partner_search_field
+#: model:ir.model.fields,help:cvr_virk_dk.field_res_users_search_field
+msgid "Enter the CVR-number or the name of the contact you want to create. This will search the CVR database, and automatically fill the relevant fields."
+msgstr "Indtast CVR-nummeret eller navnet på den kontakt du vil oprette. Dette vil søge i CVR databasen, og automatisk udfylde de relevante felter."
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_fax
+msgid "Fax"
+msgstr "Fax"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_id
+msgid "ID"
+msgstr "Id"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,help:cvr_virk_dk.field_partner_line_ad_protected
+#: model:ir.model.fields,help:cvr_virk_dk.field_res_partner_ad_protected
+#: model:ir.model.fields,help:cvr_virk_dk.field_res_users_ad_protected
+msgid "It is illegal to send unsolicited ads to this partner"
+msgstr "Det er ulovligt at sende uopfordrede reklamer til denne partner"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line___last_update
+msgid "Last Modified on"
+msgstr "Sidst ændret den"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_write_uid
+msgid "Last Updated by"
+msgstr "Sidst opdateret af"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_write_date
+msgid "Last Updated on"
+msgstr "Sidst opdateret den"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_name
+msgid "Name"
+msgstr "Navn"
+
+#. module: cvr_virk_dk
+#: model:ir.ui.view,arch_db:cvr_virk_dk.cvr_partner_line_form
+msgid "Once confirmed, the changes cannot be discarded!"
+msgstr "Hvis du bekræfter, kan du ikke kassere ændringerne!"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_partner
+msgid "Partner"
+msgstr "Kontakt"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_phone
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: cvr_virk_dk
+#: model:ir.ui.view,arch_db:cvr_virk_dk.vkdata_view_partner_form
+msgid "Search"
+msgstr "Søg"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_partner_search_results
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_users_search_results
+#: model:ir.ui.view,arch_db:cvr_virk_dk.vkdata_view_partner_form
+msgid "Search Results"
+msgstr "Søgeresultater"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_partner_search_field
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_users_search_field
+msgid "Search field"
+msgstr "Søgefelt"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_street
+msgid "Street"
+msgstr "Vej"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_street2
+msgid "Street2"
+msgstr "Gade2"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_vat
+msgid "TIN"
+msgstr "CVR"
+
+#. module: cvr_virk_dk
+#: model:ir.ui.view,arch_db:cvr_virk_dk.view_company_form
+msgid "Virk.dk"
+msgstr "Virk.dk"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_company_virk_pass
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_partner_virk_pass
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_users_virk_pass
+msgid "Virk.dk Password"
+msgstr "Virk.dk Adgangskode"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_company_virk_user
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_partner_virk_user
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_res_users_virk_user
+msgid "Virk.dk Username"
+msgstr "Virk.dk Brugernavn"
+
+#. module: cvr_virk_dk
+#: model:ir.ui.view,arch_db:cvr_virk_dk.cvr_partner_line_form
+msgid "Warning!"
+msgstr "Advarsel!"
+
+#. module: cvr_virk_dk
+#: model:ir.model.fields,field_description:cvr_virk_dk.field_partner_line_zip
+msgid "Zip"
+msgstr "Postnummer"
+
+#. module: cvr_virk_dk
+#: model:ir.model,name:cvr_virk_dk.model_partner_line
+msgid "partner.line"
+msgstr "partner.line"

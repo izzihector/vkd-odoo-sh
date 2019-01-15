@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_branchelosninger" name="Branchelosninger">
+            <section class="snippet_branchelosninger">
+                <div class="main_intro">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <h2>Brancheløsninger</h2>
+                                <p>Lorem ipsum dolor sit amLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper eget massa ac rhoncus. Sed eget diam gravida, condimentum </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="wrapper-block region-a">
+                                    <p>Produktionsvirksomheder</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="wrapper-block region-b">
+                                    <p>Produktionsvirksomheder</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="wrapper-block region-c">
+                                    <p>Produktionsvirksomheder</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="wrapper-block region-d">
+                                    <p>Produktionsvirksomheder</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_branchelosninger" inherit_id="website.snippets" name="Branchelosninger">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_branchelosninger"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_002.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

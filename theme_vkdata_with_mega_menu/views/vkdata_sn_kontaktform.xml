@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_kontaktform" name="Kontaktform - Home Page">
+            <section class="snippet_kontaktform">
+                <div class="group-kontaktform">
+                    <div class="client-image text-center">
+                        <div class="container">
+                            <p>Ønsker du at vi ringer dig op - så klik på knappen og vi vil kontakte dig snarest muligt.</p>
+                            <a href="/page/tilmeld-dig-nyhedsbre">Ring mig op</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_kontaktform" inherit_id="website.snippets" name="Home Region -E-">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_kontaktform"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_005.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

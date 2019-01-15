@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="odoo_deployment" model="ir.module.category">
+            <field name="name">Deployment</field>
+            <field name="description">User access for Odoo instance deployment and creation</field>
+            <field name="sequence">10</field>
+        </record>
+        <record id="group_instance_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="automatic_odoo_deployment.odoo_deployment"/>
+        </record>
+        <record id="group_instance_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="implied_ids" eval="[(4, ref('automatic_odoo_deployment.group_instance_user'))]"/>
+            <field name="category_id" ref="automatic_odoo_deployment.odoo_deployment"/>
+        </record>
+        <record id="group_instance_admin" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="implied_ids" eval="[(4, ref('automatic_odoo_deployment.group_instance_manager'))]"/>
+            <field name="category_id" ref="automatic_odoo_deployment.odoo_deployment"/>
+        </record>
+    </data>
+</odoo>

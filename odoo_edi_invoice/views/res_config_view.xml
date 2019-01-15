@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inherited_account_config_settings" model="ir.ui.view">
+            <field name="name">EDI account settings</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='bank_cash']" position="after">
+                    <h2>EDI</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="default_bank_journal_id"/>
+                                <field name="default_bank_journal_id"/>
+                                <label for="default_odoo_edi_method"/>
+                                <field name="default_odoo_edi_method"/>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record id="inherited_view_general_configuration_invoicing" model="ir.ui.view">
+            <field name="name">EDI account settings</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="odoo_edi.inherited_view_general_configuration" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='odoo_edi_invoice']" position="replace"></xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+<data>
+    <odoo>
+        <report
+            id="print_chart_of_accounts"
+            string="Chart of Accounts"
+            model="account.account"
+            report_type="qweb-pdf"
+            file="l10n_dk_reports.report_chart_of_accounts"
+            name="l10n_dk_reports.report_chart_of_accounts"
+            menu="True"
+        />
+    </odoo>
+</data>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sotersat_trip_details,sotersat.trip.details,model_sotersat_trip_details,base.group_user,1,1,1,0
+access_ir_config_parameter_fleet_usr,ir_config_parameter_fleet,base.model_ir_config_parameter,fleet.fleet_group_user,1,0,0,0
+access_ir_config_parameter_fleet_mngr,ir_config_parameter_fleet,base.model_ir_config_parameter,fleet.fleet_group_manager,1,0,0,0

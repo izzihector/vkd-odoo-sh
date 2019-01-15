@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <record id="cvr_partner_line_form" model="ir.ui.view">
+            <field name="name">cvr.partner.line.tree</field>
+            <field name="model">partner.line</field>
+            <field name="arch" type="xml">
+                <form string="Confirm Selection">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="street"/>
+                                <field name="street2"/>
+                                <field name="zip"/>
+                                <field name="city"/>
+                            </group>
+                            <group>
+                                <field name="phone"/>
+                                <field name="fax"/>
+                                <field name="email"/>
+                                <field name="vat"/>
+                                <field name="ad_protected"/>
+                            </group>
+                        </group>
+                        <h2 style="text-align: center;">Warning!</h2>
+                        <h2 style="text-align: center;">Confirming the changes will overwrite all current fields on the selected partner!</h2>
+                        <h2 style="text-align: center;">Once confirmed, the changes cannot be discarded!</h2>
+                        <group>
+                            <button string="Confirm Changes" name="confirm_selection" type="object" class="oe_highlight" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

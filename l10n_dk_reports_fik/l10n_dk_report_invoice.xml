@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_invoice_fik_dk" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@class='clearfix']" position="after">
+			<div class="row mt16">
+		        <div class="col-xs-4 pull-right" t-if="o.fik_line" style="padding-right: 0px;">
+		            <strong>Online payment ID</strong><br/>
+		            <span t-field="o.fik_line"/>
+		        </div>
+			</div>
+        </xpath>
+    </template>
+</odoo>

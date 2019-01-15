@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="tracking_code">
+			<field name="name">Lead Forensics Tracking Code</field>
+			<field name="model">website</field>
+			<field name="inherit_id" ref='website.view_website_form' />
+			<field name="arch" type='xml'>
+	
+				<field name="google_analytics_key" position='after'>
+					<field name="lead_forensics_tracking_code" />
+				</field>
+
+			</field>
+		</record> 
+
+	</data>
+</odoo>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_newsletter" name="Newsletter">
+            <section class="snippet_newsletter">
+                <div class="main_intro">
+                    <div class="container">
+                        <div class="col-md-12 text-center">
+                            <div class="wrapper-block">
+                                <div class="block-top">
+                                    <h2>Add text here</h2>
+                                </div>
+                                <div class="block-bottom">
+                                    <div class="col-md-6 col-md-offset-3">
+                                        <div class="input-group js_subscribe hidden" data-list-id="1" data-subscribe="off">
+                                            <input type="email" name="email" class="js_subscribe_email form-control" placeholder="your email..."/>
+                                            <span class="input-group-btn">
+                                                <a href="#" class="btn btn-primary js_subscribe_btn o_default_snippet_text">Subscribe</a>
+                                                <a href="#" class="btn btn-success js_subscribed_btn hidden o_default_snippet_text" disabled="disabled">Thanks</a>
+                                            </span>
+                                            <div class="alert alert-success hidden o_default_snippet_text">Thanks for your subscription!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_newsletter" inherit_id="website.snippets" name="Newsletter">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_newsletter"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_014.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

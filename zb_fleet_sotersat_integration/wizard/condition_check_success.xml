@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="view_conditino_check_sucess" model="ir.ui.view">
+            <field name="name">conditino_check_sucess</field>
+            <field name="model">conditino.check.sucess</field>
+            <field name="arch" type="xml">
+              <form string="rep_completed_wiz">
+          		 <p >
+                       Updated....
+                  </p>
+              	   
+                  <footer>
+                  	<button string="Close" class="oe_link" special="cancel" />
+                  </footer>
+            </form>
+            </field>
+        </record>
+        
+        <record id="action_conditino_check_sucess" model="ir.actions.act_window">
+            <field name="name">Success...</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">conditino.check.sucess</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_conditino_check_sucess"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

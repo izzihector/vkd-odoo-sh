@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_top_nisus" name="Contacts - Nisus">
+            <section class="snippet_contact">
+                <div class="col-md-10 col-sm-6 region-center text-right">
+                    <ul class="wrapper-main">
+                        <li class="region-list list-phone"><i class="fa fa-phone-square fa-lg"></i>73738888</li>
+                        <li class="region-list list-mail"><i class="fa fa-envelope fa-lg"></i>info@vkdata.dk</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-6 hidden-xs text-right region-social-networks">
+                    <ul class="social">
+                        <li class="region-social social-a"><a href="#"><i class="fa fa-facebook-official fa-2x"></i></a></li>
+                        <li class="region-social social-b"><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                        <li class="region-social social-c"><a href="#"><i class="fa fa-instagram fa-2x"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_contact" inherit_id="website.snippets" name="Contacts - Nisus">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_top_nisus"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_006.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

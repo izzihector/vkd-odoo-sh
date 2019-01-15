@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo_edi_endpoint,access_odoo_edi_endpoint,odoo_edi.model_odoo_edi_endpoint,account.group_account_user,1,0,0,0
+access_odoo_edi_uom,access_odoo_edi_uom,odoo_edi.model_odoo_edi_product_uom,account.group_account_user,1,0,0,0
+access_odoo_edi_document,access_odoo_edi_document,odoo_edi.model_odoo_edi_document,account.group_account_user,1,1,1,0

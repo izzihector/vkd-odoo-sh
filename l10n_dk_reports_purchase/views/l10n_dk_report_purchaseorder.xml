@@ -1,0 +1,71 @@
+<odoo>
+<data>
+    <template id="l10n_dk_report_purchaseorder" inherit_id="purchase.report_purchaseorder_document">
+        <!-- Removes minutes and seconds from dates -->
+        <xpath expr="//div[@class='row mt32 mb32']/div[@class='col-xs-3'][3]/p" position="replace">
+            <p t-field="o.date_order" t-field-options="{'format': 'dd-MM-yyyy'}"/>
+        </xpath>
+        <xpath expr="//table/tbody/tr/td[@class='text-center']/span" position="replace">
+            <span t-field="line.date_planned" t-field-options="{'format': 'dd-MM-yyyy'}"/>
+        </xpath>
+
+        <!-- Remove trailing zeros from quantities -->
+        <xpath expr="//span[@t-field='line.product_qty']" position="after">
+            <span t-if="not float(line.product_qty) % 1 == 0" t-esc="str(float(line.product_qty) * 1).replace('.', ',')"/>
+        </xpath>
+        <xpath expr="//span[@t-field='line.product_qty']" position="attributes">
+            <attribute name="t-if">float(line.product_qty) % 1 == 0</attribute>
+            <attribute name="t-field"></attribute>
+            <attribute name="t-esc">int(line.product_qty)</attribute>
+        </xpath>
+
+        <!-- Replace order date with planned delivery date -->
+        <xpath expr="//div[@t-if='o.date_order']/strong" position="replace">
+            <strong>Planned Date</strong>
+        </xpath>
+        <xpath expr="//div[@t-if='o.date_order']" position="attributes">
+            <attribute name="t-if">o.date_planned</attribute>
+        </xpath>
+        <xpath expr="//p[@t-field='o.date_order']" position="attributes">
+            <attribute name="t-field">o.date_planned</attribute>
+        </xpath>
+
+        <!-- Remove tax from order lines -->
+        <xpath expr="//table[@class='table table-condensed']/thead/tr/th[3]" position="replace"/>
+        <xpath expr="//table[@class='table table-condensed']/thead/tr/th[2]" position="replace"/>
+        <xpath expr="//table[@class='table table-condensed']/tbody/tr/td[2]" position="replace"/>
+
+        <!-- Change font-size for product name -->
+        <xpath expr="//table[@class='table table-condensed']/tbody" position="attributes">
+            <attribute name="style">font-size: 12px;</attribute>
+        </xpath>
+        <xpath expr="//table[@class='table table-condensed']/tbody/tr/td[@class='text-center']" position="replace"/>
+    </template>
+    <template id="l10n_dk_report_purchasequotation" inherit_id="purchase.report_purchasequotation_document">
+        <!-- Remove minutes and seconds from date -->
+        <xpath expr="//table/tbody/tr/td[@class='text-center']/span" position="replace">
+            <span t-field="order_line.date_planned" t-field-options="{'format': 'dd-MM-yyyy'}"/> 
+        </xpath>
+
+        <!-- Remove trailing zeros from quantities -->
+        <xpath expr="//span[@t-field='order_line.product_qty']" position="after">
+            <span t-if="not float(order_line.product_qty) % 1 == 0" t-esc="str(float(order_line.product_qty) * 1).replace('.', ',')"/>
+        </xpath>
+        <xpath expr="//span[@t-field='order_line.product_qty']" position="attributes">
+            <attribute name="t-if">float(order_line.product_qty) % 1 == 0</attribute>
+            <attribute name="t-field"></attribute>
+            <attribute name="t-esc">int(order_line.product_qty)</attribute>
+        </xpath>
+
+        <!-- Change name of text -->
+        <xpath expr="//table[@class='table table-condensed']/thead/tr/th[2]/strong" position="replace">
+            <strong>Desired Date</strong>
+        </xpath>
+
+        <!-- Change font-size for product name -->
+        <xpath expr="//table[@class='table table-condensed']/tbody" position="attributes">
+            <attribute name="style">font-size: 12px;</attribute>
+        </xpath>
+    </template>
+</data>
+</odoo>

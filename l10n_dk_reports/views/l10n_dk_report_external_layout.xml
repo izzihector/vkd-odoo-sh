@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="l10n_dk_external_layout" inherit_id="web.external_layout_standard">
+            <!-- Find the company logo and alter the size -->
+            <xpath expr="//div[@class='header']" position="replace">
+                <div class="header">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % to_text(company.logo)" style="max-height: 60px;"/>
+                        </div>
+                        <div class="col-xs-6 text-right" style="margin-top:0px; margin-bottom:0px; font-size: 11px;" name="company_address">
+                                <span t-field="company.street"/><br/>
+                                <span><span t-field="company.zip"/> <span t-field="company.city"/></span><br/>
+                                <span t-if="company.vat">TIN: <span t-field="company.vat"/></span><br/>
+                                <span t-if="company.phone">Phone: <span t-field="company.phone"/></span><br/>
+                                <span t-if="company.email"><span t-field="company.email"/></span><br/>
+                                <span t-if="company.website"><span t-field="company.website"/></span><br/>
+                        </div>
+                    </div>
+                    <div class="row zero_min_height">
+                    <div class="col-xs-12">
+                            <div style="border-bottom: 1px solid black;"></div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//div[@class='footer']" position="replace">
+                <div class="footer" style="font-size: 11px;">
+                    <div class="text-center" style="border-top: 1px solid black;">
+                        <ul class="list-inline">
+                            <li t-if="company.phone">Phone: <span t-field="company.phone"/></li>
+
+                            <!-- <li t-if="company.fax and company.phone">&amp;bull;</li>
+                            <li t-if="company.fax">Fax: <span t-field="company.fax"/></li> -->
+
+                            <li t-if="company.email">Email: <span t-field="company.email"/></li>
+
+                            <li t-if="company.website">Website: <span t-field="company.website"/></li>
+                        </ul>
+
+                        <!-- <ul t-if="not company.custom_footer" class="list-inline" name="financial_infos">
+                            <li t-if="company.vat">TIN: <span t-field="company.vat"/></li>
+                            <t t-if="not company.custom_footer">
+                                <t t-set="is_first" t-value="True"/>
+                                <t t-foreach="company.bank_journal_ids" t-as="journal">
+                                    <t t-set="bank_acc" t-value="journal.bank_account_id"/>
+                                    <t t-if="journal.display_on_footer">
+                                        <li t-if="(is_first and company.vat) or (not is_first)">&amp;bull;</li>
+                                        <li><span t-esc="bank_acc.bank_name"/><t t-if="bank_acc.bank_bic"> (<span t-esc="bank_acc.bank_bic"/>)</t>: <span t-esc="bank_acc.acc_number"/></li>
+                                        <t t-set="is_first" t-value="False"/>
+                                    </t>
+                                </t>
+                            </t>
+                        </ul> -->
+
+                        <div name="financial_infos">
+                            <span t-field="company.report_footer"/>
+                        </div>
+
+                        <ul class="list-inline pull-right">
+                            <li>Page:</li>
+                            <li><span class="page"/></li>
+                            <li>/</li>
+                            <li><span class="topage"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

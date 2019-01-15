@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="view_odometer_update_sucess" model="ir.ui.view">
+            <field name="name">odometer.update.sucess</field>
+            <field name="model">odometer.update.sucess</field>
+            <field name="arch" type="xml">
+              <form string="rep_completed_wiz">
+          		 <p >
+                        Odometer reading updated successfully for all vehicles.
+                  </p>
+              	   
+                  <footer>
+                      <button string="Close" class="oe_link" special="cancel" />
+                  </footer>
+            </form>
+            </field>
+        </record>
+        
+        <record id="action_odometer_update_sucess" model="ir.actions.act_window">
+            <field name="name">Updated...</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">odometer.update.sucess</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_odometer_update_sucess"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

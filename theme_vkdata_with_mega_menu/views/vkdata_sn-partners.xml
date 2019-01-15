@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <template id="snippet_partners" name="Partners - Home">
+            <section class="snippet_partners">
+                <div class="group-partners">
+                    <div class="client-image text-center">
+                        Add image here
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_partners" inherit_id="website.snippets" name="Home Region -D-">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata.snippet_partners"
+                   t-thumbnail="/theme_vkdata/static/snippet/website_home_a.png"/>
+            </xpath>
+        </template>
+    </data>
+</openerp>

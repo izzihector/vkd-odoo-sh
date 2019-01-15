@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+    	<record id="sotersat_trip_details_form_view" model="ir.ui.view">
+          <field name="name">sotersat_trip_details Form </field>
+          <field name="model">sotersat.trip.details</field>
+          <field name="arch" type="xml">
+	            	<form string="sotersat_trip_details" create="false" edit="false" Delete="false">
+	            		<sheet>
+	            		
+		            		<group>
+		            			<group>
+		            				<field name="vehicle_id"/>
+				                	<field name="trip_id"/>
+				                	<field name="device_id"/>
+				                	<field name="driver"/>
+				                	<field name="stop_odometer" widget="integer"/>
+				      				<field name="start_odometer" widget="integer"/>
+				                	
+		            			</group>
+		            			<group>
+		            				<!-- <field name="start_lat"/>
+				                	<field name="start_long"/>
+				                	<field name="stop_lat"/>
+				                	<field name="stop_lon"/>
+				                	<field name="start_addr"/>
+				      				<field name="stop_addr"/> -->
+				      				<field name="start_time"/>
+				                	<field name="stop_time"/>
+				                	<field name="duration"/>
+				      				<field name="dist"/>
+				      				<field name="private"/>
+				      				<field name="note"/>
+		            			</group>
+		            			
+	            			</group>
+	            			<group>
+		            			<group>
+		            				<field name="engine_idle"/>
+				                	<field name="toll"/>
+				                </group>
+				                <group>
+				                	<field name="maxspeed"/>
+				      				<field name="oneway"/>
+				      			</group>
+		            		</group>
+	            			<notebook>
+	            				<page string="Tracking">
+	            					<field name="vehicle_trip_url_fn" widget='iframe' colspan="4" width="800" height="500"/>
+	            				</page>
+	            			</notebook>
+            			</sheet>
+	            	</form>
+       		</field>
+  		</record>
+  		
+  		<record id="view_sotersat_trip_details_tree" model="ir.ui.view">
+            <field name="name">sotersat_trip_details</field>
+            <field name="model">sotersat.trip.details</field>
+            <field name="arch" type="xml">
+                <tree string="sotersat_trip_details" create="false" edit="false" delete="false">
+                	<field name="vehicle_id"/>
+                	<field name="driver"/>
+      				<field name="start_odometer" widget="integer"/>
+      				<field name="stop_odometer" widget="integer"/>
+                	<field name="start_time"/>
+                	<field name="stop_time"/>
+                	<field name="dist"/>
+                	<field name="duration"/>
+                	<field name="start_addr"/>
+      				<field name="stop_addr"/>
+      				
+      				<field name="private"/>
+      				<field name="note"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_sotersat_trip_details_search" model="ir.ui.view">
+	        <field name="name">sotersat_trip_details.search</field>
+	        <field name="model">sotersat.trip.details</field>
+	        <field name="arch" type="xml">
+	        	<search string="Sotersat trip details">
+	        		<field name="vehicle_id"/>
+                	<field name="trip_id"/>
+                	<field name="device_id"/>
+                	<field name="driver"/>
+                	<field name="stop_odometer"/>
+      				<field name="start_odometer"/>
+                	<field name="start_time"/>
+                	<field name="stop_time"/>
+                	<field name="duration"/>
+                	<field name="start_lat"/>
+                	<field name="start_long"/>
+                	<field name="stop_lat"/>
+                	<field name="stop_lon"/>
+                	<field name="start_addr"/>
+      				<field name="stop_addr"/>
+      				<field name="dist"/>
+      				<field name="private"/>
+      				<field name="note"/>
+      				<group expand="1" string="Group By">
+      					<filter string="Vehicle" name='user' context="{'group_by':'vehicle_id'}"/>
+      					<filter string="Device Id" name='user' context="{'group_by':'device_id'}"/>
+      				</group>
+	        	</search>
+	        </field>
+        </record>
+        
+        <record model="ir.ui.view" id="sotrersat_trip_search">
+        <field name="name">sotersat.trip.details.search</field>
+        <field name="model">sotersat.trip.details</field>
+        <field name="arch" type="xml">
+            <search string="trip details">
+                <field name="vehicle_id"/>
+               	<field name="driver"/>
+    			<field name="start_odometer" />
+     			<field name="stop_odometer" />
+               	<field name="start_time"/>
+               	<field name="stop_time"/>
+               	<field name="dist"/>
+               	<field name="duration"/>
+               	<field name="start_addr"/>
+     			<field name="stop_addr"/>
+     			<field name="private"/>
+     			<field name="note"/>
+     			
+     			<filter string="Engine Idle" name="engine_idle" icon="terp-personal" 
+     			 domain="[('engine_idle','=',True)]"
+     			/>
+     			<filter string="Trips With Toll" name="engine_idle" icon="terp-personal" 
+     			domain="[('toll','=',True)]" />
+     			<filter string="Oneway Trips" name="engine_idle" icon="terp-personal" 
+     			domain="[('oneway','=','yes')]"/>
+     			<group expand="0" string="Group By">
+     				<filter string="Vehicle" domain="[]" context="{'group_by':'vehicle_id'}"/>
+     				<filter string="Driver" domain="[]" context="{'group_by':'driver'}"/>
+     			</group>
+            </search>
+        </field>
+    </record>
+        <record model="ir.ui.view" id="view_tripdetails_pivot">
+            <field name="name">sotersat.trip.details.pivot</field>
+            <field name="model">sotersat.trip.details</field>
+            <field name="arch" type="xml">
+                <pivot string="Tripdetails">
+                    <field name="vehicle_id" type="row"/>
+	               	<field name="driver" type="row"/>
+                    <!-- <field name="amount_total" type="measure"/> -->
+                </pivot>
+            </field>
+        </record>
+        
+        <record id="action_sotersat_trip_details" model="ir.actions.act_window">
+            <field name="name">Trip Details</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sotersat.trip.details</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,pivot</field>
+            <field name="search_view_id" ref="sotrersat_trip_search"/>
+        </record>
+    </data>
+</odoo>

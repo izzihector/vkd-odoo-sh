@@ -1,0 +1,27 @@
+<odoo>
+<data>
+    <template id="custom_registration_attendee_details" inherit_id="website_event.registration_attendee_details">
+        <xpath expr="//div[@class='modal-body']/div/t/div[@class='row']/div[@class='col-md-4']" position="attributes">
+            <attribute name="class">col-md-3</attribute>
+        </xpath>
+        <xpath expr="//div[@class='modal-body']/div/t/div[@class='row']/div[@class='col-md-5']" position="attributes">
+            <attribute name="class">col-md-3</attribute>
+        </xpath>
+        <xpath expr="//div[@class='modal-body']/div/t/div[@class='row']/div[@class='col-md-3']/span" position="replace"/>
+        <xpath expr="//div[@class='modal-body']/div/t/div[@class='row']/div[@class='col-md-3']" position="after">
+            <div class="col-md-3"><strong>Company</strong></div>
+        </xpath>
+        <xpath expr="//div[@class='modal-body']/div/t/t/div[@class='row mb4']/div[@class='col-md-4']" position="attributes">
+            <attribute name="class">col-md-3</attribute>
+        </xpath>
+        <xpath expr="//div[@class='modal-body']/div/t/t/div[@class='row mb4']/div[@class='col-md-5']" position="attributes">
+            <attribute name="class">col-md-3</attribute>
+        </xpath>
+
+        <xpath expr="//div[@class='modal-body']/div/t/t/div[@class='row mb4']/div[@class='col-md-3']" position="after">
+            <div class="col-md-3"><input class='form-control' type='text' t-attf-name="#{counter}-company" required="This field is required"/></div>
+        </xpath>
+
+    </template>
+</data>
+</odoo>

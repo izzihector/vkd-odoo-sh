@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="oh_view_account_config_settings" model="ir.ui.view">
+            <field name="name">bankintegration account settings</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='invoicing_settings']" position="after">
+                    <h2>Bankintegration</h2>
+                    <div class="row mt16 o_settings_container" id="oh_bankintegration" groups="account.group_account_user">
+                        <div class="col-xs-12 col-md-12 o_setting_box">
+                            <label for="payment_margin" string="Payment margin" class="o_form_label col-md-3"/>
+                            <div>
+                                <field name="payment_margin" style="width:40px;" />
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-md-12 o_setting_box">
+                            <label for="autopay" string="Default autopay" class="o_form_label col-md-3"/>
+                            <div>
+                                <field name="autopay" class="oe_inline" />
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-12 o_setting_box">
+                            <label for="payment_journal" string="Default payment journal" class="o_form_label col-md-3"/>
+                            <div>
+                                <field name="payment_journal" class="oe_inline" />
+                            </div>
+                        </div>
+
+                        <!--<div class="col-xs-12 col-md-12 o_setting_box">
+                            <label for="multiple_payment_type" string="If multiple payments to same vendor on one day" class="o_form_label col-md-3"/>
+                            <div class="row">
+                                <field name="multiple_payment_type" class="oe_inline" widget="radio" />
+                            </div>
+                        </div>-->
+
+                        <div class="col-xs-12 col-md-12 o_setting_box">
+                            <label string="Statement text converting" class="o_form_label col-md-3"/>
+                            <div>
+                                <button type="action" string="Edit text conversion list" name="%(oh_bankintegration.action_bank_conversion_list)d" icon="fa-cogs" class="oe_inline oe_link"/>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>    
+            </field>    
+        </record>
+
+    </data>
+</odoo>

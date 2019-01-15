@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_onlineSupport" name="Online Support - Inner Page">
+            <section class="snippet_onlineSupport">
+                <div class="group-services">
+                    <div class="container main-group">
+                        <div class="row">
+                            <div class="col-sm-5 col-md-4 col-lg-3 col-sm-offset-7 col-md-offset-8 col-lg-offset-9">
+                                <div class="group_support_inner">
+                                    <a href="#">
+                                        <div class="link-icon"><i class="fa fa-headphones fa-3x"></i></div>
+                                        <div class="link-group text-center">START online support</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_onlineSupport" inherit_id="website.snippets" name="Online Support - Inner Page">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_onlineSupport"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_008.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

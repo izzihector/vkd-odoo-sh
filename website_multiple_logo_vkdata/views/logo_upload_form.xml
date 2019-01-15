@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="website_multiple_logo">
+			<field name="name">Multiple Logo</field>
+			<field name="model">website</field>
+			<field name="inherit_id" ref='website.view_website_form' />
+			<field name="arch" type='xml'>
+	
+				<field name="default_lang_id" position='after'>
+					<field name="logo_image" />
+					<field name="icon_image" />
+				</field>
+
+			</field>
+		</record> 	
+
+	</data>
+</odoo>
+

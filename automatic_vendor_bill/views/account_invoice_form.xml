@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record id="account_invoice_form_pdf_view" model="ir.ui.view">
+            <field name="name">account.invoice.form.pdf.view</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <!-- This needs to be moved to the 'side-chatter' available in Odoo v11 -->
+                <xpath expr="//field[@name='invoice_line_ids']" position="after">
+                    <field name="pdf_viewer" widget="pdf_viewer"/>
+                </xpath>
+            </field>
+        </record>
+        <template id="assets_backend" name="automatic_vendor_bill assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/automatic_vendor_bill/static/src/js/automatic_vendor_bill.js"></script>
+            <link rel="stylesheet" type="text/less" href="/automatic_vendor_bill/static/src/less/pdfviewer.less"/>
+        </xpath>
+   </template>
+    </data>
+</odoo>

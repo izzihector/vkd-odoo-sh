@@ -1,0 +1,66 @@
+//  ================================================================
+//  COLOR - GRADES
+//  ================================================================
+
+@vkdata_color_a:    #0c0c0c; //black
+@vkdata_color_b:    #5b5b5b; //dark_gray
+@vkdata_color_c:    #ae1f23; //red
+@vkdata_color_d:    #d3d3d3; //light_gray
+@vkdata_color_e:    #688e26; //green
+
+//  ================================================================
+//  SNIPPET - FOOTER
+//  ================================================================
+
+footer {
+    #footer {
+        background: #0c0c0c;
+        padding: 30px 0;
+        .footer-border {
+            .container {
+                font-size: 13px;
+                .row {
+                    background: #0c0c0c;
+                    color: #FFF;
+                    h3 {
+                        &.footer-header {
+                            border-bottom: 1px solid #bbb6b4;
+                            color: #FFF;
+                            font-size: 14px;
+                            margin: 0 0 10px;
+                            padding: 0 0 10px;
+                            text-transform: uppercase;
+                        }
+                    }
+                    ul {
+                        &.footer-menu {
+                            margin: 0px;
+                            padding: 0px;
+                            li {
+                                font-size: 13px;
+                                list-style: none;
+                                line-height: 1.8em;
+                                a {
+                                    color: #FFF;
+                                    font-size: 13px;
+                                    &:hover {
+                                        color: @vkdata_color_e;
+                                        text-decoration: none;
+                                        -webkit-transition: background 800ms ease-in-out;
+                                        -moz-transition: background 800ms ease-in-out;
+                                        -ms-transition: background 800ms ease-in-out;
+                                        -o-transition: background 800ms ease-in-out;
+                                        transition: background 800ms ease-in-out;
+                                    }
+                                }
+                                .fa {
+                                    margin: 0 10px 0 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

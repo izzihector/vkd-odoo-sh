@@ -1,0 +1,52 @@
+<odoo>
+    <data>
+        <record id="odoo_server_view_form" model="ir.ui.view">
+            <field name="name">server.form.view</field>
+            <field name="model">odoo.server</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Server">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="ip_address"/>
+                                <field name="ssl_certificate"/>
+                                <field name="admin_username"/>
+                                <field name="admin_password"/>
+                            </group>
+                            <group>
+                                <field name="cluster_id"/>
+                                <field name="max_instances"/>
+                                <!-- <field name="use_ssh_keys"/> -->
+                                <field name="partner_id" attrs="{'invisible': [('cluster_id', '!=', False)]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="instance_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="odoo_server_view_tree" model="ir.ui.view">
+            <field name="name">server.tree.view</field>
+            <field name="model">odoo.server</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="ip_address"/>
+                    <field name="cluster_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_open_server_tree" model="ir.actions.act_window">
+            <field name="name">Servers</field>
+            <field name="res_model">odoo.server</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Servers" id="automatic_odoo_deployment.server_menu" parent="automatic_odoo_deployment.menu_root" action="action_open_server_tree" sequence="2" groups="automatic_odoo_deployment.group_instance_manager"/>
+    </data>
+</odoo>

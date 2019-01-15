@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="dk_general_balance" model="account.financial.html.report">
+			<field name="name">Saldobalance</field>
+            <field name="debit_credit" eval="True"/>
+            <field name="report_type">date_range</field>
+            <field name="sequence" eval="1"/>
+            <field name='parent_id' ref='l10n_dk.account_reports_dk_statements_menu'/>
+		</record>
+        <record id="dk_general_balance_total" model="account.financial.html.report.line">
+            <field name="name">BALANCE</field>
+            <field name="code">BALANCE</field>
+            <field name="sequence" eval="0"/>
+            <field name="financial_report_id" ref="dk_general_balance"/>
+            <field name="level" eval="0" />
+            <field name="formulas">balance = DRIFT.balance + AKTIVER.balance + PASSIVER.balance; debit = DRIFT.debit + AKTIVER.debit + PASSIVER.debit; credit = DRIFT.credit + AKTIVER.credit + PASSIVER.credit</field>
+        </record>
+        <!-- RESULTATOPGØRELSE -->
+		<record id="dk_general_result" model="account.financial.html.report.line">
+            <field name="name">Drift</field>
+            <field name="code">DRIFT</field>
+            <field name="sequence" eval="1"/>
+            <field name="parent_id" ref="dk_general_balance_total"/>
+            <field name="level" eval="1" />
+            <field name="formulas">balance = FIRSTSUM.balance + SECONDSUM.balance + THIRDSUM.balance;debit = FIRSTSUM.debit + SECONDSUM.debit + THIRDSUM.debit; credit = FIRSTSUM.credit + SECONDSUM.credit + THIRDSUM.credit</field>
+        </record>
+        <!-- FIRST SUM -->
+		<record id="dk_general_result_first_sum" model="account.financial.html.report.line">
+            <field name="name">Omsætning og omkostninger</field>
+            <field name="code">FIRSTSUM</field>
+            <field name="sequence" eval="1"/>
+            <field name="parent_id" ref="dk_general_result"/>
+            <field name="level" eval="2" />
+            <field name="formulas">balance = INCOME.balance + COSTS.balance + EXTRAORDINARY.balance; debit = INCOME.debit + COSTS.debit + EXTRAORDINARY.debit; credit = INCOME.credit + COSTS.credit + EXTRAORDINARY.credit</field>
+        </record>
+        <record id="dk_general_income" model="account.financial.html.report.line">
+            <field name="name">Omsætning</field>
+            <field name="code">INCOME</field>
+            <field name="parent_id" ref='dk_general_result_first_sum'/>
+            <field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_1001'))]" />
+            <field name="groupby">account_id</field>
+            <field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+            <field name="sequence" eval="1"/>
+            <field name="level" eval="3" />
+        </record>
+        <record id="dk_general_costs" model="account.financial.html.report.line">
+        	<field name="name">Direkte omkostninger</field>
+        	<field name="code">COSTS</field>
+        	<field name="parent_id" ref='dk_general_result_first_sum'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_1300'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="2"/>
+        	<field name="level" eval="3"/>
+        </record>
+
+        <record id="dk_general_extraordinary" model="account.financial.html.report.line">
+        	<field name="name">Ekstraordinære poster</field>
+        	<field name="code">EXTRAORDINARY</field>
+        	<field name="parent_id" ref='dk_general_result_first_sum'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_4600'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="3"/>
+        	<field name="level" eval="3"/>
+        </record>
+        <!-- SECOND SUM -->
+		<record id="dk_general_result_second_sum" model="account.financial.html.report.line">
+            <field name="name">Kapacitetsomkostninger</field>
+            <field name="code">SECONDSUM</field>
+            <field name="sequence" eval="2"/>
+            <field name="parent_id" ref="dk_general_result"/>
+            <field name="level" eval="2" />
+            <field name="formulas">balance = SALARY.balance + SALE_TRAVEL.balance + VEHICLE.balance + OFFICE.balance + ADMINISTRATION.balance; debit = SALARY.debit + SALE_TRAVEL.debit + VEHICLE.debit + OFFICE.debit + ADMINISTRATION.debit; credit = SALARY.credit + SALE_TRAVEL.credit + VEHICLE.credit + OFFICE.credit + ADMINISTRATION.credit</field>
+        </record>
+        <record id="dk_general_salaries" model="account.financial.html.report.line">
+        	<field name="name">Lønninger</field>
+        	<field name="code">SALARY</field>
+        	<field name="parent_id" ref='dk_general_result_second_sum'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_2200'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="1"/>
+        	<field name="level" eval="3"/>
+        </record>
+        <record id="dk_general_sale_travel" model="account.financial.html.report.line">
+        	<field name="name">Salgs- og rejseomkostninger</field>
+        	<field name="code">SALE_TRAVEL</field>
+        	<field name="parent_id" ref='dk_general_result_second_sum'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_2700'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="2"/>
+        	<field name="level" eval="3"/>
+        </record>
+        <record id="dk_general_vehicle" model="account.financial.html.report.line">
+        	<field name="name">Autodrift - personbiler</field>
+        	<field name="code">VEHICLE</field>
+        	<field name="parent_id" ref='dk_general_result_second_sum'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_3100'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="3"/>
+        	<field name="level" eval="3"/>
+        </record>
+        <record id="dk_general_office" model="account.financial.html.report.line">
+        	<field name="name">Lokaleomkostninger</field>
+        	<field name="code">OFFICE</field>
+        	<field name="parent_id" ref='dk_general_result_second_sum'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_3400'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="4"/>
+        	<field name="level" eval="3"/>
+        </record>
+        <record id="dk_general_administration" model="account.financial.html.report.line">
+        	<field name="name">Administrationsomkostninger</field>
+        	<field name="code">ADMINISTRATION</field>
+        	<field name="parent_id" ref='dk_general_result_second_sum'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_3500'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="5"/>
+        	<field name="level" eval="3"/>
+        </record>
+        <!-- THIRD SUM -->
+		<record id="dk_general_result_third_sum" model="account.financial.html.report.line">
+            <field name="name">Skat og renter</field>
+            <field name="code">THIRDSUM</field>
+            <field name="sequence" eval="3"/>
+            <field name="parent_id" ref="dk_general_result"/>
+            <field name="level" eval="2" />
+            <field name="formulas">balance = DEPRECIATION.balance + INTEREST.balance + COMPANY_TAX.balance; debit = DEPRECIATION.debit + INTEREST.debit + COMPANY_TAX.debit; credit = DEPRECIATION.credit + INTEREST.credit + COMPANY_TAX.credit</field>
+        </record>
+
+        <record id="dk_general_depreciation" model="account.financial.html.report.line">
+        	<field name="name">Afskrivninger</field>
+        	<field name="code">DEPRECIATION</field>
+        	<field name="parent_id" ref='dk_general_result_third_sum'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_3900'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="1"/>
+        	<field name="level" eval="3"/>
+        </record>
+        <!-- INTEREST SUB HEADER -->
+        <record id="dk_general_interest" model="account.financial.html.report.line">
+        	<field name="name">Renter</field>
+        	<field name="code">INTEREST</field>
+        	<field name="parent_id" ref='dk_general_result_third_sum'/>
+        	<!-- <field name="domain" eval="[('account_id.tag_ids.name', '=', 'Renter')]" />
+        	<field name="groupby">account_id</field> -->
+        	<field name="formulas">balance = INTEREST_INCOME.balance + INTEREST_EXPENSES.balance; debit = INTEREST_INCOME.debit + INTEREST_EXPENSES.debit; credit = INTEREST_INCOME.credit + INTEREST_EXPENSES.credit</field>
+        	<field name="sequence" eval="2"/>
+        	<field name="level" eval="3"/>
+        </record>
+        <record id="dk_general_interest_income" model="account.financial.html.report.line">
+        	<field name="name">Renteindtægter</field>
+        	<field name="code">INTEREST_INCOME</field>
+        	<field name="parent_id" ref='dk_general_interest'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_4300'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="0"/>
+        	<field name="level" eval="4"/>
+        </record>
+        <record id="dk_general_interest_expenses" model="account.financial.html.report.line">
+        	<field name="name">Renteudgifter</field>
+        	<field name="code">INTEREST_EXPENSES</field>
+        	<field name="parent_id" ref='dk_general_interest'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_4400'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="1"/>
+        	<field name="level" eval="4"/>
+        </record>
+        <record id="dk_general_result_tax" model="account.financial.html.report.line">
+        	<field name="name">Selskabsskat</field>
+        	<field name="code">COMPANY_TAX</field>
+        	<field name="parent_id" ref='dk_general_result_third_sum'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_4800'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="3"/>
+        	<field name="level" eval="3"/>
+        </record>
+
+        <!-- AKTIVER -->
+
+        <record id="dk_general_balance_actives" model="account.financial.html.report.line">
+            <field name="name">AKTIVER</field>
+            <field name="code">AKTIVER</field>
+            <field name="sequence" eval="1"/>
+            <field name="parent_id" ref="dk_general_balance_total"/>
+            <field name="level" eval="1" />
+            <field name="formulas">balance = FIXED_ASSETS.balance + CURRENT_ASSETS.balance; debit = FIXED_ASSETS.debit + CURRENT_ASSETS.debit; credit = FIXED_ASSETS.credit + CURRENT_ASSETS.credit</field>
+        </record>
+		<record id="dk_general_balance_current_assets" model="account.financial.html.report.line">
+            <field name="name">Omsætningsaktiver</field>
+            <field name="code">CURRENT_ASSETS</field>
+            <field name="parent_id" ref="dk_general_balance_actives"/>
+            <field name="domain" eval="['|', ('account_id.tag_ids', '=', ref('l10n_dk.tag_header_5500')), ('account_id.user_type_id', '=', ref('account.data_account_type_liquidity'))]" />
+            <field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+            <field name="sequence" eval="1"/>
+            <field name="level" eval="2" />
+        </record>
+        <record id="dk_general_balance_fixed_assets" model="account.financial.html.report.line">
+            <field name="name">Anlægsaktiver</field>
+            <field name="code">FIXED_ASSETS</field>
+            <field name="sequence" eval="2"/>
+            <field name="parent_id" ref="dk_general_balance_actives"/>
+            <field name="level" eval="2"/>
+            <field name="formulas">balance = OFFICE_FURNITURE.balance + FIXTURES.balance + COMPUTER_EQUIPMENT.balance; debit = OFFICE_FURNITURE.debit + FIXTURES.debit + COMPUTER_EQUIPMENT.debit; credit = OFFICE_FURNITURE.credit + FIXTURES.credit + COMPUTER_EQUIPMENT.credit</field>
+        </record>
+        <record id="dk_general_fixed_assets_office_furniture" model="account.financial.html.report.line">
+        	<field name="name">Indretning af lejede lokaler</field>
+        	<field name="code">OFFICE_FURNITURE</field>
+        	<field name="parent_id" ref='dk_general_balance_fixed_assets'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_5110'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="0"/>
+        	<field name="level" eval="3"/>
+        </record>
+        <record id="dk_general_fixed_assets_fixtures" model="account.financial.html.report.line">
+        	<field name="name">Driftsmidler &amp; inventar</field>
+        	<field name="code">FIXTURES</field>
+        	<field name="parent_id" ref='dk_general_balance_fixed_assets'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_5220'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="1"/>
+        	<field name="level" eval="3"/>
+        </record>
+        <record id="dk_general_fixed_assets_computer_equipment" model="account.financial.html.report.line">
+        	<field name="name">Edb-anlæg</field>
+        	<field name="code">COMPUTER_EQUIPMENT</field>
+        	<field name="parent_id" ref='dk_general_balance_fixed_assets'/>
+        	<field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_5230'))]" />
+        	<field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+        	<field name="sequence" eval="2"/>
+        	<field name="level" eval="3"/>
+        </record>
+
+        <!-- PASSIVER -->
+
+        <record id="dk_general_balance_passives" model="account.financial.html.report.line">
+            <field name="name">PASSIVER</field>
+            <field name="code">PASSIVER</field>
+            <field name="sequence" eval="3"/>
+            <field name="parent_id" ref="dk_general_balance_total"/>
+            <field name="level" eval="1" />
+            <field name="formulas"> balance = EQUITY.balance + RESERVES.balance + DEBT.balance; debit = EQUITY.debit + RESERVES.debit + DEBT.debit; credit = EQUITY.credit + RESERVES.credit + DEBT.credit</field>
+        </record>
+
+        <record id="dk_general_balance_equity" model="account.financial.html.report.line">
+            <field name="name">EGENKAPITAL</field>
+            <field name="code">EQUITY</field>
+            <field name="parent_id" ref="dk_general_balance_passives"/>
+            <field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_6100'))]" />
+            <field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+            <field name="sequence" eval="0"/>
+            <field name="level" eval="2" />
+        </record>
+
+        <record id="dk_general_balance_last_year" model="account.financial.html.report.line">
+            <field name="name">EGENKAPITAL</field>
+            <field name="code">LAST_YEAR</field>
+            <field name="parent_id" ref="dk_general_balance_passives"/>
+            <field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_6100'))]" />
+            <field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+            <field name="sequence" eval="0"/>
+            <field name="level" eval="2" />
+        </record>
+
+        <record id="dk_general_balance_reserves" model="account.financial.html.report.line">
+            <field name="name">HENSÆTTELSER</field>
+            <field name="code">RESERVES</field>
+            <field name="parent_id" ref="dk_general_balance_passives"/>
+            <field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_6300'))]" />
+            <field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+            <field name="sequence" eval="1"/>
+            <field name="level" eval="2" />
+        </record>
+
+        <record id="dk_general_balance_debt" model="account.financial.html.report.line">
+            <field name="name">Gæld og afgifter</field>
+            <field name="code">DEBT</field>
+            <field name="sequence" eval="2"/>
+            <field name="parent_id" ref="dk_general_balance_passives"/>
+            <field name="formulas">balance = TAX.balance + OTHER_DEBT.balance + CREDITOR.balance; debit = TAX.debit + OTHER_DEBT.debit + CREDITOR.debit; credit = TAX.credit + OTHER_DEBT.credit + CREDITOR.credit</field>
+            <field name="level" eval="2" />
+        </record>
+
+        <record id="dk_general_balance_creditor" model="account.financial.html.report.line">
+            <field name="name">Gæld</field>
+            <field name="code">CREDITOR</field>
+            <field name="parent_id" ref="dk_general_balance_debt"/>
+            <field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_6600'))]" />
+            <field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+            <field name="sequence" eval="0"/>
+            <field name="level" eval="3" />
+        </record>
+
+        <record id="dk_general_balance_tax" model="account.financial.html.report.line">
+            <field name="name">Moms &amp; afgifter</field>
+            <field name="code">TAX</field>
+            <field name="parent_id" ref="dk_general_balance_debt"/>
+            <field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_6900'))]" />
+            <field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+            <field name="sequence" eval="1"/>
+            <field name="level" eval="3" />
+        </record>
+
+        <record id="dk_general_balance_other_debt" model="account.financial.html.report.line">
+            <field name="name">Anden gæld</field>
+            <field name="code">OTHER_DEBT</field>
+            <field name="parent_id" ref="dk_general_balance_debt"/>
+            <field name="domain" eval="[('account_id.tag_ids', '=', ref('l10n_dk.tag_header_6919'))]" />
+            <field name="groupby">account_id</field>
+        	<field name="formulas">balance = sum.balance; debit = sum.debit; credit = sum.credit</field>
+            <field name="sequence" eval="2"/>
+            <field name="level" eval="3" />
+        </record>
+
+    </data>
+</odoo>

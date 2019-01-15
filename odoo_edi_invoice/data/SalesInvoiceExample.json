@@ -1,0 +1,311 @@
+{
+    "DocType": 2,
+    "Invoice": {
+        "docGuid": "133eec41-b42c-4af9-8ced-f036a701cadb",
+        "docID": "sample string 2",
+        "docDate": "2018-12-18T15:06:04.0201573+01:00",
+        "revNo": 4,
+        "timeStamp": "2018-12-18T15:06:04.0201573+01:00",
+        "msgFormat": "sample string 6",
+        "erpDbId": 7,
+        "sourceModule": "sample string 8",
+        "reSent": true,
+        "targetModule": "sample string 10",
+        "issuerParty": 1,
+        "orderInfo": {
+            "initiator": 0,
+            "orderType": 0,
+            "createdDate": "2018-12-18T15:06:04.004512+01:00",
+            "acceptedByBuyer": true,
+            "acceptedBySeller": true,
+            "partialDelIndicator": true,
+            "backorderAllowIndicator": true,
+            "validityPeriod": "2018-12-18T15:06:04.004512+01:00"
+        },
+        "buyerParty": {
+            "accountNo": "sample string 1",
+            "GLN": "sample string 2",
+            "natTaxNo": "sample string 3",
+            "name": "sample string 4",
+            "address1": "sample string 5",
+            "address2": "sample string 6",
+            "zipCode": "sample string 7",
+            "city": "sample string 8",
+            "country": "sample string 9",
+            "contact": "sample string 10",
+            "eMail": "sample string 11",
+            "phone": "sample string 12"
+        },
+        "buyersOrderId": {
+            "orderNo": "sample string 1",
+            "erpDbId": 2,
+            "lastVerifiedErp": "2018-12-18T15:06:04.004512+01:00"
+        },
+        "sellerParty": {
+            "accountNo": "sample string 1",
+            "GLN": "sample string 2",
+            "natTaxNo": "sample string 3",
+            "name": "sample string 4",
+            "address1": "sample string 5",
+            "address2": "sample string 6",
+            "zipCode": "sample string 7",
+            "city": "sample string 8",
+            "country": "sample string 9",
+            "contact": "sample string 10",
+            "eMail": "sample string 11",
+            "phone": "sample string 12"
+        },
+        "sellersOrderId": {
+            "orderNo": "sample string 1",
+            "erpDbId": 2,
+            "lastVerifiedErp": "2018-12-18T15:06:04.004512+01:00"
+        },
+        "ordReferences": {
+            "buyersRef": "sample string 1",
+            "requisitionNo": "sample string 2",
+            "sellersRef": "sample string 3",
+            "frameAgreementNo": "sample string 4",
+            "campaignAgreementNo": "sample string 5",
+            "consignmentNo": "sample string 6"
+        },
+        "deliveryParty": {
+            "accountNo": "sample string 1",
+            "GLN": "sample string 2",
+            "natTaxNo": "sample string 3",
+            "name": "sample string 4",
+            "address1": "sample string 5",
+            "address2": "sample string 6",
+            "zipCode": "sample string 7",
+            "city": "sample string 8",
+            "country": "sample string 9",
+            "contact": "sample string 10",
+            "eMail": "sample string 11",
+            "phone": "sample string 12"
+        },
+        "deliveryTerms": {
+            "reqDeliveryDate": "2018-12-18T15:06:04.004512+01:00",
+            "delIncoTerms": "sample string 2",
+            "delTermsTxt": "sample string 3",
+            "delBy": "sample string 4",
+            "pickUpDate": "2018-12-18T15:06:04.004512+01:00",
+            "trackAndTraceID": "sample string 6"
+        },
+        "contactInfo": {
+            "eMail": "sample string 1",
+            "phone": "sample string 2",
+            "fax": "sample string 3",
+            "contact": "sample string 4"
+        },
+        "invoiceParty": {
+            "accountNo": "sample string 1",
+            "GLN": "sample string 2",
+            "natTaxNo": "sample string 3",
+            "name": "sample string 4",
+            "address1": "sample string 5",
+            "address2": "sample string 6",
+            "zipCode": "sample string 7",
+            "city": "sample string 8",
+            "country": "sample string 9",
+            "contact": "sample string 10",
+            "eMail": "sample string 11",
+            "phone": "sample string 12"
+        },
+        "financialInfo": {
+            "currency": "sample string 1",
+            "vatDutiable": true,
+            "vatPercent": 3.1,
+            "setOffAccNo": "sample string 4"
+        },
+        "paymentTerms": {
+            "baseDate": 0,
+            "plusMonths": 1,
+            "plusDays": 2,
+            "dueDateCalc": "sample string 3"
+        },
+        "cashDiscTerms": {
+            "baseDate": 0,
+            "plusMonths": 1,
+            "plusDays": 2,
+            "discPct": 3.1,
+            "dueDateCalc": "sample string 4"
+        },
+        "CommentLines": [{
+                "lineNo": 1.1,
+                "text": "sample string 2"
+            },
+            {
+                "lineNo": 1.1,
+                "text": "sample string 2"
+            }
+        ],
+        "DetailLines": [{
+                "orderLineId": "5422911c-144f-46df-ae49-5bdf027e9c30",
+                "lineNo": 2.1,
+                "buyerErpDbId": 3,
+                "sellerErpDbId": 4,
+                "buyersItemNo": "sample string 5",
+                "sellersItemNo": "sample string 6",
+                "tryItemNo": "sample string 7",
+                "description": "sample string 8",
+                "eanNumber": "sample string 9",
+                "upcNumber": "sample string 10",
+                "itemErpId": 11,
+                "accountingCostCode": "sample string 12",
+                "accountingCost": "sample string 13",
+                "qtyTu": 14.1,
+                "dlvQtyTu": 15.1,
+                "invQtyTu": 16.1,
+                "unit": "sample string 17",
+                "delDate": "2018-12-18T15:06:04.0201573+01:00",
+                "grossPrice": 19.1,
+                "discPct": 20.1,
+                "netPrice": 21.1,
+                "priceUnit": 22.1,
+                "netAmount": 23.1,
+                "netWeight": 24.1,
+                "vatAmount": 25.1,
+                "taxAmount": 26.1,
+                "batchSerialNo": "sample string 27",
+                "vatInclusive": true,
+                "drawingID": "sample string 29",
+                "confDelDate": "2018-12-18T15:06:04.0201573+01:00",
+                "ledAccNo": "sample string 31",
+                "requisitionNo": "sample string 32",
+                "deliveryNote": "sample string 33",
+                "eanNumberCU": "sample string 34",
+                "countryOrig": "sample string 35",
+                "tariffNo": "sample string 36",
+                "ordQtyTu": 37.1,
+                "qtyPerUnit": 38.1,
+                "issuerLineRef": "sample string 39",
+                "CommentLines": [{
+                        "lineNo": 1.1,
+                        "text": "sample string 2"
+                    },
+                    {
+                        "lineNo": 1.1,
+                        "text": "sample string 2"
+                    }
+                ],
+                "AllowanceCharges": [{
+                        "allowanceChargeID": "sample string 1",
+                        "allowanceChargeName": "sample string 2",
+                        "allowanceChargeAmount": 3.1,
+                        "allowanceChargeVatAmount": 4.1
+                    },
+                    {
+                        "allowanceChargeID": "sample string 1",
+                        "allowanceChargeName": "sample string 2",
+                        "allowanceChargeAmount": 3.1,
+                        "allowanceChargeVatAmount": 4.1
+                    }
+                ]
+            },
+            {
+                "orderLineId": "5422911c-144f-46df-ae49-5bdf027e9c30",
+                "lineNo": 2.1,
+                "buyerErpDbId": 3,
+                "sellerErpDbId": 4,
+                "buyersItemNo": "sample string 5",
+                "sellersItemNo": "sample string 6",
+                "tryItemNo": "sample string 7",
+                "description": "sample string 8",
+                "eanNumber": "sample string 9",
+                "upcNumber": "sample string 10",
+                "itemErpId": 11,
+                "accountingCostCode": "sample string 12",
+                "accountingCost": "sample string 13",
+                "qtyTu": 14.1,
+                "dlvQtyTu": 15.1,
+                "invQtyTu": 16.1,
+                "unit": "sample string 17",
+                "delDate": "2018-12-18T15:06:04.0201573+01:00",
+                "grossPrice": 19.1,
+                "discPct": 20.1,
+                "netPrice": 21.1,
+                "priceUnit": 22.1,
+                "netAmount": 23.1,
+                "netWeight": 24.1,
+                "vatAmount": 25.1,
+                "taxAmount": 26.1,
+                "batchSerialNo": "sample string 27",
+                "vatInclusive": true,
+                "drawingID": "sample string 29",
+                "confDelDate": "2018-12-18T15:06:04.0201573+01:00",
+                "ledAccNo": "sample string 31",
+                "requisitionNo": "sample string 32",
+                "deliveryNote": "sample string 33",
+                "eanNumberCU": "sample string 34",
+                "countryOrig": "sample string 35",
+                "tariffNo": "sample string 36",
+                "ordQtyTu": 37.1,
+                "qtyPerUnit": 38.1,
+                "issuerLineRef": "sample string 39",
+                "CommentLines": [{
+                        "lineNo": 1.1,
+                        "text": "sample string 2"
+                    },
+                    {
+                        "lineNo": 1.1,
+                        "text": "sample string 2"
+                    }
+                ],
+                "AllowanceCharges": [{
+                        "allowanceChargeID": "sample string 1",
+                        "allowanceChargeName": "sample string 2",
+                        "allowanceChargeAmount": 3.1,
+                        "allowanceChargeVatAmount": 4.1
+                    },
+                    {
+                        "allowanceChargeID": "sample string 1",
+                        "allowanceChargeName": "sample string 2",
+                        "allowanceChargeAmount": 3.1,
+                        "allowanceChargeVatAmount": 4.1
+                    }
+                ]
+            }
+        ],
+        "AllowanceCharges": [{
+                "allowanceChargeID": "sample string 1",
+                "allowanceChargeName": "sample string 2",
+                "allowanceChargeAmount": 3.1,
+                "allowanceChargeVatAmount": 4.1
+            },
+            {
+                "allowanceChargeID": "sample string 1",
+                "allowanceChargeName": "sample string 2",
+                "allowanceChargeAmount": 3.1,
+                "allowanceChargeVatAmount": 4.1
+            }
+        ],
+        "documentTotals": {
+            "netWeight": 1.1,
+            "cbm": 2.1,
+            "orderBalance": 3.1,
+            "feeTaxFree": 4.1,
+            "feeTaxable": 5.1,
+            "dutyTaxFree": 6.1,
+            "dutyTaxable": 7.1,
+            "invoiceDisc": 8.1,
+            "roundOff": 9.1,
+            "vatBaseAmount": 10.1,
+            "vatAmount": 11.1,
+            "invoiceAmount": 12.1,
+            "dueDate": "2018-12-18T15:06:04.0201573+01:00",
+            "cashDiscAmount": 14.1,
+            "cashDiscDate": "2018-12-18T15:06:04.0201573+01:00",
+            "grossWeight": 16.1,
+            "qtyPallets": 17.1
+        },
+        "paymentInfo": {
+            "paymentID": "sample string 1",
+            "paymTypeCode": "sample string 2",
+            "paymCredGiro": "sample string 3",
+            "paymBankAcc": "sample string 4",
+            "paymBankReg": "sample string 5",
+            "paymFactoring": "sample string 6",
+            "paymSwift": "sample string 7",
+            "paymIBAN": "sample string 8"
+        }
+    }
+}

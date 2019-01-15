@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_partners" name="Partners">
+            <section class="sinppet_partners">
+                <div class="partners-block">
+                    <div class="container carousel-partners">
+                        <div class="row">
+                            <div class="group-partners">
+                                <div class="col-xs-4 col-sm-2 col-md-2 group-partners-block">
+                                    <section class="snippet_partners">
+                                        <div class="group-partners">
+                                            <div class="client-image text-center">
+                                                Add image here
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-xs-4 col-sm-2 col-md-2 group-partners-block">
+                                    <section class="snippet_partners">
+                                        <div class="group-partners">
+                                            <div class="client-image text-center">
+                                                Add image here
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-xs-4 col-sm-2 col-md-2 group-partners-block">
+                                    <section class="snippet_partners">
+                                        <div class="group-partners">
+                                            <div class="client-image text-center">
+                                                Add image here
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-xs-4 col-sm-2 col-md-2 group-partners-block">
+                                    <section class="snippet_partners">
+                                        <div class="group-partners">
+                                            <div class="client-image text-center">
+                                                Add image here
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-xs-4 col-sm-2 col-md-2 group-partners-block">
+                                    <section class="snippet_partners">
+                                        <div class="group-partners">
+                                            <div class="client-image text-center">
+                                                Add image here
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-xs-4 col-sm-2 col-md-2 group-partners-block">
+                                    <section class="snippet_partners">
+                                        <div class="group-partners">
+                                            <div class="client-image text-center">
+                                                Add image here
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_partners" inherit_id="website.snippets" name="Partners">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_partners"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_001.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Customize header  -->
+        <template id="custom_header" inherit_id="website.layout" name="vkdata header">
+            <!-- Assign an id  -->
+            <xpath expr="//div[@id='wrapwrap']/header" position="attributes">
+                <attribute name="id">vkdata_header</attribute>
+            </xpath>
+            <!-- Add an element after the top menu  -->
+            <!--<xpath expr="//div[@id='wrapwrap']/header/div" position="before">
+                <div class="container vkdata_header">
+                    <div class="col-md-3 col-sm-4 region-logo text-xs-center">
+                        
+                    </div> 
+                    <div class="col-md-7 col-sm-5 region-center text-right">
+                        <ul class="wrapper-main">
+                            <li class="region-list list-phone"><i class="fa fa-phone-square fa-lg"></i>73738888</li>
+                            <li class="region-list list-mail"><i class="fa fa-envelope fa-lg"></i>info@vkdata.dk</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-3 hidden-xs region-konfigurator">
+                        <a href="#" class="wrapper-konfigurator">PC konfigurator</a>
+                    </div>
+                </div>
+            </xpath>-->
+        </template>
+        <template id="footer_copyright" inherit_id="website.layout_footer_copyright">
+            <xpath expr="//div[@class='container mt16 mb8']" position="attributes">
+                <attribute name="style">display:none;</attribute>
+            </xpath>
+            <xpath expr="//div[@class='container mt16 mb8']" position="after">
+                <div class="footer-btm">
+                    <div class="container">
+                        Copyright &amp;copy; <span t-field="res_company.name" itemprop="name" />
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

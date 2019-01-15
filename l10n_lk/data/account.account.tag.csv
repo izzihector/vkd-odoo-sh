@@ -1,0 +1,5 @@
+"id","name","applicability"
+"tag_tax_govt","Govt Taxes","Taxes"
+"tag_tax_corporate_income","Corporate Income Taxes","Taxes"
+"tag_tax_withholding","Withholding Taxes","Taxes"
+"tag_account_taxes","Govt Taxes","Accounts"

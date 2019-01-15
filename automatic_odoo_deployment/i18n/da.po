@@ -1,0 +1,756 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* automatic_odoo_deployment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-07 11:20+0000\n"
+"PO-Revision-Date: 2018-12-07 12:22+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: da_DK\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,version:0
+msgid "10.0"
+msgstr "10.0"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,version:0
+msgid "11.0"
+msgstr "11.0"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,version:0
+msgid "12.0"
+msgstr "12.0"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_search_filter
+msgid "Action Needed"
+msgstr "Kræver Handling"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_active
+#: selection:odoo.instance,state:0
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_odoo_admin_username
+msgid "Admin E-Mail"
+msgstr "Admin E-Mail"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_admin_password
+msgid "Admin Password"
+msgstr "Admin Adgangskode"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_admin_username
+msgid "Admin Username"
+msgstr "Admin Brugernavn"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_odoo_admin_password
+msgid "Admin password"
+msgstr "Admin Adgangskode"
+
+#. module: automatic_odoo_deployment
+#: model:res.groups,name:automatic_odoo_deployment.group_instance_admin
+msgid "Administrator"
+msgstr "Administrator"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,website_theme:0
+msgid "Another Theme"
+msgstr "Another Theme"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_view_form
+msgid "Basic Information"
+msgstr "Grundlæggende Information"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_ssl_certificate
+msgid "Check this if the instance has a valid SSL certificate"
+msgstr "Slå dette til, hvis instansen har et gyldigt SSL certifikat."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_server_ssl_certificate
+msgid "Check this if the server has a valid SSL certificate"
+msgstr "Slå dette til, hvis serveren har et gyldigt SSL certifikat."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_demo_data
+msgid "Choose if this Odoo instance should have demo data installed"
+msgstr "Vælg om denne Odoo instans skal have demo data installeret."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_customer_id
+msgid "Choose the customer this instance is for"
+msgstr "Vælg kunden for denne instans."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_subscription_id
+msgid "Choose the sales subscription relevant to this instance"
+msgstr "Vælg det tilknyttede Odoo abonnement."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_server_cluster_id
+msgid "Choose which shared resource cluster the server is part of. Empty is treated as a dedicated server"
+msgstr "Vælg hvilket shared resource cluster denne server er en del af. Et tomt felt bliver regnet for en dedikeret server."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_cluster_id
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_cluster_view_form
+msgid "Cluster"
+msgstr "Cluster"
+
+#. module: automatic_odoo_deployment
+#: model:ir.actions.act_window,name:automatic_odoo_deployment.action_open_cluster_tree
+#: model:ir.ui.menu,name:automatic_odoo_deployment.cluster_menu
+msgid "Clusters"
+msgstr "Clusters"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_community
+msgid "Community"
+msgstr "Community"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.menu,name:automatic_odoo_deployment.menu_odoo_deployment_settings
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster_create_uid
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_create_uid
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domains_create_uid
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_create_uid
+msgid "Created by"
+msgstr "Oprettet af"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster_create_date
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_create_date
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domains_create_date
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_create_date
+msgid "Created on"
+msgstr "Oprettet den"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_customer_id
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_partner_id
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_search_filter
+msgid "Customer"
+msgstr "Kunde"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_database_admin_password
+msgid "Database Admin Password"
+msgstr "Database Admin Adgangskode"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,purpose:0
+msgid "Dedicated Live"
+msgstr "Dedikeret Live"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_res_config_settings_default_port_number
+msgid "Default Port Number"
+msgstr "Standard Port Number"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,state:0
+msgid "Deleted"
+msgstr "Slettet"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.cluster,purpose:0 selection:odoo.instance,purpose:0
+msgid "Demo"
+msgstr "Demo"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_demo_data
+msgid "Demo Data"
+msgstr "Demo Data"
+
+#. module: automatic_odoo_deployment
+#: model:ir.module.category,name:automatic_odoo_deployment.odoo_deployment
+msgid "Deployment"
+msgstr "Udrulning"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_deployment_config_settings
+msgid "Deployment Configuration"
+msgstr "Udrulnings Konfiguration"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_description
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domains_description
+msgid "Description"
+msgstr "Beskrivelse"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,odoo_package:0
+msgid "Detail"
+msgstr "Detalje"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.cluster,purpose:0 selection:odoo.instance,purpose:0
+msgid "Development"
+msgstr "Udvikling"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_instance_manager_display_name
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster_display_name
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domains_display_name
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_display_name
+msgid "Display Name"
+msgstr "Vis navn"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_deployment_config_settings
+msgid "Distribute instances evenly on servers"
+msgstr "Fordel instanser jævnt på tværs af servere"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster_dns_suffix
+msgid "Dns Suffix"
+msgstr "Dns Suffix"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domain_ids
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_view_form
+msgid "Domains"
+msgstr "Domæner"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_search_filter
+#: selection:odoo.instance,state:0
+msgid "Draft"
+msgstr "Kladde"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_enable_webshop
+msgid "Enable Webshop"
+msgstr "Enable Webshop"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_enable_website
+msgid "Enable Website"
+msgstr "Enable Website"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_community
+msgid "Enable this if you want to deploy a community version"
+msgstr "Slå dette til hvis der skal udrulles en community version-"
+
+#. module: automatic_odoo_deployment
+#: code:addons/automatic_odoo_deployment/models/instance.py:101
+#, python-format
+msgid "Error! Server not correctly assigned. Please contact technical support"
+msgstr "Fejl! Serveren blev ikke tildelt korrekt. Kontakt venligst teknisk support."
+
+#. module: automatic_odoo_deployment
+#: code:addons/automatic_odoo_deployment/models/instance.py:96
+#, python-format
+msgid "Error! There is already an active instance with the designated portnumber on the chosen server"
+msgstr "Fejl! Der er allerede en aktiv instans med det valgte portnummer på serveren."
+
+#. module: automatic_odoo_deployment
+#: code:addons/automatic_odoo_deployment/models/instance.py:87
+#, python-format
+msgid "Error! There is already an active instance with the given name on the chosen server"
+msgstr "Fejl! Der er allerede en aktiv instans med det givne navn på serveren."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_res_config_settings_use_load_balancing
+msgid "Evenly distribute new instances across servers in a cluster"
+msgstr "Fordel instanser jævnt på tværs af servere i et cluster"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_ssl_certificate
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_ssl_certificate
+msgid "Has SSL Certificate?"
+msgstr "Har SSL Certifikat?"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_instance_manager_id
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster_id
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domains_id
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_id
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_id
+msgid "ID"
+msgstr "ID"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_server_ip_address
+msgid "IP Address of the server"
+msgstr "Serverens IP adresse"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_ip_address
+msgid "IP-Address"
+msgstr "IP-Adresse"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_domain_ids
+msgid "If there are additional domains attached to this instance, write them here."
+msgstr "Hvis der er flere domæner tilknyttet denne instans, kan du tilføje dem her."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domains_instance_id
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_res_partner_instance_ids
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_res_users_instance_ids
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_view_form
+msgid "Instance"
+msgstr "Instans"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_res_partner_instance_count
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_res_users_instance_count
+msgid "Instance Count"
+msgstr "Instance Count"
+
+#. module: automatic_odoo_deployment
+#: model:ir.actions.act_window,name:automatic_odoo_deployment.act_partner_instances
+#: model:ir.actions.act_window,name:automatic_odoo_deployment.action_open_instance_tree
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_instance_ids
+#: model:ir.ui.menu,name:automatic_odoo_deployment.instance_menu
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_view_tree
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.partner_instance_count
+msgid "Instances"
+msgstr "Instanser"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_deployment_config_settings
+msgid "Instances start on this port number"
+msgstr "Instanser starter ved dette port nummer"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_language_id
+msgid "Language"
+msgstr "Sprog"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_instance_manager___last_update
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster___last_update
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance___last_update
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domains___last_update
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server___last_update
+msgid "Last Modified on"
+msgstr "Sidst ændret den"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_date_update
+msgid "Last Updated"
+msgstr "Last Updated"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster_write_uid
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domains_write_uid
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_write_uid
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_write_uid
+msgid "Last Updated by"
+msgstr "Sidst opdateret af"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster_write_date
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domains_write_date
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_write_date
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_write_date
+msgid "Last Updated on"
+msgstr "Sidst opdateret den"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_linux_password
+msgid "Linux Password"
+msgstr "Linux Adgangskode"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_linux_username
+msgid "Linux Username"
+msgstr "Linux Brugernavn"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.cluster,purpose:0 selection:odoo.instance,purpose:0
+msgid "Live"
+msgstr "Live"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_deployment_config_settings
+msgid "Load Balancing"
+msgstr "Load Balancing"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_longpolling_port_number
+msgid "Longpolling Port Number"
+msgstr "Longpolling Port Nummer"
+
+#. module: automatic_odoo_deployment
+#: model:res.groups,name:automatic_odoo_deployment.group_instance_manager
+msgid "Manager"
+msgstr "Leder"
+
+#. module: automatic_odoo_deployment
+#: model:ir.actions.server,name:automatic_odoo_deployment.action_set_to_delete
+msgid "Mark To Delete"
+msgstr "Marker til sletning"
+
+#. module: automatic_odoo_deployment
+#: model:ir.actions.server,name:automatic_odoo_deployment.action_set_to_suspend
+msgid "Mark To Suspend"
+msgstr "Marker til suspendering"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_max_instances
+msgid "Max Instances"
+msgstr "Max Instanser"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster_name
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domain_name
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_name
+msgid "Name"
+msgstr "Navn"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_server_name
+msgid "Name of the server"
+msgstr "Navn på serveren"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.menu,name:automatic_odoo_deployment.menu_root
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_deployment_config_settings
+msgid "Odoo Deployment"
+msgstr "Odoo Udrulning"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_view_form
+msgid "Odoo Information"
+msgstr "Odoo Information"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_odoo_package
+msgid "Odoo Package"
+msgstr "Odoo Package"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_view_form
+msgid "Options"
+msgstr "Muligheder"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model,name:automatic_odoo_deployment.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_port_number
+msgid "Port Number"
+msgstr "Port Nummer"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_primary_domain_name
+msgid "Primary Domain Name"
+msgstr "Primært Domænenavn"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,odoo_package:0
+msgid "Production"
+msgstr "Produktion"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster_purpose
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_purpose
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_search_filter
+msgid "Purpose"
+msgstr "Formål"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,state:0
+msgid "Queued"
+msgstr "I kø"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_request_user_id
+msgid "Requested by"
+msgstr "Forespurgt af"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_search_filter
+msgid "Search Instance"
+msgstr "Søg instans"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_send_mail
+msgid "Send Mail"
+msgstr "Send Mail"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_send_mail
+msgid "Send an email to the address provided as the user e-mail, when the instance has been created"
+msgstr "Send en email til den adresse der er angivet som bruger email, når instansen er oprettet."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_server_id
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_server_view_form
+msgid "Server"
+msgstr "Server"
+
+#. module: automatic_odoo_deployment
+#: model:ir.actions.act_window,name:automatic_odoo_deployment.action_open_server_tree
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_cluster_server_ids
+#: model:ir.ui.menu,name:automatic_odoo_deployment.server_menu
+msgid "Servers"
+msgstr "Servere"
+
+#. module: automatic_odoo_deployment
+#: model:ir.actions.act_window,name:automatic_odoo_deployment.action_odoo_deployment_config
+msgid "Settings"
+msgstr "Opsætning"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_deployment_config_settings
+msgid "Starting Port"
+msgstr "Start Port"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_state
+msgid "State"
+msgstr "Status"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_subscription_id
+msgid "Subscription"
+msgstr "Abonnement"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,state:0
+msgid "Suspended"
+msgstr "Suspenderet"
+
+#. module: automatic_odoo_deployment
+#: model:ir.ui.view,arch_db:automatic_odoo_deployment.odoo_instance_view_form
+msgid "Technical Information"
+msgstr "Teknisk Information"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.cluster,purpose:0 selection:odoo.instance,purpose:0
+msgid "Test"
+msgstr "Test"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_state
+msgid "The current status of the Odoo instance"
+msgstr "Den nuværende status på Odoo instansen"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_date_update
+msgid "The date this Odoo instance was last updated."
+msgstr "The date this Odoo instance was last updated."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_res_config_settings_default_port_number
+msgid "The default port number set on new instances"
+msgstr "Standard port nummer sat på nye instanser."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_cluster_dns_suffix
+msgid "The dns suffix will be appended to the URL of instances created in this cluster"
+msgstr "Dns suffix bliver sat efter URL'en på instanser lavet i dette cluster."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_display_name
+msgid "The full domain name of the instance"
+msgstr "Det fulde domænenavn for denne instans"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_odoo_admin_password
+msgid "The initial password of the Odoo administrator"
+msgstr "Adgangskoden for Odoo administrator brugeren."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_odoo_admin_username
+msgid "The initial username of the Odoo administrator"
+msgstr "Brugernavnen for Odoo administrator brugeren."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_longpolling_port_number
+msgid "The longpolling port number of this Odoo instance"
+msgstr "Longpolling port nummer for denne Odoo instans."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_server_max_instances
+msgid "The maximum number of instances allowed on this server. Default is -1 which is unlimited."
+msgstr "Det maksimale antal instanser tilladt på denne server. Standard er -1, hvilket er ubegrænset."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_domain_name
+msgid "The name of the Odoo instance. For instances on dedicated servers, please use the full domain name."
+msgstr "Navnet på Odoo instansen. For instanser på dedikerede servere, skal du indtaste det fulde domænenavn."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_server_partner_id
+msgid "The partner this server belongs to, if it is a dedicated server"
+msgstr "Kunden denne server er tilknyttet, hvis det er en dedikeret server."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_linux_password
+msgid "The password of the Linux system user running this Odoo instance Used for SSH and SFTP."
+msgstr "Adgangskoden for Linux brugeren der kører denne instans. Brugt til SFTP og SSH."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_database_admin_password
+msgid "The password used for the Odoo database manager."
+msgstr "Adgangskoden brugt i Odoo database manageren."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_port_number
+msgid "The port number of this Odoo instance"
+msgstr "Port nummeret for denne instans."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_primary_domain_name
+msgid "The primary domain name of the instance. Use this field for dedicated instances, or to override the computed domain name."
+msgstr "Det primære domænenavn på instansen. Brug dette felt hvis det er en dedikeret instans, eller for at overstyre det automatisk generede domænenavn."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_language_id
+msgid "The primary language used on this instance"
+msgstr "Det primære sprog brugt på denne instans."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_purpose
+msgid "The purpose of this Odoo instance"
+msgstr "Formålet med denne instans."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_cluster_purpose
+msgid "The purpose of this cluster"
+msgstr "Formålet med dette cluster."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_server_admin_password
+msgid "The server administrator password"
+msgstr "Server administrator adgangskoden."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_server_admin_username
+msgid "The server administrator username"
+msgstr "Server administrator brugernavnet."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_request_user_id
+msgid "The user that has requested the deployment of this instance"
+msgstr "Brugeren der har efterspurgt oprettelsen af denne instans."
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_instance_linux_username
+msgid "The username of the Linux system user running this Odoo instance. Used for SSH and SFTP."
+msgstr "Brugernavnet for Linux brugeren der kører denne instans. Brugt til SFTP og SSH."
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,state:0
+msgid "To Delete"
+msgstr "Skal slettes"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,state:0
+msgid "To Suspend"
+msgstr "Skal Suspenderes"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,odoo_package:0
+msgid "Transport"
+msgstr "Transport"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.cluster,purpose:0 selection:odoo.instance,purpose:0
+msgid "Trial"
+msgstr "Prøve"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_display_name
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_domains_name
+msgid "URL"
+msgstr "URL"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_res_config_settings_use_load_balancing
+msgid "Use Load Balancing"
+msgstr "Use Load Balancing"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,help:automatic_odoo_deployment.field_odoo_server_use_ssh_keys
+msgid "Use SSH keys to contact github during deployment"
+msgstr "Brug SSH nøgler til at kontakte Github under udrulning"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_server_use_ssh_keys
+msgid "Use Ssh Keys"
+msgstr "Brug SSH nøgler"
+
+#. module: automatic_odoo_deployment
+#: model:res.groups,name:automatic_odoo_deployment.group_instance_user
+msgid "User"
+msgstr "Bruger"
+
+#. module: automatic_odoo_deployment
+#: model:ir.module.category,description:automatic_odoo_deployment.odoo_deployment
+msgid "User access for Odoo instance deployment and creation"
+msgstr "User access for Odoo instance deployment and creation"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_version
+msgid "Version"
+msgstr "Version"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model.fields,field_description:automatic_odoo_deployment.field_odoo_instance_website_theme
+msgid "Website Theme"
+msgstr "Website Theme"
+
+#. module: automatic_odoo_deployment
+#: selection:odoo.instance,website_theme:0
+msgid "Wine Theme"
+msgstr "Wine Theme"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model,name:automatic_odoo_deployment.model_instance_manager
+msgid "instance.manager"
+msgstr "instance.manager"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model,name:automatic_odoo_deployment.model_odoo_cluster
+msgid "odoo.cluster"
+msgstr "odoo.cluster"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model,name:automatic_odoo_deployment.model_odoo_instance
+msgid "odoo.instance"
+msgstr "odoo.instance"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model,name:automatic_odoo_deployment.model_odoo_instance_domains
+msgid "odoo.instance.domains"
+msgstr "odoo.instance.domains"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model,name:automatic_odoo_deployment.model_odoo_server
+msgid "odoo.server"
+msgstr "odoo.server"
+
+#. module: automatic_odoo_deployment
+#: model:ir.model,name:automatic_odoo_deployment.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"

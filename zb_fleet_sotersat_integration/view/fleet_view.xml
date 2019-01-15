@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+    	    <record id="fleet_vehicle_form_inherit" model="ir.ui.view">
+            <field name="name">fleet.vehicle.inherit</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+            <field name="arch" type="xml">
+            	<!-- <xpath expr="//div[@class='oe_button_box']" position="inside">
+            		<button name="test_button" type="object" string="Test" class="oe_stat_button" />
+            	</xpath> -->
+            	<xpath expr="//field[@name='vin_sn']" position="after">
+            		<field name="gps_device_id"/>
+            		<field name="imei"/>
+            		
+            	</xpath>
+            	<xpath expr="//field[@name='odometer']" position="attributes">
+            		<attribute name="widget">integer</attribute>
+            	</xpath>
+            	<xpath expr="//field[@name='odometer_unit']" position="after">
+            		<br/>
+            		<div >
+            			<button name="refresh_button" type="object" string="Read" icon="zb_fleet_sotersat_integration/static/icon/STOCK_REFRESH.png" />
+            			<button name="%(action_set_odometer_rading)d" type="action" string="Set" icon="zb_fleet_sotersat_integration/static/icon/STOCK_EXECUTE.png" />
+            		</div>
+            		
+            	</xpath>
+            	<xpath expr="//field[@name='acquisition_date']" position="before">
+            		<field name="last_update_date_time"/>
+            	</xpath>
+            	
+                <xpath expr="//field[@name='driver_id']" position="after">
+            		<field name="hr_driver_id"/>
+            	</xpath>
+            	<xpath expr="//field[@name='driver_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//sheet/group[2]" position="after">
+                		<notebook>
+                			<page string="Vehicle Location">
+                				<field name="vehicle_url_fn" widget='iframe' colspan="4" width="800" height="500"/>	
+                			</page>
+                		</notebook>
+                </xpath>
+                  <xpath expr="//field[@name='odometer']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>  
+                
+            </field>
+         </record>   
+         
+           <record id="fleet_vehicle_odometer_tree_inherit" model="ir.ui.view">
+            <field name="name">fleet.vehicle.odometer.inherit</field>
+            <field name="model">fleet.vehicle.odometer</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_odometer_view_tree"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='value']" position="attributes">
+                    <attribute name="widget">integer</attribute>
+                </xpath>
+            </field>
+          </record> 
+          
+           <record id="fleet_vehicle_tree_sot_fleet" model="ir.ui.view">
+            <field name="name">fleet.vehicle.tree</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_tree"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='driver_id']" position="after">
+            		<field name="hr_driver_id"/>
+            	</xpath>
+            	 <xpath expr="//field[@name='driver_id']" position="attributes">
+                       <attribute name="invisible">1</attribute>
+                   </xpath> 
+            </field>
+         </record> 
+          
+           <record id="fleet_vehicle_log_fuel_form_inherited" model="ir.ui.view">
+            <field name="name">fleet.vehicle.odometer.inherit</field>
+            <field name="model">fleet.vehicle.log.fuel</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_log_fuel_view_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='odometer']" position="attributes">
+                    <attribute name="widget">integer</attribute>
+                </xpath> 
+            </field>
+          </record> 
+          
+          
+     </data>
+</odoo>

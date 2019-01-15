@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_bullets" name="Header with Bullets">
+            <section class="snippet_bullet_point">
+                <div class="block_d">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bullets-points">
+                                    <h3>Add sub header here.</h3>
+                                    <ul class="bullets">
+                                        <li class="text-list">Add text here.</li>
+                                        <li class="text-list">Add text here.</li>
+                                        <li class="text-list">Add text here.</li>
+                                        <li class="text-list">Add text here.</li>
+                                        <li class="text-list">Add text here.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_bullets" inherit_id="website.snippets" name="Header with Bullets">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_bullets"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_015.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

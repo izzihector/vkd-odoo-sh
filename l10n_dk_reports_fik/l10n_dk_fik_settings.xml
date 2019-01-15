@@ -1,0 +1,79 @@
+<odoo>
+    <data>
+        <record id="0-14" model="fik.settings">
+            <field name="name">0 - 14</field>
+            <field name="customer_code_length">0</field>
+            <field name="invoice_number_length">14</field>
+        </record>
+        <record id="1-13" model="fik.settings">
+            <field name="name">1 - 13</field>
+            <field name="customer_code_length">1</field>
+            <field name="invoice_number_length">13</field>
+        </record>
+        <record id="2-12" model="fik.settings">
+            <field name="name">2 - 12</field>
+            <field name="customer_code_length">2</field>
+            <field name="invoice_number_length">12</field>
+        </record>
+        <record id="3-11" model="fik.settings">
+            <field name="name">3 - 11</field>
+            <field name="customer_code_length">3</field>
+            <field name="invoice_number_length">11</field>
+        </record>
+        <record id="4-10" model="fik.settings">
+            <field name="name">4 - 10</field>
+            <field name="customer_code_length">4</field>
+            <field name="invoice_number_length">10</field>
+        </record>
+        <record id="5-9" model="fik.settings">
+            <field name="name">5 - 9</field>
+            <field name="customer_code_length">5</field>
+            <field name="invoice_number_length">9</field>
+        </record>
+        <record id="6-8" model="fik.settings">
+            <field name="name">6 - 8</field>
+            <field name="customer_code_length">6</field>
+            <field name="invoice_number_length">8</field>
+        </record>
+        <record id="7-7" model="fik.settings">
+            <field name="name">7 - 7</field>
+            <field name="customer_code_length">7</field>
+            <field name="invoice_number_length">7</field>
+        </record>
+        <record id="8-6" model="fik.settings">
+            <field name="name">8 - 6</field>
+            <field name="customer_code_length">8</field>
+            <field name="invoice_number_length">6</field>
+        </record>
+        <record id="9-5" model="fik.settings">
+            <field name="name">9 - 5</field>
+            <field name="customer_code_length">9</field>
+            <field name="invoice_number_length">5</field>
+        </record>
+        <record id="10-4" model="fik.settings">
+            <field name="name">10 - 4</field>
+            <field name="customer_code_length">10</field>
+            <field name="invoice_number_length">4</field>
+        </record>
+        <record id="11-3" model="fik.settings">
+            <field name="name">11 - 3</field>
+            <field name="customer_code_length">11</field>
+            <field name="invoice_number_length">3</field>
+        </record>
+        <record id="12-2" model="fik.settings">
+            <field name="name">12 - 2</field>
+            <field name="customer_code_length">12</field>
+            <field name="invoice_number_length">2</field>
+        </record>
+        <record id="13-1" model="fik.settings">
+            <field name="name">13 - 1</field>
+            <field name="customer_code_length">13</field>
+            <field name="invoice_number_length">1</field>
+        </record>
+        <record id="14-0" model="fik.settings">
+            <field name="name">14 - 0</field>
+            <field name="customer_code_length">14</field>
+            <field name="invoice_number_length">0</field>
+        </record>
+    </data>
+</odoo>

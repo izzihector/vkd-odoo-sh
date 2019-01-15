@@ -1,0 +1,311 @@
+//  ================================================================
+//  COLOR - GRADES
+//  ================================================================
+
+@vkdata_color_a:    #0c0c0c; //black
+@vkdata_color_b:    #5b5b5b; //dark_gray
+@vkdata_color_c:    #ae1f23; //red
+@vkdata_color_d:    #d3d3d3; //light_gray
+@vkdata_color_e:    #688e26; //green
+
+//  ================================================================
+//  HEADER - MEDIA
+//  ================================================================
+
+@media (max-width: 480px) {
+    #vkdata_header {
+        .container {
+            .row {
+                .region-logo {
+                    a {
+                        img {
+                            display: block !important;
+                            margin: 0 auto !important;
+                        }
+                    }
+                }
+                .region-center {
+                    text-align: center !important;
+                }
+            }
+            .navbar-header {
+                .navbar-toggle {
+                    margin: 8px 15px !important;
+                    width: 90% !important;
+                    .icon-bar {
+                        color: #000 !important;
+                    }
+                }
+            }
+        }
+        .navbar-default {
+            .container {
+                .navbar-collapse {
+                    ul {
+                        float: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  ================================================================
+//  REGION - OUR SERVICES - HOME
+//  ================================================================
+
+@media (max-width: 480px) { 
+    .group-services-block {
+        margin-bottom: 15px;
+    }   
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .group-services-block {
+        margin-bottom: 30px;
+    }  
+}
+
+//  ================================================================
+//  REGION - OUR CLIENTS
+//  ================================================================
+
+@media (max-width: 480px) {
+    .clients-block {
+        .container {
+            .row {
+                .clients-header {
+                    h1 {
+                        width: 80% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  ================================================================
+//  REGION - CONTACTS
+//  ================================================================
+
+@media (max-width: 480px) {
+    .snippet_contact {
+        .group-contact {
+            .container {
+                .row {
+                    .group-contact {
+                        .contact-container {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .snippet_contact {
+        .group-contact {
+            .container {
+                .row {
+                    .group-contact {
+                        .contact-container {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  ================================================================
+//  INNER - ONLINE SUPPORT
+//  ================================================================
+
+@media (max-width: 480px) { 
+    .group_support_inner {
+        margin: 0px !important;
+    }
+}
+
+//  ================================================================
+//  INNER - INNER BLOCK - KONTACT
+//  ================================================================
+
+@media (max-width: 480px) {
+    .snippet_innerBlock_kontakt {
+        .block_kontakt {
+            .container {
+                .group-contact {
+                    .container {
+                        .row {
+                            .group-contact {
+                                margin-bottom: 15px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .text-xs-center {
+        text-align: center;
+    }
+}
+
+//  ================================================================
+//  MAIN MENU
+//  ================================================================
+
+@media (max-width: 480px) {
+    .navbar-collapse {
+        ul {
+            &.navbar-nav {
+                li {
+                    &.dropdown {
+                        ul {
+                            &.dropdown-menu {
+                                background: #FFF !important;
+                                li {
+                                    display: inline !important;
+                                    a {
+                                        padding: 10px 10px 10px 30px !important;
+                                    }
+                                    &.active {
+                                        a {
+                                            color: #000 !important;
+                                        }
+                                    }
+                                }
+                                .yamm-content {
+                                    width: 320px;
+                                    .s_image_text {
+                                        .container {
+                                            .row {
+                                                .col-md-6 {
+                                                    h3 {
+                                                        margin: 10px 0 !important;
+                                                    }
+                                                    ul {
+                                                        li {
+                                                            background: #FFF !important;
+                                                            &:hover {
+                                                                a {
+                                                                    background: #FFF !important;
+                                                                }
+                                                            }
+                                                            a {
+                                                                background: #FFF !important;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .s_three_columns {
+                                        .container {
+                                            .row {
+                                                .col-md-4 {
+                                                    ul {
+                                                        li {
+                                                            background: #FFF !important;
+                                                            &:hover {
+                                                                a {
+                                                                    background: #FFF !important;
+                                                                }
+                                                            }
+                                                            a {
+                                                                background: #FFF !important;
+                                                                padding: 10px 0 !important;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    background: none !important;
+                    &:hover {
+                        a {
+                            background: #ae1f23 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-collapse {
+        ul {
+            &.navbar-nav {
+                li {
+                    background: none !important;
+                    a {
+                        background: none !important;
+                        padding: 30px 10px 10px;
+                    }
+                    &.dropdown {
+                        ul {
+                            &.dropdown-menu {
+                                min-width: 320px;
+                                li {
+                                    display: inline !important;
+                                    a {
+                                        background-image: none;
+                                        &:hover {
+                                            background-image: none !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        background: none !important;
+                        a {
+                            color: #ac1d21 !important;   
+                        }
+                    }
+                    &:nth-child(1) {
+                        background: none !important;
+                        a {
+                            color: #ac1d21 !important; 
+                            &:hover {
+                                background: none !important;
+                                color: #AC1D21 !important;
+                            }
+                        }       
+                    }
+                    &:nth-child(2) {
+                        a {
+                            
+                        }
+                    }
+                    &.active {
+                        a {
+                            color: #ac1d21 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .text-xs-center {
+        text-align: center;
+    } 
+}
+
+
+//  ================================================================
+
+@media (min-width: 768px) and (max-width: 991px) {}
+@media only screen and (max-width : 768px){}

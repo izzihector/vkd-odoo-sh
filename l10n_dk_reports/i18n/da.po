@@ -1,0 +1,607 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_dk_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-13 08:48+0000\n"
+"PO-Revision-Date: 2018-07-13 10:56+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: da_DK\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_invoice_dk
+msgid "<strong>Comment:</strong>"
+msgstr "<strong>Kommentar:</strong>"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_invoice_dk
+msgid "<strong>Customer Code:</strong>"
+msgstr "<strong>Kunde kode:</strong>"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_invoice_dk
+msgid "<strong>Salesperson:</strong>"
+msgstr "<strong>Sælger:</strong>"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_balance_actives
+msgid "AKTIVER"
+msgstr "AKTIVER"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_administration
+msgid "Administrationsomkostninger"
+msgstr "Administrationsomkostninger"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_depreciation
+msgid "Afskrivninger"
+msgstr "Afskrivninger"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_balance_other_debt
+msgid "Anden gæld"
+msgstr "Anden gæld"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_balance_fixed_assets
+msgid "Anlægsaktiver"
+msgstr "Anlægsaktiver"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_vehicle
+msgid "Autodrift - personbiler"
+msgstr "Autodrift - personbiler"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_balance_total
+msgid "BALANCE"
+msgstr "BALANCE"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "CO2-afgift"
+msgstr "CO2-afgift"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+msgid "CVR-nummer"
+msgstr "CVR-nummer"
+
+#. module: l10n_dk_reports
+#: model:ir.actions.report,name:l10n_dk_reports.print_chart_of_accounts
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_chart_of_accounts
+msgid "Chart of Accounts"
+msgstr "Kontoplan"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_chart_of_accounts
+msgid "Code"
+msgstr "Kode"
+
+#. module: l10n_dk_reports
+#: model:ir.model,name:l10n_dk_reports.model_res_company
+msgid "Companies"
+msgstr "Virksomheder"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+msgid "Country"
+msgstr "Land"
+
+#. module: l10n_dk_reports
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_create_uid
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_eu_create_uid
+msgid "Created by"
+msgstr "Oprettet af"
+
+#. module: l10n_dk_reports
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_create_date
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_eu_create_date
+msgid "Created on"
+msgstr "Oprettet den"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_result
+msgid "DRIFT"
+msgstr "DRIFT"
+
+#. module: l10n_dk_reports
+#: model:ir.model,name:l10n_dk_reports.model_account_tax_report_dk_eu
+msgid "Danish EU Tax Report"
+msgstr "Danish EU Tax Report"
+
+#. module: l10n_dk_reports
+#: model:ir.model,name:l10n_dk_reports.model_account_tax_report_dk
+msgid "Danish Tax Report"
+msgstr "Danish Tax Report"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_chart_of_accounts
+msgid "Default Taxes"
+msgstr "Standard moms"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_invoice_dk
+msgid "Description"
+msgstr "Beskrivelse"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_costs
+msgid "Direkte omkostninger"
+msgstr "Direkte omkostninger"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_invoice_dk
+msgid "Disc.(%)"
+msgstr "Rabatprocent"
+
+#. module: l10n_dk_reports
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_display_name
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_eu_display_name
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_report_l10n_dk_reports_l10n_dk_tax_report_display_name
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_report_l10n_dk_reports_l10n_dk_tax_report_eu_display_name
+msgid "Display Name"
+msgstr "Vis navn"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_fixed_assets_fixtures
+msgid "Driftsmidler & inventar"
+msgstr "Driftsmidler & inventar"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_balance_equity
+msgid "EGENKAPITAL"
+msgstr "EGENKAPITAL"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+msgid "EU Sale"
+msgstr "EU Salg"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+msgid "EU Sale Service"
+msgstr "EU Ydelser"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+msgid "EU-Salg Uden Moms"
+msgstr "EU-Salg Uden Moms"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_fixed_assets_computer_equipment
+msgid "Edb-anlæg"
+msgstr "Edb-anlæg"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_extraordinary
+msgid "Ekstraordinære poster"
+msgstr "Ekstraordinære poster"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Elafgift"
+msgstr "Elafgift"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_external_layout
+msgid "Email:"
+msgstr "Email:"
+
+#. module: l10n_dk_reports
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_res_config_settings_module_l10n_dk_reports_fik
+msgid "Enable FIK module"
+msgstr "Enable FIK module"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_view_account_config_settings
+msgid "FIK"
+msgstr "FIK"
+
+#. module: l10n_dk_reports
+#: code:addons/l10n_dk_reports/models/account_tax_report.py:14
+#: code:addons/l10n_dk_reports/models/account_tax_report_eu.py:16
+#, python-format
+msgid "Form content is missing, this report cannot be printed."
+msgstr "Form content is missing, this report cannot be printed."
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+msgid "Fra:"
+msgstr "Fra:"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Fradrag"
+msgstr "Fradrag"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_balance_debt
+msgid "GÆLD"
+msgstr "GÆLD"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_balance_reserves
+msgid "HENSÆTTELSER"
+msgstr "HENSÆTTELSER"
+
+#. module: l10n_dk_reports
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_eu_id
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_id
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_report_l10n_dk_reports_l10n_dk_tax_report_eu_id
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_report_l10n_dk_reports_l10n_dk_tax_report_id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Indberettes ikke til EU-salg uden moms. Værdien af fx installation og montage, fjernsalg og nye transportmidler til ikke-momsregistrerede kunder uden moms til andre EU-lande"
+msgstr "Indberettes ikke til EU-salg uden moms. Værdien af fx installation og montage, fjernsalg og nye transportmidler til ikke-momsregistrerede kunder uden moms til andre EU-lande"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_fixed_assets_office_furniture
+msgid "Indretning af lejede lokaler"
+msgstr "Indretning af lejede lokaler"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_view_account_config_settings
+msgid "Install the FIK module"
+msgstr "Installer FIK modulet"
+
+#. module: l10n_dk_reports
+#: model:ir.model,name:l10n_dk_reports.model_account_invoice
+msgid "Invoice"
+msgstr "Faktura"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_capacity_costs
+msgid "Kapacitetsomkostninger"
+msgstr "Kapacitetsomkostninger"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Kulafgift"
+msgstr "Kulafgift"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Købsmoms (indgående moms)"
+msgstr "Købsmoms (indgående moms)"
+
+#. module: l10n_dk_reports
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk___last_update
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_eu___last_update
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_report_l10n_dk_reports_l10n_dk_tax_report___last_update
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_report_l10n_dk_reports_l10n_dk_tax_report_eu___last_update
+msgid "Last Modified on"
+msgstr "Sidst ændret den"
+
+#. module: l10n_dk_reports
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_eu_write_uid
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_write_uid
+msgid "Last Updated by"
+msgstr "Sidst opdateret af"
+
+#. module: l10n_dk_reports
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_eu_write_date
+#: model:ir.model.fields,field_description:l10n_dk_reports.field_account_tax_report_dk_write_date
+msgid "Last Updated on"
+msgstr "Sidst opdateret den"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_office
+msgid "Lokaleomkostninger"
+msgstr "Lokaleomkostninger"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_salaries
+msgid "Lønninger"
+msgstr "Lønninger"
+
+#. module: l10n_dk_reports
+#: code:addons/l10n_dk_reports/models/account_tax_report_eu.py:46
+#, python-format
+msgid ""
+"Missing VAT number for customer {0}.\n"
+"\n"
+"Common reasons for error:\n"
+"1. Forgot to add VAT number on customer\n"
+"2. EU Sales tax on orders/invoices for non-EU or Danish customer.\n"
+"\n"
+"Please make sure customer '{0}' has the correct VAT number, and that sales orders/invoices for the customer have the correct tax type"
+msgstr ""
+"Manglende momsnr. for kunde {0}.\n"
+"\n"
+"Almindelige grunde til fejlen:\n"
+"1. Glemt momsnr. på kunden\n"
+"2. EU moms på en ordre/faktura for en ikke-EU, eller dansk kunde.\n"
+"\n"
+"Venligst kontroller at kunde '{0}' har det rigtige momsnr., og at salgsordre/fakturaer på kunden har den rigtige momstype."
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_balance_tax
+msgid "Moms & afgifter"
+msgstr "Moms & afgifter"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Moms af varekøb i udlandet (både EU og tredjelande)"
+msgstr "Moms af varekøb i udlandet (både EU og tredjelande)"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Moms af ydelseskøb i udlandet med omvendt betalingspligt"
+msgstr "Moms af ydelseskøb i udlandet med omvendt betalingspligt"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Moms i alt"
+msgstr "Moms i alt"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Momsangivelse"
+msgstr "Momsangivelse"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Momsperiode"
+msgstr "Momsperiode"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_chart_of_accounts
+msgid "Name"
+msgstr "Navn"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Naturgas- og bygasafgift"
+msgstr "Naturgas- og bygasafgift"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Olie- og flaskegasafgift"
+msgstr "Olie- og flaskegasafgift"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_income
+msgid "Omsætning"
+msgstr "Omsætning"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_balance_current_assets
+msgid "Omsætningsaktiver"
+msgstr "Omsætningsaktiver"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_balance_passives
+msgid "PASSIVER"
+msgstr "PASSIVER"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_external_layout
+msgid "Page:"
+msgstr "Side:"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+msgid "Periode"
+msgstr "Periode"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_external_layout
+msgid "Phone:"
+msgstr "Telefon:"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.menu,name:l10n_dk_reports.l10n_dk_tax_report_EU_print_menu
+msgid "Print EU Tax Report"
+msgstr "Print EU-Salg uden moms"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.menu,name:l10n_dk_reports.l10n_dk_tax_report_print_menu
+msgid "Print Tax Report"
+msgstr "Print Momsangivelse"
+
+#. module: l10n_dk_reports
+#: model:ir.model,name:l10n_dk_reports.model_product_product
+msgid "Product"
+msgstr "Produkt"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_invoice_dk
+msgid "Quantity"
+msgstr "Mængde"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_interest_income
+msgid "Renteindtægter"
+msgstr "Renteindtægter"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_interest
+msgid "Renter"
+msgstr "Renter"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_interest_expenses
+msgid "Renteudgifter"
+msgstr "Renteudgifter"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Rubrik A = varer"
+msgstr "Rubrik A = varer"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Rubrik A = ydelser"
+msgstr "Rubrik A = ydelser"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Rubrik B = varer"
+msgstr "Rubrik B = varer"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Rubrik B = ydelser"
+msgstr "Rubrik B = ydelser"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Rubrik C"
+msgstr "Rubrik C"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report,name:l10n_dk_reports.account_financial_report_dk_general
+#: model:ir.actions.client,name:l10n_dk_reports.account_financial_html_report_action_5
+#: model:ir.ui.menu,name:l10n_dk_reports.account_financial_html_report_menu_5
+msgid "Saldobalance"
+msgstr "Saldobalance"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_sale_travel
+msgid "Salgs- og rejseomkostninger"
+msgstr "Salgs- og rejseomkostninger"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Salgsmoms (udgående moms)"
+msgstr "Salgsmoms (udgående moms)"
+
+#. module: l10n_dk_reports
+#: model:account.financial.html.report.line,name:l10n_dk_reports.account_financial_report_dk_general_result_tax
+msgid "Selskabsskat"
+msgstr "Selskabsskat"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_invoice_dk
+msgid "Source Document"
+msgstr "Kildedokument"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Supplerende oplysninger"
+msgstr "Supplerende oplysninger"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_external_layout
+msgid "TIN:"
+msgstr "CVR:"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_chart_of_accounts
+msgid "Tags"
+msgstr "Tags"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_invoice_dk
+msgid "Tax Excluded Price"
+msgstr "Pris uden moms"
+
+#. module: l10n_dk_reports
+#: model:ir.actions.act_window,name:l10n_dk_reports.action_l10n_dk_tax_report
+#: model:ir.actions.act_window,name:l10n_dk_reports.action_l10n_dk_tax_report_eu
+msgid "Tax Report"
+msgstr "Momsrapport"
+
+#. module: l10n_dk_reports
+#: model:ir.actions.report,name:l10n_dk_reports.print_l10n_dk_tax_report
+#: model:ir.actions.report,name:l10n_dk_reports.print_l10n_dk_tax_report_eu
+msgid "Tax Reports"
+msgstr "Momsrapporter"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_invoice_dk
+msgid "Taxes"
+msgstr "Moms"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+msgid "Til:"
+msgstr "Til:"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+msgid "Triangle Trade"
+msgstr "Trekantshandel"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_chart_of_accounts
+msgid "Type"
+msgstr "Type"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.report_invoice_dk
+msgid "Unit Price"
+msgstr "Enhedspris"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report_eu
+msgid "VAT nbr."
+msgstr "Momsnr."
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Vandafgift"
+msgstr "Vandafgift"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Værdien af andre varer og ydelser, der leveres uden afgift her i landet, i andre EU-lande og i lande uden for EU"
+msgstr "Værdien af andre varer og ydelser, der leveres uden afgift her i landet, i andre EU-lande og i lande uden for EU"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Værdien af varesalg uden moms til andre EU-lande. Indberettes til systemet EU-salg uden moms"
+msgstr "Værdien af varesalg uden moms til andre EU-lande. Indberettes til systemet EU-salg uden moms"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Værdien af visse ydelsessalg uden moms til andre EU-lande. Indberettes til EU-salg uden moms."
+msgstr "Værdien af visse ydelsessalg uden moms til andre EU-lande. Indberettes til EU-salg uden moms."
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Værdien uden moms af varekøb i andre EU-lande (EU-erhvervelser)"
+msgstr "Værdien uden moms af varekøb i andre EU-lande (EU-erhvervelser)"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_tax_report
+msgid "Værdien uden moms af ydelseskøb i andre EU-lande"
+msgstr "Værdien uden moms af ydelseskøb i andre EU-lande"
+
+#. module: l10n_dk_reports
+#: model:ir.ui.view,arch_db:l10n_dk_reports.l10n_dk_external_layout
+msgid "Website:"
+msgstr "Hjemmeside:"
+
+#. module: l10n_dk_reports
+#: model:ir.model,name:l10n_dk_reports.model_report_l10n_dk_reports_l10n_dk_tax_report
+msgid "report.l10n_dk_reports.l10n_dk_tax_report"
+msgstr "report.l10n_dk_reports.l10n_dk_tax_report"
+
+#. module: l10n_dk_reports
+#: model:ir.model,name:l10n_dk_reports.model_report_l10n_dk_reports_l10n_dk_tax_report_eu
+msgid "report.l10n_dk_reports.l10n_dk_tax_report_eu"
+msgstr "report.l10n_dk_reports.l10n_dk_tax_report_eu"
+
+#. module: l10n_dk_reports
+#: model:ir.model,name:l10n_dk_reports.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"

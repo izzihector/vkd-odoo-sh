@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_block_c" name="Inner Block - Newsletter">
+            <section class="snippet_innerBlock_c">
+                <div class="block_c">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 block-text">
+                                <div class="special-text">
+                                    <!-- <p>E-Mail Marketing Med <span class="special_note">Pro News</span></p> -->
+                                    <p>Tilmeld dig vores nyhedsbrev og <span class="special_note">modtag relevant info og gode tilbud</span></p>
+                                </div>
+                                <!-- <div class="special-sub-text">
+                                     <p>Effective og målrettet</p>
+                                    <p>Tilmeld dig nyhedsbrev</p>
+                                </div> -->
+                            </div>
+                            <div class="col-md-2 block-image text-center">
+                                <div class="image">
+                                    <img src="/theme_vkdata_with_mega_menu/static/images/mail_icon.png"></img>
+                                </div>
+                            </div>
+                            <div class="col-md-4 block-link">
+                                <a href="/page/tilmeld-dig-nyhedsbrev">Tilmeld dig nyhedsbrev<i class="fa fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_block_c" inherit_id="website.snippets" name="Inner Block - Newsletter">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_block_c"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_012.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

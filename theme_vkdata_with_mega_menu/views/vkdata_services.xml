@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_services" name="Services">
+            <section class="sinppet_services">
+                <div class="container services_home">
+                    <div class="row">
+                        <div class="group-services">
+                            <div class="col-xs-12 col-sm-6 col-md-4 group-services-block">
+                                <div class="oe_structure"/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 group-services-block">
+                                <div class="oe_structure"/>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-4 group-services-block">
+                                <div class="oe_structure"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_services" inherit_id="website.snippets" name="Services">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_services"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_001.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<odoo>
+    <data>
+        <template id="snippet_services_home" name="Services - Home Page">
+            <section class="snippet_services-block"> 
+                <div class="group-services-block">
+                    <div class="services-title">
+                        <div class="wrapper-header">
+                            Add Text Here
+                        </div>
+                    </div>
+                    <div class="wrapper-link">
+                        <a href="#"><i class="fa fa-chain fa-2x"></i></a>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_services_home" inherit_id="website.snippets" name="Services - Home Page">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_services_home"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_002.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

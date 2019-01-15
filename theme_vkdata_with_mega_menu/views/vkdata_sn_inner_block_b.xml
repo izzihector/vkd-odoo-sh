@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_block_b" name="Inner Block - Ring Mig Op">
+            <section class="snippet_innerBlock_b">
+                <div class="block_b">
+                    <div class="container">
+                        <div class="row text-center">
+                            <p>Ønsker du at vi ringer dig op - så klik på knappen og vi vil kontakte dig snarest muligt.</p>
+                            <a href="/page/tilmeld-dig-nyhedsbre">Ring Mig Op</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_block_b" inherit_id="website.snippets" name="Inner Block - Ring Mig Op">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_block_b"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_011.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

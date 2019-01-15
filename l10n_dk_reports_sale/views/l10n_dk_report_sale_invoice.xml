@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_sale_invoice_dk" inherit_id="sale.report_invoice_document_inherit_sale" priority="1">
+				<xpath expr="//div[@groups='sale.group_delivery_invoice_address']" position="replace">
+					<div class="col-xs-6" style="margin-left: 2%;" groups="sale.group_delivery_invoice_address">
+					    <address t-field="o.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+					    <span t-if="o.partner_id.vat">TIN: <span t-field="o.partner_id.vat"/></span>
+					</div>
+				</xpath>
+				<xpath expr="//div[@class='col-xs-5 col-xs-offset-1']" position="replace"/>
+	    </template>
+	    <template id="report_invoice_shipping_address_dk" inherit_id="l10n_dk_reports.report_invoice_dk" priority="1">
+	    	<xpath expr="//div[@class='row']/div[@class='col-xs-6']" position="after">
+				<div class="col-xs-5" groups="sale.group_delivery_invoice_address">
+		    		<t t-if="o.partner_shipping_id != o.partner_id">
+						<t t-if="o.partner_shipping_id">
+							<strong>Shipping address:</strong>
+			            	<div t-field="o.partner_shipping_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+						</t>
+					</t>
+				</div>
+	    	</xpath>
+	    </template>
+	</data>
+</odoo>

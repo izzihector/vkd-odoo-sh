@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <template id="snippet_team" name="VKData Team Member">
+            <section class="snippet_team">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 block block-team-member">
+                            <div class="wrapper member-image">
+                                Add image here
+                            </div>
+                            <div class="wrapper member-name-designation">
+                                <h3>Add Name Here</h3>
+                                <p>Add designation here</p>
+                            </div>
+                            <div class="wrapper member-contacts">
+                                <p><a href="mailto:visti@vkdata.dk">Add email here</a></p>
+                            </div>
+                            <div class="wrapper member-description">
+                                <h3 class="block-descriptions">Ansvarsområder:</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 block block-team-member">
+                            <div class="wrapper member-image">
+                                Add image here
+                            </div>
+                            <div class="wrapper member-name-designation">
+                                <h3>Add Name Here</h3>
+                                <p>Add designation here</p>
+                            </div>
+                            <div class="wrapper member-contacts">
+                                <p><a href="mailto:visti@vkdata.dk">Add email here</a></p>
+                            </div>
+                            <div class="wrapper member-description">
+                                <h3 class="block-descriptions">Ansvarsområder:</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 block block-team-member">
+                            <div class="wrapper member-image">
+                                Add image here
+                            </div>
+                            <div class="wrapper member-name-designation">
+                                <h3>Add Name Here</h3>
+                                <p>Add designation here</p>
+                            </div>
+                            <div class="wrapper member-contacts">
+                                <p><a href="mailto:visti@vkdata.dk">Add email here</a></p>
+                            </div>
+                            <div class="wrapper member-description">
+                                <h3 class="block-descriptions">Ansvarsområder:</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_team" inherit_id="website.snippets" name="VKData Team Member">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_team"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_008.png"/>
+            </xpath>         
+        </template>
+    </data>
+</openerp>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    	<record id="sotersat_login_wizard_view" model="ir.ui.view">
+            <field name="name">sotersat.login.wizard</field>
+            <field name="model">sotersat.login.wizard</field>
+            <field name="arch" type="xml">
+              <form string="sotersat_login_wizard">
+          		 <p >
+          		 	You are authorization is no longer valid. Please login to Sotersat again here.
+                  </p> 
+                  <group>
+                  	<group>
+                  		<field name="account"/>
+                  		<field name="user_name"/>
+                  		<field name="password" password="True"/>
+                  		
+                            	
+                  	</group>
+                  	<group>
+                  	</group>
+                  	<div style="padding-left: 37%;">
+                  			<button string="Login" class="oe_highlight" name="sotersat_login" type="object"/>
+                  		</div>
+                  </group>
+              	   
+                <!--   <footer>
+                  	<button string="Close" class="oe_link" special="cancel" />
+                  </footer> -->
+            </form>
+            </field>
+        </record>
+        
+        <record id="action_sotersat_login_wizard_view" model="ir.actions.act_window">
+            <field name="name">Login</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sotersat.login.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="sotersat_login_wizard_view"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

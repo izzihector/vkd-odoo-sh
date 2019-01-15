@@ -1,0 +1,216 @@
+<odoo>
+<data>
+
+    <!-- The ir.actions.report record that binds it all together -->
+    <report
+    id="print_l10n_dk_tax_report"
+    string="Tax Reports"
+    model="account.tax.report.dk"
+    report_type="qweb-pdf"
+    file="l10n_dk_reports.l10n_dk_tax_report"
+    name="l10n_dk_reports.l10n_dk_tax_report"
+    />
+
+    <!-- Form view of the wizard.
+         Needs to inherit from account.account_common_report_view in
+         order to work correctly. As far as i have figured out, the 'print' button
+         of this view, triggers the _print_report method of the defined model -->
+    <record id="l10n_dk_tax_report_wizard" model="ir.ui.view">
+        <field name="name">Tax Report</field>
+        <field name="model">account.tax.report.dk</field>
+        <field name="inherit_id" ref="account.account_common_report_view"/>
+        <field name="arch" type="xml">
+            <data>
+                <field name="journal_ids" position="replace"/>
+                <field name="target_move" position="replace"/>
+                <xpath expr="//field[@name='date_from']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <!-- Action for opening the wizard -->
+    <record id="action_l10n_dk_tax_report" model="ir.actions.act_window">
+        <field name="name">Tax Report</field>
+        <field name="res_model">account.tax.report.dk</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_dk_tax_report_wizard"/>
+        <field name="context">{}</field>
+        <field name="target">new</field>
+    </record>
+    
+    <!-- Menu item for triggering the action that opens the wizard -->
+    <menuitem id="l10n_dk_tax_report_print_menu" name="Print Tax Report" parent="l10n_dk.account_reports_dk_statements_menu" action="action_l10n_dk_tax_report"/>
+
+    <!-- The actual printed report -->
+    <template id="l10n_dk_tax_report">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <h2>Momsangivelse</h2>
+                    <div class="row" style="padding-bottom: 5px;">
+                        <div class="col-xs-6 col-xs-offset-6">
+                            <table class="table table-condensed">
+                                <tbody>
+                                    <tr>
+                                        <th width="60%">CVR-nummer</th>
+                                        <td width="10%"></td>
+                                        <td width="30%" style="text-align: right;"><t t-if="company.vat" t-esc="company.vat"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Momsperiode</th>
+                                        <td>Fra:</td>
+                                        <td style="text-align: right;"><span t-esc="datetime.datetime.strptime(data['date_from'], '%Y-%m-%d').strftime('%d-%m-%Y')"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td>Til:</td>
+                                        <td style="text-align: right;"><span t-esc="datetime.datetime.strptime(data['date_to'], '%Y-%m-%d').strftime('%d-%m-%Y')"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row zero_min_height">
+                        <div class="col-xs-12">
+                            <div style="border-bottom: 1px solid black;"></div>
+                        </div>
+                    </div>
+                    <table class="table table-condensed">
+                        <t t-set="first_sum" t-value="lines['salgsmoms'] + lines['moms_vare_eu_in'] + lines['moms_ydelse_eu']"/>
+                        <tbody>
+                            <tr>
+                                <th width="76%">Salgsmoms (udgående moms)</th>
+                                <td width="12%" style="text-align: right;"><t t-esc="round(lines['salgsmoms'],2)"/></td>
+                                <td width="12%"></td>
+                            </tr>
+                            <tr>
+                                <th>Moms af varekøb i udlandet (både EU og tredjelande)</th>
+                                <td style="text-align: right;"><t t-esc="round(lines['moms_vare_eu_in'],2)"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Moms af ydelseskøb i udlandet med omvendt betalingspligt</th>
+                                <td style="text-align: right;"><t t-esc="round(lines['moms_ydelse_eu'],2)"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td></td>
+                                <td style="text-align: right;"><t t-esc="round(first_sum,2)"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row zero_min_height">
+                        <div class="col-xs-12">
+                            <div style="border-bottom: 1px solid black;"></div>
+                        </div>
+                    </div>
+                    <table class="table table-condensed">
+                        <h3 style="padding-top: 10px;">Fradrag</h3>
+
+                        <t t-set="second_sum" t-value="lines['kobsmoms'] + lines['olie_gas_afgift'] + lines['elafgift'] + lines['vandafgift'] + lines['natur_by_gas_afgift'] + lines['kulafgift'] + lines['co2_afgift']"/>
+                        <tbody>
+                            <tr>
+                                <th width="76%">Købsmoms (indgående moms)</th>
+                                <td width="12%" style="text-align: right;"><t t-esc="round(lines['kobsmoms'],2)"/></td>
+                                <td width="12%"></td>
+                            </tr>
+                            <tr>
+                                <th>Olie- og flaskegasafgift</th>
+                                <td style="text-align: right;"><t t-esc="round(lines['olie_gas_afgift'],2)"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Elafgift</th>
+                                <td style="text-align: right;"><t t-esc="round(lines['elafgift'],2)"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Naturgas- og bygasafgift</th>
+                                <td style="text-align: right;"><t t-esc="round(lines['natur_by_gas_afgift'],2)"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Kulafgift</th>
+                                <td style="text-align: right;"><t t-esc="round(lines['kulafgift'],2)"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>CO2-afgift</th>
+                                <td style="text-align: right;"><t t-esc="round(lines['co2_afgift'],2)"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Vandafgift</th>
+                                <td style="text-align: right;"><t t-esc="round(lines['vandafgift'],2)"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td></td>
+                                <td style="text-align: right;"><t t-esc="round(second_sum,2)"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row" style="padding-bottom: 5px;">
+                        <div class="col-xs-12">
+                            <div style="border-bottom: 1px solid black;"></div>
+                        </div>
+                    </div>
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr>
+                                <th style="font-size: 16px;border: none;" width="76%">Moms i alt</th>
+                                <td style="border: none;" width="12%"></td>
+                                <td style="border: none;text-align: right;" width="12%"><t t-esc="round(first_sum - second_sum,2)"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3 style="padding-top: 10px;">Supplerende oplysninger</h3>
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr>
+                                <th width="20%">Rubrik A = varer</th>
+                                <td width="68%">Værdien uden moms af varekøb i andre EU-lande (EU-erhvervelser)</td>
+                                <td width="12%" style="text-align: right;"><t t-esc="round(lines['rubrik_av'],2)"/></td>
+                            </tr>
+                            <tr>
+                                <th>Rubrik A = ydelser</th>
+                                <td>Værdien uden moms af ydelseskøb i andre EU-lande</td>
+                                <td style="text-align: right;"><t t-esc="round(lines['rubrik_ay'],2)"/></td>
+                            </tr>
+                            <tr>
+                                <th>Rubrik B = varer</th>
+                                <td>Værdien af varesalg uden moms til andre EU-lande. Indberettes til systemet EU-salg uden moms</td>
+                                <td style="text-align: right;"><t t-esc="round(lines['rubrik_bv'],2)"/></td>
+                            </tr>
+                            <tr>
+                                <th>Rubrik B = varer</th>
+                                <td>Indberettes ikke til EU-salg uden moms. Værdien af fx installation og montage, fjernsalg og nye transportmidler til ikke-momsregistrerede kunder uden moms til andre EU-lande</td>
+                                <td style="text-align: right;"><t t-esc="round(lines['rubrik_b_vy_u'],2)"/></td>
+                            </tr>
+                            <tr>
+                                <th>Rubrik B = ydelser</th>
+                                <td>Værdien af visse ydelsessalg uden moms til andre EU-lande. Indberettes til EU-salg uden moms.</td>
+                                <td style="text-align: right;"><t t-esc="round(lines['rubrik_by'],2)"/></td>
+                            </tr>
+                            <tr>
+                                <th>Rubrik C</th>
+                                <td>Værdien af andre varer og ydelser, der leveres uden afgift her i landet, i andre EU-lande og i lande uden for EU</td>
+                                <td style="text-align: right;"><t t-esc="round(lines['rubrik_c'],2)"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</data>
+</odoo>

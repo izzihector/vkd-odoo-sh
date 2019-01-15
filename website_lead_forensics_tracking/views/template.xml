@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+		<template id="tracking_code_web" inherit_id="website.layout" name="Lead Forensics Tracking Code">
+
+			<xpath expr="//meta[@property='og:site_name']" position="after">
+				<t t-if="website.lead_forensics_tracking_code">	
+					<script type="text/javascript" t-attf-src="https://secure.leadforensics.com/js/{{website.lead_forensics_tracking_code}}.js" ></script>
+					<noscript><img alt="Lead Forensics"  t-attf-src="https://secure.leadforensics.com/{{website.lead_forensics_tracking_code}}.png" style="display:none;" /></noscript>
+				</t>
+			</xpath>
+
+		</template>
+
+  </data>
+</odoo>

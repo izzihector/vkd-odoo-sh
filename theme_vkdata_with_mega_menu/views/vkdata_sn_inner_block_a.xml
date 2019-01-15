@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_block_a" name="Inner Block - Paragraph with bullets">
+            <section class="snippet_innerBlock_a">
+                <div class="group-services">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 wrapper-left">
+                                <h1>Add header here</h1>
+                                <h2>Add second header here</h2>
+                                <p>
+                                    Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor accumsan tincidunt. Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultricies ligula sed magna dictum porta.
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 wrapper-right">
+                                <h3>Add text here</h3>
+                                <ul>
+                                    <li><i class="fa fa-paper-plane"></i>Item name add here</li>
+                                    <li><i class="fa fa-paper-plane"></i>Item name add here</li>
+                                    <li><i class="fa fa-paper-plane"></i>Item name add here</li>
+                                    <li><i class="fa fa-paper-plane"></i>Item name add here</li>
+                                    <li><i class="fa fa-paper-plane"></i>Item name add here</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_block_a" inherit_id="website.snippets" name="Inner Block - Paragraph with bullets">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_block_a"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_010.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

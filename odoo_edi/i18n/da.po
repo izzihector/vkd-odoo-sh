@@ -1,0 +1,267 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* odoo_edi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-05 07:28+0000\n"
+"PO-Revision-Date: 2018-04-05 07:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odoo_edi
+#: model:ir.ui.view,arch_db:odoo_edi.inherited_view_general_configuration
+msgid "<strong>Save</strong> this page to activate the feature."
+msgstr "<strong>Save</strong> this page to activate the feature."
+
+#. module: odoo_edi
+#: model:ir.model.fields,help:odoo_edi.field_res_company_edi_mode
+#: model:ir.model.fields,help:odoo_edi.field_res_config_settings_edi_mode
+msgid "Choose how we handle EDI connections. Option 'Production' for running against a production environment and sending real documents to real customers. Option 'Test' is to send documents to the testing environment where data is processed but not actually sent. Option 'Development/Debug' is used when we do not want to contact a server, which results in the file just being dumped locally on the server"
+msgstr "Vælg hvordan vi skal håndtere EDI. Muligheden 'Produktion' opsætter systemet til at aflevere dokumneter til produktionsmiljøet, og derved også til reelle kunder/leverandører. Muligheden 'Test' opsætter systemet ti lat aflevere dokumenter på testmiljøet og derved sendes der ikke noget direkte til kunder/leverandører. Muligheden 'Udvikling/Fejlsøgning' er til brug ved fejlsøgning, hvor filen blot gemmes midlertidigt på serveren og ikke afleveres til hverken testmiljø eller produktionsmiljø"
+
+#. module: odoo_edi
+#: model:ir.model,name:odoo_edi.model_res_company
+msgid "Companies"
+msgstr "Virksomheder"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_document_create_uid
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_endpoint_create_uid
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_product_uom_create_uid
+msgid "Created by"
+msgstr "Oprettet af"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_document_create_date
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_endpoint_create_date
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_product_uom_create_date
+msgid "Created on"
+msgstr "Oprettet den"
+
+#. module: odoo_edi
+#: model:ir.model.fields,help:odoo_edi.field_res_company_odoo_edi_password
+#: model:ir.model.fields,help:odoo_edi.field_res_config_settings_ediportal_password
+msgid "Define the password that is used for login to FlexEDI"
+msgstr "Angiv den adgangskode, som benyttes til FlexEDI"
+
+#. module: odoo_edi
+#: model:ir.model.fields,help:odoo_edi.field_res_company_odoo_edi_username
+#: model:ir.model.fields,help:odoo_edi.field_res_config_settings_ediportal_username
+msgid "Define the username that is used for login to FlexEDI"
+msgstr "Angiv det brugernavn, som benyttes til FlexEDI"
+
+#. module: odoo_edi
+#: selection:res.company,edi_mode:0
+msgid "Development/Debugging"
+msgstr "Udvikling/Fejlsøgning"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_document_display_name
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_endpoint_display_name
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_product_uom_display_name
+msgid "Display Name"
+msgstr "Vis navn"
+
+#. module: odoo_edi
+#: model:ir.ui.view,arch_db:odoo_edi.inherited_view_general_configuration
+msgid "EDI"
+msgstr "EDI"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_res_company_edi_mode
+#: model:ir.model.fields,field_description:odoo_edi.field_res_config_settings_edi_mode
+msgid "EDI Operation mode"
+msgstr "EDI afviklingsmetode"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_product_uom_edi_name
+msgid "EDI Unit name"
+msgstr "EDI enhedsbetegnelse"
+
+#. module: odoo_edi
+#: model:ir.model,name:odoo_edi.model_odoo_edi_product_uom
+msgid "EDI standard Unit of measure name"
+msgstr "EDI enhedsbetegnelse"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_product_uom_description
+msgid "EDI unit description"
+msgstr "EDI enhedsbeskrivelse"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_product_uom_name
+msgid "EDI unit name"
+msgstr "EDI enhedsbetegnelse"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_res_config_settings_module_odoo_edi_invoice
+msgid "Enable EDI Invoicing (Send EDI invoices)"
+msgstr "Aktiver EDI Fakturering (Send EDI fakturaer)"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_res_config_settings_module_odoo_edi_purchase
+msgid "Enable EDI Purchase orders"
+msgstr "Aktiver EDI indkøbsordrer"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_res_config_settings_module_odoo_edi_saleorder
+msgid "Enable EDI Sales orders and qoutations"
+msgstr "Aktiver EDI salgsordrer og tilbud"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_res_config_settings_module_odoo_edi_vendorbill
+msgid "Enable EDI Vendor Bills (Recieve EDI invoices)"
+msgstr "Aktiver EDI leverandørfakturarer (Modtag EDI fakturaer)"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_endpoint_name
+msgid "Endpoint Id"
+msgstr "Endpoint Id"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_endpoint_description
+msgid "Endpoint name"
+msgstr "Endpoint navn"
+
+#. module: odoo_edi
+#: model:ir.model.fields,help:odoo_edi.field_res_company_gln
+msgid "GLN identification number of the company. This can also be called the EAN identifier/number"
+msgstr "GLN identifikationsnummer til virksomheden. Dette kan også hedde EAN identifikation/nummer"
+
+#. module: odoo_edi
+#: model:ir.model.fields,help:odoo_edi.field_res_partner_gln
+#: model:ir.model.fields,help:odoo_edi.field_res_users_gln
+msgid "GLN identification number of the partner. This can also be called the EAN identifier/number"
+msgstr "GLN identifikationsnummer til partneren. Dette kan også hedde EAN identifikation/nummer"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_res_company_gln
+#: model:ir.model.fields,field_description:odoo_edi.field_res_partner_gln
+#: model:ir.model.fields,field_description:odoo_edi.field_res_users_gln
+msgid "GLN number"
+msgstr "GLN nummer"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_document_id
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_endpoint_id
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_product_uom_id
+msgid "ID"
+msgstr "ID"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_document___last_update
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_endpoint___last_update
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_product_uom___last_update
+msgid "Last Modified on"
+msgstr "Sidst ændret den"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_document_write_uid
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_endpoint_write_uid
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_product_uom_write_uid
+msgid "Last Updated by"
+msgstr "Sidst opdateret af"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_document_write_date
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_endpoint_write_date
+#: model:ir.model.fields,field_description:odoo_edi.field_odoo_edi_product_uom_write_date
+msgid "Last Updated on"
+msgstr "Sidst opdateret den"
+
+#. module: odoo_edi
+#: model:ir.model,name:odoo_edi.model_odoo_edi_endpoint
+msgid "Odoo EDI Endpoint Definition"
+msgstr "Odoo EDI Endpoint Definition"
+
+#. module: odoo_edi
+#: model:ir.model,name:odoo_edi.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_res_company_odoo_edi_password
+msgid "Password"
+msgstr "Adgangskode"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_res_config_settings_ediportal_password
+msgid "Password *"
+msgstr "Adgangskode *"
+
+#. module: odoo_edi
+#: code:addons/odoo_edi/models/edi_document.py:40
+#, python-format
+msgid "Please define the FlexEDI username and FlexEDI password before sending an invoice"
+msgstr "Du skal angive brugernavn og adgangskode til FlexEDI før du kan sende en faktura"
+
+#. module: odoo_edi
+#: model:ir.model,name:odoo_edi.model_product_uom
+msgid "Product Unit of Measure"
+msgstr "Vareenhed"
+
+#. module: odoo_edi
+#: selection:res.company,edi_mode:0
+msgid "Production"
+msgstr "Produktion"
+
+#. module: odoo_edi
+#: selection:res.company,edi_mode:0
+msgid "Test"
+msgstr "Test"
+
+#. module: odoo_edi
+#: code:addons/odoo_edi/models/edi_document.py:38
+#, python-format
+msgid "The current company, %s, does not have a company registration number or GLN identification/number, which is required for EDI invoicing"
+msgstr "Den aktuelle virksomhed, %s, har ikke noget CVR-nummer eller GLN identifikation/nummer, hvilket er påkrævet for at lave EDI fakturering"
+
+#. module: odoo_edi
+#: code:addons/odoo_edi/models/edi_document.py:42
+#, python-format
+msgid "The current company, %s, does not have a default bank journal configured, which is required for EDI invoicing"
+msgstr "Den aktuelle virksomhed, %s, har ikke fået opsat en standard bank journal. Dette er påkrævet for at kunne foretage EDI fakturering"
+
+#. module: odoo_edi
+#: model:ir.model.fields,help:odoo_edi.field_product_uom_edi_name
+msgid "The generic EDI unit name used for correctly handling EDI invoicing"
+msgstr "Den standardiserede EDI enhedsbetegnelse for korrekt håndtering af EDI fakturaer"
+
+#. module: odoo_edi
+#: code:addons/odoo_edi/models/edi_document.py:33
+#, python-format
+msgid "The odoo_edi.document.create_edi method is not implemented for this document type"
+msgstr "Metoden odoo_edi.document.create_edi er ikke implementeret for denne dokumenttype"
+
+#. module: odoo_edi
+#: code:addons/odoo_edi/models/edi_document.py:30
+#, python-format
+msgid "The odoo_edi.document.recieve_document method is not implemented for this document type"
+msgstr "Metoden odoo_edi.document.recieve_document er ikke implementeret for denne dokumenttype"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_res_company_odoo_edi_username
+msgid "Username"
+msgstr "Brugernavn"
+
+#. module: odoo_edi
+#: model:ir.model.fields,field_description:odoo_edi.field_res_config_settings_ediportal_username
+msgid "Username *"
+msgstr "Brugernavn *"
+
+#. module: odoo_edi
+#: model:ir.model,name:odoo_edi.model_odoo_edi_document
+msgid "odoo_edi.document"
+msgstr "odoo_edi.document"
+
+#. module: odoo_edi
+#: model:ir.model,name:odoo_edi.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"

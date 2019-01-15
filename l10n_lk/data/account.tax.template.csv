@@ -1,0 +1,8 @@
+"id","description","type_tax_use","name","amount_type","amount","account_id/id","refund_account_id/id","children_tax_ids/id","tag_ids/id","chart_template_id/id"
+"tax_purchase","15.00%","Purchases","Tax 11.00%","Percentage of Price","11.0","101300","101300","","","l10n_lk"
+"tax_sale_11","11.00%","Sales","Tax 11.00%","Percentage of Price","11.0","111200","111200","","","l10n_lk"
+"tax_service_charge","0.25%","Sales","Economic Service Charge ","Percentage of Price","0.25","200000","200000","","","l10n_lk"
+"tax_sale_nbt","2%","Sales","NBT","Percentage of Price","2.0","200000","200000","","","l10n_lk"
+"tax_sale_levy","0.3%","Sales","Levy","Percentage of Price","0.3","200000","200000","","","l10n_lk"
+"tax_sale_bet","10%","Sales","BET","Percentage of Price","10.0","200000","200000","","","l10n_lk"
+"tax_sale_vat","11%","Sales","VAT 11%","Percentage of Price","11.0","101300","101300","","","l10n_lk"

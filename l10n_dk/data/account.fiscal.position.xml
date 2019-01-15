@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fiscal_eu" model="account.fiscal.position.template">
+            <field name="name">EU</field>
+            <field name="chart_template_id" ref="l10n_dk"/>
+    </record>
+    <record id="fiscal_export" model="account.fiscal.position.template">
+            <field name="name">Eksport (3. lande)</field>
+            <field name="chart_template_id" ref="l10n_dk"/>
+    </record>
+
+    <record id="fiscal_position_account_template_sale_products_with_tax_eu" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_eu"  />
+            <field name="account_src_id" ref="1010" />
+            <field name="account_dest_id" ref="1025" />
+    </record>
+    <record id="fiscal_position_account_template_sale_services_with_tax_eu" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_eu"  />
+            <field name="account_src_id" ref="1015" />
+            <field name="account_dest_id" ref="1026" />
+    </record>
+    <record id="fiscal_position_account_template_sale_without_tax_eu" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_eu"  />
+            <field name="account_src_id" ref="1030" />
+            <field name="account_dest_id" ref="1025" />
+    </record>
+
+	<record id="fiscal_position_account_template_sale_products_with_tax_export" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_export"  />
+            <field name="account_src_id" ref="1010" />
+            <field name="account_dest_id" ref="1020" />
+    </record>
+    <record id="fiscal_position_account_template_sale_services_with_tax_export" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_export"  />
+            <field name="account_src_id" ref="1015" />
+            <field name="account_dest_id" ref="1021" />
+    </record>
+    <record id="fiscal_position_account_template_sale_without_tax_export" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_export"  />
+            <field name="account_src_id" ref="1030" />
+            <field name="account_dest_id" ref="1020" />
+    </record>
+
+    <record id="fiscal_postion_tax_sale_eu" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_eu"/>
+            <field name="tax_src_id" ref="tax_sale"/>
+            <field name="tax_dest_id" ref="tax_eu_sale"/>
+    </record>
+    <record id="fiscal_postion_tax_sale_eu_service" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_eu"/>
+            <field name="tax_src_id" ref="tax_sale_services"/>
+            <field name="tax_dest_id" ref="tax_eu_sale_service"/>
+    </record>
+    <record id="fiscal_postion_tax_purchase_eu" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_eu"/>
+            <field name="tax_src_id" ref="tax_purchase"/>
+            <field name="tax_dest_id" ref="tax_eu_purchase"/>
+    </record>
+    <record id="fiscal_postion_tax_purchase_eu_service" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_eu"/>
+            <field name="tax_src_id" ref="tax_purchase_services"/>
+            <field name="tax_dest_id" ref="tax_eu_purchase_service"/>
+    </record>
+
+    <record id="fiscal_postion_tax_sale_export" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_export"/>
+            <field name="tax_src_id" ref="tax_sale"/>
+            <field name="tax_dest_id" ref="tax_export"/>
+    </record>
+    <record id="fiscal_postion_tax_sale_export_service" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_export"/>
+            <field name="tax_src_id" ref="tax_sale_services"/>
+            <field name="tax_dest_id" ref="tax_export"/>
+    </record>
+    <record id="fiscal_postion_tax_purchase_export" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_export"/>
+            <field name="tax_src_id" ref="tax_purchase"/>
+            <field name="tax_dest_id" ref="tax_import"/>
+    </record>
+    <record id="fiscal_postion_tax_purchase_export_service" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_export"/>
+            <field name="tax_src_id" ref="tax_purchase_services"/>
+            <field name="tax_dest_id" ref="tax_import"/>
+    </record>
+
+</odoo>

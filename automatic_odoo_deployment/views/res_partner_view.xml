@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="act_partner_instances" model="ir.actions.act_window">
+            <field name="name">Instances</field>
+            <field name="res_model">odoo.instance</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_customer_id': active_id}</field>
+        </record>
+        <record id="partner_instance_count" model="ir.ui.view">
+            <field name="name">partner.instance.count</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_button_box']" position="inside">
+                    <button class="oe_stat_button" icon="fa-book" type="action" name="%(automatic_odoo_deployment.act_partner_instances)d">
+                        <field name="instance_count" string="Instances" widget="statinfo"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

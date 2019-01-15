@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+		<template id="facebook_pixel_code" inherit_id="website.layout" name="Facebook Pixel Code">
+
+			<xpath expr="//div[@id='wrapwrap']" position="after">
+				<t t-if="website.facebook_pixel">	
+					<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '<t t-esc="website.facebook_pixel" />');
+  fbq('track', 'PageView');
+</script>
+
+<noscript><img height="1" width="1" style="display:none" t-attf-src="https://www.facebook.com/tr?id={{website.facebook_pixel}}&amp;ev=PageView&amp;noscript=1" /></noscript>
+				</t>
+			</xpath>
+
+		</template>
+
+  </data>
+</odoo>

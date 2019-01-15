@@ -1,0 +1,26 @@
+//  ================================================================
+//  COLOR - GRADES
+//  ================================================================
+
+@vkdata_color_a:    #0c0c0c; //black
+@vkdata_color_b:    #5b5b5b; //dark_gray
+@vkdata_color_c:    #ae1f23; //red
+@vkdata_color_d:    #d3d3d3; //light_gray
+@vkdata_color_e:    #688e26; //green
+
+//  ================================================================
+//  MIXIN FOR LINKS
+//  ================================================================
+
+@mixin link-a {
+    font-size: 1.2em;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        visibility: visible;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+} //green links

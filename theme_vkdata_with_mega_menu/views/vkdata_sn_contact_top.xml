@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="snippet_top_contact" name="Contacts - Top">
+            <section class="snippet_contact">
+                <div class="col-md-7 col-sm-5 region-center text-right">
+                    <ul class="wrapper-main">
+                        <li class="region-list list-phone"><i class="fa fa-phone-square fa-lg"></i>73738888</li>
+                        <li class="region-list list-mail"><i class="fa fa-envelope fa-lg"></i>info@vkdata.dk</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-3 hidden-xs region-konfigurator">
+                    <a href="#" class="wrapper-konfigurator">PC konfigurator</a>
+                </div>
+            </section>
+        </template>
+        <template id="vkdata_contact" inherit_id="website.snippets" name="Contacts - Top">
+            <xpath expr="//div[@id='snippet_structure']/div[2]" position="inside">
+                <t t-snippet="theme_vkdata_with_mega_menu.snippet_top_contact"
+                   t-thumbnail="/theme_vkdata_with_mega_menu/static/snippet/snippet_image_006.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

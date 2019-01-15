@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+	<template id="website_multiple_logo_vkdata.assets_frontend" inherit_id="website.assets_frontend" name="Add Custom CSS">
+    	<xpath expr="." position="inside">	
+			<link rel="stylesheet" href="/website_multiple_logo_vkdata/static/src/css/style.css" />			
+	    </xpath>
+	</template>	
+
+	<template id="multiple_icon" inherit_id="web.layout" name="Add New Icon">
+		<xpath expr="//link[@type='image/x-icon']" position="replace"> 
+		</xpath>
+	</template>
+
+    <template id="multiple_logo" inherit_id="website.layout" name="Add New Logo">
+
+		<xpath expr="//meta[@property='og:title']" position="replace">
+			<link type="image/x-icon" rel="shortcut icon" t-attf-href="data:image/*;base64,{{website.icon_image}}" />
+		</xpath>
+
+		<!--<xpath expr="//header//a[@class='navbar-brand']" position="after">
+		    <a href="/" class="navbar-brand logo-new">
+		        <span itemprop="image" t-field="website.logo_image" t-field-options='{"widget": "image", "class": "blog_list_img", "alt-field": "domain"}'/> 
+		    </a>
+		</xpath>-->
+
+		<xpath expr="//div[@id='wrapwrap']/header/div[2]" position="before">
+            <div class="container vkdata_header-new">
+                <div class="col-md-9 col-sm-8 region-logo text-xs-center">
+                    <a href="/" class="navbar-brand-new logo-new">
+						<span itemprop="image" t-field="website.logo_image" t-field-options='{"widget": "image", "class": "blog_list_img", "alt-field": "domain"}'/> 
+					</a>
+                </div> 
+                <!--<div class="col-md-9">
+                    <div class="oe_structure"/>
+                </div>-->
+<!--
+                <div class="col-md-7 col-sm-5 region-center text-right">
+                    <ul class="wrapper-main">
+                        <li class="region-list list-phone"><i class="fa fa-phone-square fa-lg"></i>73738888</li>
+                        <li class="region-list list-mail"><i class="fa fa-envelope fa-lg"></i>info@vkdata.dk</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-3 hidden-xs region-konfigurator">
+                    <a href="#" class="wrapper-konfigurator">PC konfigurator</a>
+                </div>
+-->
+            </div>
+        </xpath>
+
+    </template>
+
+  </data>
+</odoo>

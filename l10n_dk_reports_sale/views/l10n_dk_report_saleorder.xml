@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="l10n_dk_reports_saleorder" inherit_id="sale.report_saleorder_document">
+			<!-- <xpath expr="//div[@class='page']/div[@class='row']/div[@class='col-xs-4 pull-right']" position="attributes">
+				<attribute name="style">margin-top: 25px;</attribute>
+			</xpath> -->
+			<xpath expr="//div[@class='page']" position="attributes">
+	            <attribute name="style">font-size: 11px;</attribute>
+	        </xpath>
+			<xpath expr="//div[@class='row mt32 mb32']" position="attributes">
+				<attribute name="class">row mt16 mb16</attribute>
+			</xpath>
+			<xpath expr="//div[@class='page']/h2" position="attributes">
+				<attribute name="style">margin-left: -2px;</attribute>
+			</xpath>
+			<xpath expr="//div[@class='row']" position="replace">
+				<div class="row">
+					<div class="col-xs-6">
+						<strong t-if="doc.partner_shipping_id == doc.partner_invoice_id">Invoicing and shipping address:</strong>
+						<strong t-if="doc.partner_shipping_id != doc.partner_invoice_id">Invoicing address:</strong>
+						<address t-field="doc.partner_invoice_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: True}"/>
+						<span t-if="doc.partner_id.vat">TIN: <span t-field="doc.partner_id.vat"/></span>
+					</div>
+				</div>
+			</xpath>
+			<xpath expr="//div[@class='row']/div[@class='col-xs-6']" position="after">
+				<div class="col-xs-5">
+		    		<t t-if="doc.partner_shipping_id != doc.partner_invoice_id">
+						<t t-if="doc.partner_shipping_id">
+							<strong>Shipping address:</strong>
+			            	<div t-field="doc.partner_shipping_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+						</t>
+					</t>
+				</div>
+	    	</xpath>
+			<xpath expr="//div[@class='page']/p" position="replace"></xpath>
+			<xpath expr="//div[@class='row']" position="inside">
+				<div class="col-xs-12" style="margin-top: 30px;">
+					<span t-if="doc.note">
+						<strong>Comment:</strong>
+						<span t-field="doc.note"/>
+					</span><br/>
+					<span t-if="doc.remarks" t-field="doc.remarks"/>
+				</div>
+			</xpath>
+			<xpath expr="//p[@t-field='doc.date_order']" position="attributes">
+				<attribute name="t-field-options">{'format': 'dd-MM-yyyy'}</attribute>
+			</xpath>
+			<xpath expr="//p[@t-field='doc.confirmation_date']" position="attributes">
+				<attribute name="t-field-options">{'format': 'dd-MM-yyyy'}</attribute>
+			</xpath>
+			<xpath expr="//table[@class='table table-condensed']/thead/tr" position="replace">
+				<tr>
+	                <th style="padding-left: 0px;">Description</th>
+	                <th class="text-right">Quantity</th>
+	                <th class="text-right">Unit Price</th>
+	                <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">Disc.(%)</th>
+	                <th class="text-right hidden">Taxes</th>
+	                <th class="text-right" groups="sale.group_show_price_subtotal">Price</th>
+	            </tr>
+			</xpath>
+			<xpath expr="//table[@class='table table-condensed']/tbody[@class='sale_tbody']" position="replace">
+				<tbody class="sale_tbody">
+                    <t t-foreach="page" t-as="layout_category">
+
+                        <t t-if="layout_category_size &gt; 1 or page_size &gt; 1" groups="sale.group_sale_layout">
+                            <tr class="active">
+                                <td colspan="7" style="font-weight: bold; border-bottom: 1px solid black;">&amp;bull;
+                                    <t t-esc="layout_category['name']"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <t t-foreach="layout_category['lines']" t-as="l">
+                            <tr>
+                                <td style="padding-left: 0px;"><span t-field="l.name"/></td>
+                                <td class="text-right">
+                                    <span t-if="float(l.product_uom_qty) % 1 == 0" t-esc="int(l.product_uom_qty)"/>
+									<span t-if="not float(l.product_uom_qty) % 1 == 0" t-esc="str(float(l.product_uom_qty * 1)).replace('.', ',')"/>
+                                    <span t-field="l.product_uom" groups="product.group_uom"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.price_unit"/>
+                                </td>
+                                <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                                    <span t-field="l.discount"/>
+                                </td>
+                                <td class="text-right hidden">
+                                    <span t-esc="', '.join(map(lambda x: (x.description or x.name), l.tax_id))"/>
+                                </td>
+                                <td class="text-right" groups="sale.group_show_price_subtotal">
+                                    <span t-field="l.price_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: doc.pricelist_id.currency_id}"/>
+                                </td>
+                            </tr>
+                        </t>
+
+                        <t t-if="(layout_category_size &gt; 1 or page_size &gt; 1) and layout_category['subtotal']" groups="sale.group_sale_layout">
+                            <tr class="text-right">
+                                <td colspan="6">
+                                    <strong>Subtotal: </strong>
+                                    <t t-set="subtotal" t-value="sum(line.price_subtotal for line in layout_category['lines'])"/>
+                                    <span t-esc="subtotal" t-options="{'widget': 'monetary', 'display_currency': doc.pricelist_id.currency_id}"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </t>
+                </tbody>
+			</xpath>
+		</template>
+	</data>
+</odoo>

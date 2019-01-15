@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		 <menuitem action="action_update_odometer" 
+		parent="fleet.fleet_vehicles" 
+		id="fleet_sotersat_integ_menu" 
+		/> 
+		<menuitem action="action_sotersat_all_vehilce" 
+		parent="fleet.menu_root" 
+		id="sotersat_all_vehicle_menu" 
+		sequence="0"
+		/>
+		
+		<menuitem 
+		name="Trip"
+		parent="fleet.menu_root" 
+		id="sotersat_trip_menu"
+		sequence="5" 
+		/>
+		<menuitem action="action_sotersat_trip_details" 
+		parent="sotersat_trip_menu" 
+		id="sotersat_trip_menu_sub" 
+		sequence="1"
+		/>
+		
+		<menuitem action="action_update_trip_wizard" 
+		parent="sotersat_trip_menu" 
+		id="sotersat_trip_update_wiz" 
+		sequence="2"
+		/>
+	</data>
+</odoo>

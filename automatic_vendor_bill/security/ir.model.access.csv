@@ -1,0 +1,3 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_res_company_group_erp_manager","res_company group_erp_manager","model_res_company","base.group_erp_manager",1,1,1,1
+"access_res_company_group_user","res_company group_user","model_res_company",,1,0,0,0

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vkdata_sale_subscription_template_view_form" model="ir.ui.view">
+            <field name="name">vkdata.sale.subscription.template</field>
+            <field name="model">sale.subscription.template</field>
+            <field name="inherit_id" ref="sale_subscription.sale_subscription_template_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='accounting']" position="inside">
+                    <field name="offset_invoice"/>
+                </xpath>
+                <xpath expr="//group[@name='main']" position="inside">
+                    <group name="offset_invoice" string="Offset invoice" attrs="{'invisible':[('offset_invoice', '=', False)]}">
+                        <field name="use_subscription_period_end"/>
+                        <field name="offset_invoice_generation"/>
+                        <field name="offset_invoice_date"/>
+                    </group>
+                </xpath>
+                <xpath expr="//group[@name='main']/group[2]" position="inside">
+                    <field name="team_id"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="vkdata_sale_subscription_view_form" model="ir.ui.view">
+            <field name="name">vkdata.sale.subscription.form.view</field>
+            <field name="model">sale.subscription</field>
+            <field name="inherit_id" ref="sale_subscription.sale_subscription_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='main']/group/label" position="replace"/>
+                <xpath expr="//group[@name='main']/group/field[@name='code']" position="after">
+                    <label for="recurring_next_date" string="Next subscription period start"/>
+                </xpath>
+                <xpath expr="//field[@name='recurring_next_date']" position="attributes">
+                    <attribute name="help">The next subscription period will start on this date</attribute>
+                </xpath>
+                <xpath expr="//group[@name='main']/group/div" position="after">
+                    <field name="offset_specific_subscription"/>
+                </xpath>
+                <xpath expr="//group[@name='main']" position="inside">
+                    <group name="offset_invoice" string="Offset invoice" attrs="{'invisible':[('offset_specific_subscription', '=', False)]}">
+                        <field name="use_subscription_period_end"/>
+                        <field name="offset_invoice_generation"/>
+                        <field name="offset_invoice_date"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='date']" position="after">
+                    <field name="team_id"/>
+                </xpath>
+                <sheet position="inside">
+                    <group>
+                        <field name="internal_remarks"/>
+                    </group>
+                </sheet>
+            </field>
+        </record>
+    </data>
+</odoo>
