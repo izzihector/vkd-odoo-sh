@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.cron" id="odoo_edi_import_vendor_bills">
+            <field name="name">EDI: Import Vendor Bills</field>
+            <field name="model_id" ref="odoo_edi_vendorbill.model_odoo_edi_vendor_bill_document_vendorbill"/>
+            <field name="state">code</field>
+            <field name="code">model.recieve_document()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+        </record>
+    </data>
+</odoo>
